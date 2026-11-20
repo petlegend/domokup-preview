@@ -133,11 +133,11 @@
   // ── 카탈로그 필터·정렬 ──
   var fbox = $('[data-filters]');
   if (fbox) {
-    var state = { species: fbox.getAttribute('data-preset') || '', flavor: '', kg: '' }, grid = $('[data-grid]'), cards = $$('.card', grid);
+    var state = { cat: '', species: '', flavor: '', kg: '', stock: false }, grid = $('[data-grid]'), cards = $$('.card', grid);
     var apply = function () {
       var n = 0;
       cards.forEach(function (c) {
-        var ok = (!state.species || c.dataset.species === state.species) && (!state.flavor || c.dataset.flavor === state.flavor) && (!state.kg || c.dataset.kg === state.kg);
+        var ok = (!state.cat || c.dataset.cat === state.cat) && (!state.species || c.dataset.species === state.species || c.dataset.species === 'both') && (!state.flavor || c.dataset.flavor === state.flavor) && (!state.kg || c.dataset.kg === state.kg) && (!state.stock || c.dataset.stock === '1');
         c.hidden = !ok; if (ok) n++;
       });
       $('[data-count]').textContent = n; $('[data-empty]').hidden = n > 0;
@@ -147,6 +147,7 @@
       var f = b.getAttribute('data-f'); state[f] = b.getAttribute('data-v');
       $$('[data-f="' + f + '"]', fbox).forEach(function (x) { x.setAttribute('aria-pressed', x === b); }); apply();
     });
+    var so = $('[data-stock-only]', fbox); if (so) so.addEventListener('change', function () { state.stock = so.checked; apply(); });
     $('[data-sort]', fbox).addEventListener('change', function (e) {
       var v = e.target.value, val = function (c) { var p = +c.dataset.price, kg = +c.dataset.kg; return v === 'kg' ? (kg ? p / kg : p) : p; };
       var sorted = cards.slice().sort(function (a, b) { return v === 'pop' ? cards.indexOf(a) - cards.indexOf(b) : v === 'desc' ? val(b) - val(a) : val(a) - val(b); });
@@ -161,7 +162,7 @@
   function norm(s) { s = String(s).toLowerCase().replace(/ё/g, 'е'); SYN.forEach(function (r) { s = s.replace(r[0], r[1]); }); return s; }
   function translit(s) { return s.replace(/[a-z]/g, function (ch) { return LAT[ch] || ch; }); }
   function score(item, q) {
-    var hay = norm(item.n + ' ' + item.f + ' ' + (item.sp === 'cat' ? 'кошк' : 'собак') + (item.k === 'feed' ? ' корм pure nature' : ' joyser'));
+    var hay = norm(item.n + ' ' + item.f + ' ' + item.s + ' ' + (item.sp === 'cat' ? 'кошк' : item.sp === 'dog' ? 'собак' : 'кошк собак') + (item.k === 'feed' ? ' корм pure nature' : '') + (item.j ? ' joyser' : ''));
     var words = norm(q).split(/\s+/).filter(Boolean), sc = 0;
     for (var i = 0; i < words.length; i++) { var w = words[i]; if (hay.indexOf(w) > -1 || hay.indexOf(translit(w)) > -1) sc += 2; else if (w.length > 3 && hay.indexOf(w.slice(0, -1)) > -1) sc += 1; else return 0; }
     return sc + (item.k === 'feed' ? 1 : 0) + (item.st ? 1 : 0);

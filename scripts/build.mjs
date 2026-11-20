@@ -24,7 +24,6 @@ const BUILD_DATE = new Date().toISOString().slice(0, 10);
 
 // ───────────────────────── 데이터 읽기 ─────────────────────────
 const readJson = (p, fallback) => (existsSync(p) ? JSON.parse(readFileSync(p, 'utf8')) : fallback);
-const snapshot = readJson(join(SRC, 'data', 'catalog-snapshot-20261120.json'));
 const copyFile = readJson(join(SRC, 'data', 'copy-ru.json'), {});
 const contentFile = readJson(join(SRC, 'data', 'products-content-ru.json'), {});
 const C = deepMerge(readJson(join(SRC, 'data', 'copy-defaults-ru.json')), copyFile);
@@ -39,50 +38,82 @@ function deepMerge(a, b) {
   return b === undefined ? a : b;
 }
 
-// 2026-11-02 대표 확정: 자사몰 사료 7종. 순서 = 판매량 순(고양이 연어가 1위).
-const CORE = [
-  { sku: '88103', group: 'cat-salmon', species: 'cat', flavor: 'salmon', kg: 2, img: 'cat-salmon' },
-  { sku: '88104', group: 'cat-salmon', species: 'cat', flavor: 'salmon', kg: 5, img: 'cat-salmon' },
-  { sku: '88101', group: 'cat-chicken', species: 'cat', flavor: 'chicken', kg: 2, img: 'cat-chicken' },
-  { sku: '88102', group: 'cat-chicken', species: 'cat', flavor: 'chicken', kg: 5, img: 'cat-chicken' },
-  { sku: '88106', group: 'cat-diet', species: 'cat', flavor: 'diet', kg: 5, img: 'cat-diet' },
-  { sku: '88204', group: 'dog-salmon', species: 'dog', flavor: 'salmon', kg: 5, img: 'dog-salmon' },
-  { sku: '88206', group: 'dog-lamb', species: 'dog', flavor: 'lamb', kg: 5, img: 'dog-lamb' },
+// 판매 범위: 2026-11-20 대표 확정 — domokup.ru 전 상품에서 소분(200·500 г)·오리 14개만 뺀 164개.
+// 데이터: 앱 팀이 만든 catalog-content 스냅샷(운영 Store API, 읽기 전용). excluded=true 는 쓰지 않는다.
+const content = readJson(join(SRC, 'data', 'catalog-content-20261120.json'));
+const SOURCE = content.products.filter(p => !p.excluded);
+
+// 카테고리 — 운영 사이트의 「고양이/강아지 거울 카테고리」를 하나로 합친다(중복 페이지 방지).
+// key = 미리보기 주소(catalog/<key>/), slugs = 운영 카테고리 슬러그, sp = 기본 대상
+const CATS = [
+  { key: 'korm-dlja-koshek', name: 'Корм для кошек', slugs: ['pure-nature'], sp: 'cat', icon: 'paw', feed: true },
+  { key: 'korm-dlja-sobak', name: 'Корм для собак', slugs: ['pure-nature-dog-products'], sp: 'dog', icon: 'paw', feed: true },
+  { key: 'igrushki-dlja-koshek', name: 'Игрушки для кошек', slugs: ['igrushki-dlja-koshek'], sp: 'cat', icon: 'gift' },
+  { key: 'igrushki-dlja-sobak', name: 'Игрушки для собак', slugs: ['igrushki-dlja-sobak'], sp: 'dog', icon: 'gift' },
+  { key: 'amunicija-dlja-sobak', name: 'Шлейки и поводки', slugs: ['amunicija-dlja-sobak'], sp: 'dog', icon: 'shield' },
+  { key: 'miski', name: 'Миски', slugs: ['miski-dlja-sobak-i-koshek', 'miski-dlja-sobak-i-koshek-cat-products'], sp: 'both', icon: 'box' },
+  { key: 'ot-bloh-i-kleshhej', name: 'От блох и клещей', slugs: ['sredstva-ot-bloh-i-kleshhej', 'sredstva-ot-bloh-i-kleshhej-cat-products'], sp: 'both', icon: 'shield' },
+  { key: 'uhod-dlja-sobak', name: 'Уход за собаками', slugs: ['sredstva-dlja-uhoda-dlja-sobak'], sp: 'dog', icon: 'check' },
+  { key: 'uhod-dlja-koshek', name: 'Уход за кошками', slugs: ['sredstva-dlja-uhoda-dlja-koshek'], sp: 'cat', icon: 'check' },
+  { key: 'gruming', name: 'Груминг', slugs: ['gruming', 'gruming-cat-products', 'tovary-dlja-krasoty'], sp: 'both', icon: 'check' },
+  { key: 'napolniteli', name: 'Наполнители для туалета', slugs: ['ever-dream'], sp: 'cat', icon: 'box' },
 ];
+const catBySlug = new Map(CATS.flatMap(c => c.slugs.map(sl => [sl, c])));
+
 const FLAVOR_RU = { salmon: 'Лосось', chicken: 'Курица', diet: 'Диета', lamb: 'Ягнёнок' };
-const SPECIES_RU = { cat: 'Для кошек', dog: 'Для собак' };
-const ACC_CATS = { 'igrushki-dlja-koshek': 'cat', 'igrushki-dlja-sobak': 'dog', 'amunicija-dlja-sobak': 'dog' };
+const SPECIES_RU = { cat: 'Для кошек', dog: 'Для собак', both: 'Для кошек и собак' };
+const price = p => Math.round(Number(p.priceMinor) / 10 ** (p.currencyMinorUnit ?? 2));
+const ENT = { nbsp: ' ', amp: '&', quot: '"', laquo: '«', raquo: '»', mdash: '—', ndash: '–', rsquo: '’', lsquo: '‘', hellip: '…' };
+const stripHtml = h => String(h || '')
+  .replace(/<(script|style)[\s\S]*?<\/(script|style)>/gi, '')
+  .replace(/<br\s*\/?>/gi, '\n')
+  .replace(/<\/(p|li|h[1-6]|div|tr)>/gi, '\n')
+  .replace(/<li[^>]*>/gi, '• ')
+  .replace(/<[^>]+>/g, '')
+  .replace(/&([a-z]+);/gi, (m, k) => ENT[k.toLowerCase()] ?? ' ')
+  .replace(/&#(\d+);/g, (m, d) => String.fromCodePoint(Number(d)));
+const paras = h => stripHtml(h).split(/\n+/).map(x => x.trim()).filter(Boolean);
 
-const bySku = new Map(snapshot.products.map(p => [p.sku, p]));
-const price = p => Math.round(p.priceMinor / 10 ** (p.currencyMinorUnit ?? 2));
+// 사료: 이름에서 맛·중량을 읽는다. 표시명·설명은 카피팀 문서(검증된 사실)만 쓴다 — 운영 설명·사진에는 확인 안 된 문구가 있다.
+function feedInfo(p) {
+  const n = p.name.toLowerCase().replace(/,/g, '.');
+  const flavor = /лосос/.test(n) ? 'salmon' : /куриц/.test(n) ? 'chicken' : /диет/.test(n) ? 'diet' : /ягн/.test(n) ? 'lamb' : '';
+  const sum = n.match(/(\d+(?:\.\d+)?)\s*\+\s*(\d+(?:\.\d+)?)\s*кг/);
+  const one = n.match(/(\d+(?:\.\d+)?)\s*кг/);
+  const kg = sum ? Number(sum[1]) + Number(sum[2]) : one ? Number(one[1]) : 0;
+  return { flavor, kg, pack: sum ? `${sum[1]} + ${sum[2]} кг` : `${kg} кг` };
+}
 
-const feeds = CORE.map(c => {
-  const p = bySku.get(c.sku);
-  if (!p) throw new Error(`스냅샷에 없는 SKU: ${c.sku}`);
-  const ct = contentFile[c.sku] || {};
-  return {
-    ...c, kind: 'feed', id: p.id, slug: p.slug, name: p.name,
-    displayName: ct.displayName || `Pure Nature · ${FLAVOR_RU[c.flavor]} · ${SPECIES_RU[c.species].toLowerCase()}`,
-    price: price(p), inStock: p.inStock, url: `product/${p.slug}/`,
-    image: `assets/img/${c.img}-600.webp`, thumb: `assets/img/${c.img}-300.webp`, imageRemote: false,
-    content: ct, reviews: p.reviewCount || 0,
+const ALL = SOURCE.map(p => {
+  const cat = p.categories.map(c => catBySlug.get(c.slug)).find(Boolean);
+  if (!cat) throw new Error(`분류 없는 상품: ${p.id} ${p.name}`);
+  const base = {
+    id: p.id, sku: String(p.sku || p.id), slug: p.slug, name: p.name, cat: cat.key, catName: cat.name, species: cat.sp,
+    price: price(p), inStock: !!p.inStock, url: `product/${p.slug}/`, reviews: p.reviewCount || 0,
+    joyser: /joyser/i.test(p.name) || /^igrushki/.test(cat.key),
   };
+  if (cat.feed) {
+    const fi = feedInfo(p);
+    const ct = contentFile[base.sku.split('-')[0]] || {};
+    const group = `${cat.sp}-${fi.flavor}`;
+    const bundle = /\+/.test(fi.pack);
+    return { ...base, kind: 'feed', flavor: fi.flavor, kg: fi.kg, pack: fi.pack, group, content: ct,
+      displayName: (ct.displayName || `Pure Nature ${{ salmon: 'с лососем', chicken: 'с курицей', diet: 'Диета', lamb: 'с ягнёнком' }[fi.flavor] || ''} для ${cat.sp === 'cat' ? 'кошек' : 'собак'}`) + (bundle ? ` · набор ${fi.pack}` : ''),
+      image: `assets/img/${group}-600.webp`, thumb: `assets/img/${group}-300.webp` };
+  }
+  const local = existsSync(join(SRC, 'assets', 'img', 'p', `p-${p.id}-300.webp`));
+  return { ...base, kind: 'acc', displayName: p.name, desc: paras(p.shortDescriptionHtml).concat(paras(p.descriptionHtml)),
+    image: local ? `assets/img/p/p-${p.id}-600.webp` : 'assets/img/icon-512.png', thumb: local ? `assets/img/p/p-${p.id}-300.webp` : 'assets/img/icon-192.png' };
 });
+// 진열 순서: 재고 있음 먼저 → 사료 먼저(판매 순위: 고양이 연어 → 치킨 → 다이어트 → 강아지) → 작은 포장 먼저
+const FEED_ORDER = ['cat-salmon', 'cat-chicken', 'cat-diet', 'dog-salmon', 'dog-lamb'];
+ALL.sort((x, y) => (y.inStock - x.inStock) || ((x.kind === 'feed' ? 0 : 1) - (y.kind === 'feed' ? 0 : 1)) || (FEED_ORDER.indexOf(x.group) - FEED_ORDER.indexOf(y.group)) || ((x.kg || 0) - (y.kg || 0)));
+const feeds = ALL.filter(i => i.kind === 'feed');
+const accessories = ALL.filter(i => i.kind === 'acc');
+// 이름이 똑같은 상품(색상만 다름 등)은 카드에 상품번호를 함께 보여 구별한다
+const nameCount = ALL.reduce((m, i) => m.set(i.displayName, (m.get(i.displayName) || 0) + 1), new Map());
+for (const i of ALL) i.dup = nameCount.get(i.displayName) > 1;
 
-// 장난감·하네스(JOYSER 쿠폰 대상으로 가정 — 대표 확인 필요). 재고 있는 것만.
-const accessories = snapshot.products
-  .filter(p => p.inStock && p.categories.some(k => ACC_CATS[k.slug]))
-  .map(p => {
-    const cat = p.categories.find(k => ACC_CATS[k.slug]);
-    return {
-      kind: 'acc', sku: p.sku, id: p.id, slug: p.slug, name: p.name, displayName: p.name,
-      species: ACC_CATS[cat.slug], catSlug: cat.slug, catName: cat.name,
-      price: price(p), inStock: true, url: `product/${p.slug}/`,
-      image: p.image?.src || '', thumb: p.image?.thumbnail || p.image?.src || '', imageRemote: true, joyser: true,
-    };
-  });
-
-const ALL = [...feeds, ...accessories];
 
 // ───────────────────────── 도우미 ─────────────────────────
 const esc = s => String(s ?? '').replace(/[&<>"']/g, ch => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[ch]));
@@ -102,6 +133,7 @@ const fill = s => String(s ?? '').replace(/{{([A-Z_]+)}}/g, (m, k) => {
 }).replace(/{year}/g, new Date().getFullYear());
 const t = (path, fb = '') => fill(path.split('.').reduce((o, k) => (o == null ? o : o[k]), C) ?? fb);
 
+const PHONE = '+7&nbsp;914&nbsp;721&#8209;92&#8209;86';
 const ICONS = {
   home: '<path d="M3 11.5 12 4l9 7.5"/><path d="M5 10v10h14V10"/>',
   grid: '<rect x="4" y="4" width="7" height="7" rx="1.5"/><rect x="13" y="4" width="7" height="7" rx="1.5"/><rect x="4" y="13" width="7" height="7" rx="1.5"/><rect x="13" y="13" width="7" height="7" rx="1.5"/>',
@@ -125,16 +157,16 @@ const ICONS = {
 const icon = (name, cls = '') => `<svg class="ic ${cls}" viewBox="0 0 24 24" aria-hidden="true" focusable="false">${ICONS[name]}</svg>`;
 
 function img(item, size, { lazy = true, sizes = '' } = {}) {
-  const src = item.imageRemote ? (size === 'thumb' ? item.thumb : item.image) : u(size === 'thumb' ? item.thumb : item.image);
+  const src = u(size === 'thumb' ? item.thumb : item.image);
   const dim = size === 'thumb' ? 300 : 600;
   return `<img src="${esc(src)}" alt="${esc(item.displayName)}" width="${dim}" height="${dim}"${lazy ? ' loading="lazy" decoding="async"' : ' fetchpriority="high"'}${sizes ? ` sizes="${sizes}"` : ''}>`;
 }
 
 function card(item) {
   const perKg = item.kind === 'feed' ? `<span class="perkg">${rub(Math.round(item.price / item.kg))} / кг</span>` : '';
-  const badge = item.kind === 'feed' ? `<span class="badge badge-gift">${icon('gift')}${esc(t('product.giftBadgeShort', 'Подарок'))}</span><span class="badge badge-kg">${item.kg} кг</span>` : '';
-  const meta = item.kind === 'feed' ? `<span class="meta">${item.kg} кг · ${esc(FLAVOR_RU[item.flavor])}</span>` : '';
-  return `<li class="card" data-kind="${item.kind}" data-species="${item.species}" data-flavor="${item.flavor || ''}" data-kg="${item.kg || ''}" data-price="${item.price}" data-name="${esc(item.displayName.toLowerCase())}">
+  const badge = item.kind === 'feed' ? `<span class="badge badge-gift">${icon('gift')}${esc(t('product.giftBadgeShort', 'Подарок'))}</span><span class="badge badge-kg">${esc(item.pack)}</span>` : '';
+  const meta = item.kind === 'feed' ? `<span class="meta">${esc(item.pack)} · ${esc(FLAVOR_RU[item.flavor])}</span>` : `<span class="meta">${esc(item.catName)}${item.dup ? ` · арт. ${esc(item.sku)}` : ''}</span>`;
+  return `<li class="card" data-kind="${item.kind}" data-cat="${item.cat}" data-stock="${item.inStock ? 1 : 0}" data-species="${item.species}" data-flavor="${item.flavor || ''}" data-kg="${item.kg || ''}" data-price="${item.price}" data-name="${esc(item.displayName.toLowerCase())}">
   <a class="card-link" href="${u(item.url)}">
     <div class="card-img">${img(item, 'thumb')}${badge}</div>
     <div class="card-body">${meta}<h3 class="card-title">${esc(item.displayName)}</h3>
@@ -154,15 +186,15 @@ function layout({ path, title, description, body, jsonld = [], active = '' }) {
     ['help', 'contacts/', t('nav.bottomTabs.help', 'Помощь'), 'chat'],
   ];
   const canonicalLive = `https://domokup.ru/${path}`;
-  return `<!doctype html>
+  return `<!DOCTYPE html>
 <html lang="ru">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>${esc(title)}</title>
+<title>${esc(title.length > 68 ? title.slice(0, 66).replace(/\s+\S*$/, '') + '…' : title)}</title>
 <meta name="description" content="${esc(description)}">
 <meta name="robots" content="noindex, nofollow">
-<meta name="theme-color" content="#1F3A2E">
+<meta name="theme-color" content="#0B6B4A">
 <link rel="canonical" href="${esc(canonicalLive)}">
 <meta property="og:type" content="website"><meta property="og:title" content="${esc(title)}"><meta property="og:description" content="${esc(description)}"><meta property="og:image" content="${u('assets/img/og-1200x630.jpg')}"><meta property="og:locale" content="ru_RU">
 <link rel="manifest" href="${u('manifest.webmanifest')}">
@@ -184,9 +216,9 @@ ${jsonld.map(j => `<script type="application/ld+json">${JSON.stringify(j)}</scri
       <button type="submit" aria-label="${esc(t('nav.searchSubmit', 'Найти'))}">${icon('search')}</button>
     </form>
     <nav class="hdr-nav" aria-label="${esc(t('nav.mainLabel', 'Основное меню'))}">
-      <a href="${u('catalog/koshki/')}">${esc(t('nav.forCats', 'Для кошек'))}</a>
-      <a href="${u('catalog/sobaki/')}">${esc(t('nav.forDogs', 'Для собак'))}</a>
-      <a href="${u('catalog/igrushki/')}">${esc(t('catalog.categories.toys', 'Игрушки JOYSER'))}</a>
+      <a href="${u('catalog/korm-dlja-koshek/')}">${esc(t('nav.forCats', 'Для кошек'))}</a>
+      <a href="${u('catalog/korm-dlja-sobak/')}">${esc(t('nav.forDogs', 'Для собак'))}</a>
+      <a href="${u('catalog/')}">${esc(t('nav.catalog', 'Каталог'))}</a>
       <a href="${u('delivery/')}">${esc(t('nav.delivery', 'Доставка'))}</a>
     </nav>
     <a class="hdr-cart" href="${u('cart/')}" aria-label="${esc(t('nav.bottomTabs.cart', 'Корзина'))}">${icon('cart')}<span class="cart-count" data-cart-count hidden>0</span></a>
@@ -211,7 +243,7 @@ ${body}
         <p class="ftr-h">${esc(t('footer.requisitesTitle', 'Продавец'))}</p>
         <p class="req">${esc(t('footer.requisites', 'ИП Цхай Наталья Генадьевна · ИНН 250908672910 · ОГРНИП 319253600007389'))}</p>
         <p class="req">${esc(t('footer.pickupAddress', 'Самовывоз: г. Москва, ул. Производственная, д. 11, стр. 1'))}</p>
-        <p class="req"><a href="tel:+79147219286">+7 914 721-92-86</a></p>
+        <p class="req"><a href="tel:+79147219286">${PHONE}</a></p>
       </div>
     </div>
     <p class="ftr-copy">${esc(t('footer.copyright', '© {year} ДОМОКУП'))} ${esc(t('footer.copyNotice', 'Копирование материалов сайта без письменного разрешения запрещено.'))}</p>
@@ -237,33 +269,38 @@ const ORG_LD = { '@context': 'https://schema.org', '@type': 'OnlineStore', name:
 const pages = [];
 const page = (path, html) => pages.push([path, html]);
 
-// 홈
+// 홈 — 상품의 90%가 용품이므로 「분류로 바로 가기」를 첫 화면 가까이에 둔다
+const catCount = key => ALL.filter(i => i.cat === key).length;
+const catTiles = () => `<ul class="tiles">${CATS.filter(c => catCount(c.key)).map(c => `<li><a href="${u(`catalog/${c.key}/`)}"><span class="tile-ic">${icon(c.icon)}</span><span class="tile-t">${esc(c.name)}</span><span class="tile-n">${catCount(c.key)}</span></a></li>`).join('')}</ul>`;
+const row = (title, href, items) => items.length ? `<section class="sec wrap">
+  <div class="sec-h"><h2>${esc(title)}</h2><a href="${u(href)}">${esc(t('home.sections.showAll', 'Смотреть все'))} ${icon('arrow')}</a></div>
+  <ul class="grid grid-scroll">${items.map(card).join('')}</ul>
+</section>` : '';
+const inCat = (key, n = 8) => ALL.filter(i => i.cat === key && i.inStock).slice(0, n);
 {
   const usp = (C.home?.usp || []).slice(0, 4);
   const uspIcons = ['shield', 'box', 'gift', 'truck'];
-  const catFeeds = feeds.filter(f => f.species === 'cat');
-  const dogFeeds = feeds.filter(f => f.species === 'dog');
-  const toys = accessories.filter(a => a.catSlug === 'igrushki-dlja-koshek').slice(0, 8);
   const body = `
 <section class="hero">
-  <picture class="hero-img"><source media="(min-width: 800px)" srcset="${u('assets/img/hero-cat-1600.webp')}"><img src="${u('assets/img/hero-cat-800.webp')}" alt="${esc(t('home.heroAlt', 'Кошка и корма Pure Nature'))}" width="800" height="412" fetchpriority="high"></picture>
+  <picture class="hero-img"><source media="(min-width: 800px)" srcset="${u('assets/img/hero-cat-1600.webp')}" width="1600" height="825"><img src="${u('assets/img/hero-cat-800.webp')}" alt="${esc(t('home.heroAlt', 'Кошка и корма Pure Nature'))}" width="800" height="412" fetchpriority="high"></picture>
   <div class="hero-txt wrap">
-    <p class="eyebrow">${esc(t('home.eyebrow', 'Pure Nature · Южная Корея'))}</p>
-    <h1>${esc(t('home.heroTitle', 'Корм, который кошка ест с удовольствием'))}</h1>
-    <p class="lead">${esc(t('home.heroSub', 'Официальный импорт. Внутри упаковки — порционные пакеты.'))}</p>
-    <div class="hero-cta"><a class="btn btn-primary" href="${u('catalog/koshki/')}">${esc(t('home.heroCta', 'Выбрать корм'))}</a><a class="btn btn-light" href="#quiz">${esc(t('home.heroCtaSecondary', 'Подобрать за минуту'))}</a></div>
+    <p class="eyebrow">${esc(t('home.eyebrow', 'Pure Nature · Республика Корея'))}</p>
+    <h1>${esc(t('home.heroTitle', 'Корма Pure Nature из Республики Корея'))}</h1>
+    <p class="lead">${esc(t('home.heroSub', 'Официальный импорт. Внутри упаковки — пакеты поменьше.'))}</p>
+    <div class="hero-cta"><a class="btn btn-primary" href="${u('catalog/korm-dlja-koshek/')}">${esc(t('home.heroCta', 'Выбрать корм'))}</a><a class="btn btn-light" href="#quiz">${esc(t('home.heroCtaSecondary', 'Подобрать за минуту'))}</a></div>
   </div>
 </section>
 <section class="usp wrap" aria-label="${esc(t('home.sections.trust', 'Почему нам доверяют'))}">
   <ul>${usp.map((x, i) => `<li>${icon(uspIcons[i] || 'check')}<div><b>${esc(fill(x.title))}</b><span>${esc(fill(x.text))}</span></div></li>`).join('')}</ul>
 </section>
+<section class="sec wrap" aria-labelledby="h-cats">
+  <div class="sec-h"><h2 id="h-cats">${esc(t('home.sections.categories', 'Разделы каталога'))}</h2><a href="${u('catalog/')}">${esc(t('home.sections.showAll', 'Смотреть все'))} ${icon('arrow')}</a></div>
+  ${catTiles()}
+</section>
 <section class="gift-banner wrap">
   <div>${icon('gift', 'ic-lg')}<div><h2>${esc(t('home.giftBanner.title', 'Игрушка JOYSER в подарок к каждому заказу корма'))}</h2><p>${esc(t('home.giftBanner.text', 'Подарок добавится в корзину автоматически.'))}</p></div></div>
 </section>
-<section class="sec wrap">
-  <div class="sec-h"><h2>${esc(t('home.sections.forCats', 'Для кошек'))}</h2><a href="${u('catalog/koshki/')}">${esc(t('home.sections.showAll', 'Смотреть все'))} ${icon('arrow')}</a></div>
-  <ul class="grid grid-scroll">${catFeeds.map(card).join('')}</ul>
-</section>
+${row(t('home.sections.forCats', 'Корм для кошек'), 'catalog/korm-dlja-koshek/', feeds.filter(f => f.species === 'cat' && f.inStock))}
 <section class="sec wrap" id="quiz">
   <div class="quiz" data-quiz data-result-title="${esc(t('home.chooseQuiz.result.title', 'Вам подойдёт'))}" data-result-help="${esc(t('home.chooseQuiz.result.help', ''))}">
     <h2>${esc(t('home.chooseQuiz.title', 'Подберём корм за три вопроса'))}</h2>
@@ -273,16 +310,12 @@ const page = (path, html) => pages.push([path, html]);
     <div class="quiz-result" data-result hidden></div>
   </div>
 </section>
-<section class="sec wrap">
-  <div class="sec-h"><h2>${esc(t('home.sections.forDogs', 'Для собак'))}</h2><a href="${u('catalog/sobaki/')}">${esc(t('home.sections.showAll', 'Смотреть все'))} ${icon('arrow')}</a></div>
-  <ul class="grid grid-scroll">${dogFeeds.map(card).join('')}</ul>
-</section>
-<section class="sec wrap">
-  <div class="sec-h"><h2>${esc(t('catalog.categories.toys', 'Игрушки JOYSER'))}</h2><a href="${u('catalog/igrushki/')}">${esc(t('home.sections.showAll', 'Смотреть все'))} ${icon('arrow')}</a></div>
-  <ul class="grid grid-scroll">${toys.map(card).join('')}</ul>
-</section>
+${row(t('home.sections.forDogs', 'Корм для собак'), 'catalog/korm-dlja-sobak/', feeds.filter(f => f.species === 'dog' && f.inStock))}
+${row('Игрушки для кошек', 'catalog/igrushki-dlja-koshek/', inCat('igrushki-dlja-koshek'))}
+${row('Шлейки и поводки', 'catalog/amunicija-dlja-sobak/', inCat('amunicija-dlja-sobak'))}
+${row('Миски', 'catalog/miski/', inCat('miski'))}
 <section class="sec wrap trust">
-  <h2>${esc(t('home.sections.trust', 'Покупать у нас спокойно'))}</h2>
+  <h2>${esc(t('home.sections.trust', 'Почему нам доверяют'))}</h2>
   <ul class="trust-list">${(C.product?.trustBadges || []).map(x => typeof x === 'string' ? `<li>${icon('check')}<span>${esc(fill(x))}</span></li>` : `<li>${icon('check')}<span><b>${esc(fill(x.title))}</b> ${esc(fill(x.text))}</span></li>`).join('')}</ul>
   <div class="trust-cta"><a class="btn btn-light" href="${u('delivery/')}">${icon('truck')}${esc(t('pages.delivery.title', 'Доставка и оплата'))}</a><a class="btn btn-light" href="${u('contacts/')}">${icon('pin')}${esc(t('home.pickup', 'Самовывоз в Москве'))}</a></div>
 </section>
@@ -290,84 +323,95 @@ const page = (path, html) => pages.push([path, html]);
   <div class="sec-h"><h2>${esc(t('nav.faq', 'Вопросы и ответы'))}</h2><a href="${u('faq/')}">${esc(t('home.sections.showAll', 'Смотреть все'))} ${icon('arrow')}</a></div>
   ${(C.pages?.faq || []).slice(0, 4).map(f => `<details><summary>${esc(fill(f.q))}</summary><p>${esc(fill(f.a))}</p></details>`).join('')}
 </section>`;
-  page('', layout({ path: '', title: t('meta.defaultTitle', 'ДОМОКУП — корма Pure Nature для кошек и собак'), description: t('meta.defaultDescription', 'Интернет-магазин кормов Pure Nature. Официальный импорт из Южной Кореи, доставка СДЭК по России, самовывоз в Москве.'), body, jsonld: [ORG_LD], active: 'home' }));
+  page('', layout({ path: '', title: t('meta.defaultTitle', 'ДОМОКУП — корма Pure Nature и товары для животных'), description: t('meta.defaultDescription', 'Интернет-магазин кормов Pure Nature и товаров для кошек и собак. Доставка СДЭК по России, самовывоз в Москве.'), body, jsonld: [ORG_LD], active: 'home' }));
 }
 
-// 카탈로그 (전체 + 프리셋 3개)
-function catalogPage({ path, title, h1, preset, items, crumbsList }) {
-  const flavors = [...new Set(items.filter(i => i.flavor).map(i => i.flavor))];
-  const weights = [...new Set(items.filter(i => i.kg).map(i => i.kg))].sort((a, b) => a - b);
+// 카탈로그 — 전체 1쪽 + 분류 11쪽. 필터는 그 쪽에 있는 값만 보여 준다.
+function catalogPage({ path, title, h1, intro = '', items, crumbsList, showCats = false }) {
+  const allFeed = items.every(i => i.kind === 'feed');
+  const flavors = allFeed ? [...new Set(items.map(i => i.flavor).filter(Boolean))] : [];
+  const weights = allFeed ? [...new Set(items.map(i => i.kg).filter(Boolean))].sort((a, b) => a - b) : [];
+  const species = [...new Set(items.map(i => i.species))];
+  const hasBoth = species.includes('cat') || species.includes('both') ? species.includes('dog') || species.includes('both') : false;
+  const cats = showCats ? CATS.filter(c => items.some(i => i.cat === c.key)) : [];
+  const chip = (f, v, label, on) => `<button type="button" data-f="${f}" data-v="${v}" aria-pressed="${on}">${esc(label)}</button>`;
   const cr = crumbs(crumbsList);
   const body = `${cr.html}
-<section class="wrap cat-head"><h1>${esc(h1)}</h1><p class="muted"><span data-count>${items.length}</span> ${esc(t('catalog.itemsWord', 'товаров'))}</p></section>
-<section class="wrap filters" data-filters${preset ? ` data-preset="${preset}"` : ''}>
-  <div class="chips" role="group" aria-label="${esc(t('catalog.filters.species', 'Питомец'))}">
-    <button type="button" data-f="species" data-v="" aria-pressed="${preset ? 'false' : 'true'}">${esc(t('catalog.filters.all', 'Все'))}</button>
-    <button type="button" data-f="species" data-v="cat" aria-pressed="${preset === 'cat'}">${esc(t('catalog.filters.speciesCat', 'Кошки'))}</button>
-    <button type="button" data-f="species" data-v="dog" aria-pressed="${preset === 'dog'}">${esc(t('catalog.filters.speciesDog', 'Собаки'))}</button>
+<section class="wrap cat-head"><h1>${esc(h1)}</h1>${intro ? `<p class="muted">${esc(intro)}</p>` : ''}<p class="muted">${esc(t('catalog.resultsLabel', 'Товаров'))}: <span data-count>${items.length}</span></p></section>
+<section class="wrap filters" data-filters>
+  ${cats.length ? `<div class="chips" role="group" aria-label="${esc(t('catalog.filters.title', 'Раздел'))}">${chip('cat', '', t('catalog.filters.all', 'Все'), true)}${cats.map(c => chip('cat', c.key, c.name, false)).join('')}</div>` : ''}
+  ${hasBoth ? `<div class="chips" role="group" aria-label="${esc(t('catalog.filters.species', 'Для кого'))}">${chip('species', '', t('catalog.filters.all', 'Все'), true)}${chip('species', 'cat', t('catalog.filters.speciesCat', 'Кошки'), false)}${chip('species', 'dog', t('catalog.filters.speciesDog', 'Собаки'), false)}</div>` : ''}
+  ${flavors.length > 1 ? `<div class="chips" role="group" aria-label="${esc(t('catalog.filters.taste', 'Вкус'))}">${chip('flavor', '', t('catalog.filters.anyFlavor', 'Любой вкус'), true)}${flavors.map(f => chip('flavor', f, FLAVOR_RU[f], false)).join('')}</div>` : ''}
+  ${weights.length > 1 ? `<div class="chips" role="group" aria-label="${esc(t('catalog.filters.packSize', 'Вес упаковки'))}">${chip('kg', '', t('catalog.filters.anyWeight', 'Любой вес'), true)}${weights.map(w => chip('kg', String(w), `${w} кг`, false)).join('')}</div>` : ''}
+  <div class="filter-row">
+    <label class="check"><input type="checkbox" data-stock-only>${esc(t('catalog.filters.inStockOnly', 'Только в наличии'))}</label>
+    <label class="sort"><span>${esc(t('catalog.sort.label', 'Сортировка'))}</span><select data-sort><option value="pop">${esc(t('catalog.sort.popular', 'По популярности'))}</option><option value="asc">${esc(t('catalog.sort.priceAsc', 'Сначала дешевле'))}</option><option value="desc">${esc(t('catalog.sort.priceDesc', 'Сначала дороже'))}</option>${weights.length ? `<option value="kg">${esc(t('catalog.sort.perKg', 'Цена за кг'))}</option>` : ''}</select></label>
   </div>
-  ${flavors.length ? `<div class="chips" role="group" aria-label="${esc(t('catalog.filters.taste', 'Вкус'))}"><button type="button" data-f="flavor" data-v="" aria-pressed="true">${esc(t('catalog.filters.anyFlavor', 'Любой вкус'))}</button>${flavors.map(f => `<button type="button" data-f="flavor" data-v="${f}" aria-pressed="false">${esc(FLAVOR_RU[f])}</button>`).join('')}</div>` : ''}
-  ${weights.length ? `<div class="chips" role="group" aria-label="${esc(t('catalog.filters.packSize', 'Вес упаковки'))}"><button type="button" data-f="kg" data-v="" aria-pressed="true">${esc(t('catalog.filters.anyWeight', 'Любой вес'))}</button>${weights.map(w => `<button type="button" data-f="kg" data-v="${w}" aria-pressed="false">${w} кг</button>`).join('')}</div>` : ''}
-  <label class="sort"><span>${esc(t('catalog.sort.label', 'Сортировка'))}</span><select data-sort><option value="pop">${esc(t('catalog.sort.popular', 'Популярные'))}</option><option value="asc">${esc(t('catalog.sort.priceAsc', 'Сначала дешевле'))}</option><option value="desc">${esc(t('catalog.sort.priceDesc', 'Сначала дороже'))}</option><option value="kg">${esc(t('catalog.sort.perKg', 'Цена за кг'))}</option></select></label>
 </section>
 <section class="wrap"><ul class="grid" data-grid>${items.map(card).join('')}</ul><p class="empty" data-empty hidden>${esc(t('catalog.empty.text', 'Ничего не нашлось. Попробуйте изменить фильтры.'))}</p></section>`;
-  page(path, layout({ path, title, description: t('meta.defaultDescription', ''), body, jsonld: [cr.ld], active: 'catalog' }));
+  page(path, layout({ path, title, description: `${h1} — ${items.length} товаров в интернет-магазине ДОМОКУП. Доставка СДЭК по России, самовывоз в Москве.`, body, jsonld: [cr.ld], active: 'catalog' }));
 }
 const HOME = t('nav.bottomTabs.home', 'Главная');
-catalogPage({ path: 'catalog/', title: `${t('nav.bottomTabs.catalog', 'Каталог')} — ДОМОКУП`, h1: t('nav.bottomTabs.catalog', 'Каталог'), items: ALL, crumbsList: [[HOME, ''], [t('nav.bottomTabs.catalog', 'Каталог'), 'catalog/']] });
-catalogPage({ path: 'catalog/koshki/', title: `${t('catalog.categories.cats', 'Корм для кошек')} — ДОМОКУП`, h1: t('catalog.categories.cats', 'Корм для кошек'), preset: 'cat', items: feeds.filter(f => f.species === 'cat'), crumbsList: [[HOME, ''], [t('nav.bottomTabs.catalog', 'Каталог'), 'catalog/'], [t('nav.forCats', 'Для кошек'), 'catalog/koshki/']] });
-catalogPage({ path: 'catalog/sobaki/', title: `${t('catalog.categories.dogs', 'Корм для собак')} — ДОМОКУП`, h1: t('catalog.categories.dogs', 'Корм для собак'), preset: 'dog', items: feeds.filter(f => f.species === 'dog'), crumbsList: [[HOME, ''], [t('nav.bottomTabs.catalog', 'Каталог'), 'catalog/'], [t('nav.forDogs', 'Для собак'), 'catalog/sobaki/']] });
-catalogPage({ path: 'catalog/igrushki/', title: `${t('catalog.categories.toys', 'Игрушки JOYSER')} — ДОМОКУП`, h1: t('catalog.categories.toys', 'Игрушки JOYSER'), items: accessories, crumbsList: [[HOME, ''], [t('nav.bottomTabs.catalog', 'Каталог'), 'catalog/'], [t('catalog.categories.toys', 'Игрушки JOYSER'), 'catalog/igrushki/']] });
+const CATALOG = t('nav.bottomTabs.catalog', 'Каталог');
+catalogPage({ path: 'catalog/', title: `${CATALOG} — ДОМОКУП`, h1: CATALOG, items: ALL, showCats: true, crumbsList: [[HOME, ''], [CATALOG, 'catalog/']] });
+for (const c of CATS) {
+  const items = ALL.filter(i => i.cat === c.key);
+  if (!items.length) continue;
+  catalogPage({ path: `catalog/${c.key}/`, title: `${c.name} — ДОМОКУП`, h1: c.name, items, crumbsList: [[HOME, ''], [CATALOG, 'catalog/'], [c.name, `catalog/${c.key}/`]] });
+}
 
 // 상품 상세
 for (const it of ALL) {
   const isFeed = it.kind === 'feed';
   const ct = it.content || {};
   const siblings = isFeed ? feeds.filter(f => f.group === it.group) : [];
-  const section = isFeed ? (it.species === 'cat' ? [t('nav.forCats', 'Для кошек'), 'catalog/koshki/'] : [t('nav.forDogs', 'Для собак'), 'catalog/sobaki/']) : [t('catalog.categories.toys', 'Игрушки JOYSER'), 'catalog/igrushki/'];
-  const cr = crumbs([[HOME, ''], section, [it.displayName, it.url]]);
+  const section = [it.catName, `catalog/${it.cat}/`];
+  const cr = crumbs([[HOME, ''], [CATALOG, 'catalog/'], section, [it.displayName, it.url]]);
   const tabs = [];
-  const desc = (ct.description || []).map(p => `<p>${esc(fill(p))}</p>`).join('');
+  const desc = isFeed ? (ct.description || []).map(p => `<p>${esc(fill(p))}</p>`).join('') : (it.desc || []).map(p => `<p>${esc(p)}</p>`).join('');
   tabs.push(['description', t('product.tabs.description', 'Описание'), (desc || `<p>${esc(it.name)}</p>`) + (isFeed ? `<p class="muted">${esc(t('product.healthDisclaimer', ''))}</p>` : '')]);
   if (isFeed) tabs.push(['composition', t('product.tabs.composition', 'Состав'), (ct.composition?.length ? `<table class="spec">${ct.composition.map(r => `<tr><th scope="row">${esc(r.label)}</th><td>${esc(r.value)}</td></tr>`).join('')}</table><p class="muted">${esc(t('product.compositionPending', ''))}</p>` : `<p>${esc(t('product.compositionPending', ''))}</p>`)]);
   if (isFeed) tabs.push(['feeding', t('product.tabs.feeding', 'Кормление'), ct.feeding?.rows ? `<div class="tbl"><table class="feed"><thead><tr>${ct.feeding.columns.map(c => `<th scope="col">${esc(c)}</th>`).join('')}</tr></thead><tbody>${ct.feeding.rows.map(r => `<tr>${r.map((c, i) => i ? `<td>${esc(c)}</td>` : `<th scope="row">${esc(c)}</th>`).join('')}</tr>`).join('')}</tbody></table></div><ul class="notes">${(ct.feeding.notes || []).map(n => `<li>${esc(fill(n))}</li>`).join('')}</ul><p class="muted">${esc(t('product.feedingDisclaimer', ''))}</p>` : `<p>${esc(t('product.feedingPending', 'Норма кормления указана на упаковке.'))}</p>`]);
-  tabs.push(['delivery', t('product.tabs.delivery', 'Доставка'), `<p>${esc(t('product.deliveryText', 'Доставка СДЭК по всей России, самовывоз в Москве.'))}</p><p><a href="${u('delivery/')}">${esc(t('pages.delivery.title', 'Доставка и оплата'))} ${icon('arrow')}</a></p>`]);
-  tabs.push(['reviews', `${t('product.tabs.reviews', 'Отзывы')} (${it.reviews || 0})`, `<p class="muted">${esc(t('product.reviewsEmpty', 'Отзывов пока нет. Купили этот товар? Расскажите о нём — это поможет другим.'))}</p>`]);
+  tabs.push(['delivery', t('product.tabs.delivery', 'Доставка'), `<p>${esc(t('pages.delivery.intro', 'Доставка СДЭК по всей России, самовывоз в Москве.'))}</p><p><a href="${u('delivery/')}">${esc(t('pages.delivery.title', 'Доставка и оплата'))} ${icon('arrow')}</a></p>`]);
+  tabs.push(['reviews', `${t('product.tabs.reviews', 'Отзывы')} (${it.reviews || 0})`, `<p class="muted">${esc(t('product.reviewsEmpty', 'Отзывов пока нет.'))}</p>`]);
 
-  const ld = { '@context': 'https://schema.org', '@type': 'Product', name: it.name, sku: it.sku, image: it.imageRemote ? it.image : `https://domokup.ru/`, brand: isFeed ? 'Pure Nature' : 'JOYSER', offers: { '@type': 'Offer', price: it.price, priceCurrency: 'RUB', availability: it.inStock ? 'https://schema.org/InStock' : 'https://schema.org/OutOfStock', url: `https://domokup.ru/${it.url}` } };
+  const ld = { '@context': 'https://schema.org', '@type': 'Product', name: it.name, sku: it.sku, image: `https://domokup.ru/${it.url}`, ...(isFeed ? { brand: { '@type': 'Brand', name: 'Pure Nature' } } : /joyser/i.test(it.name) ? { brand: { '@type': 'Brand', name: 'JOYSER' } } : {}), offers: { '@type': 'Offer', price: it.price, priceCurrency: 'RUB', availability: it.inStock ? 'https://schema.org/InStock' : 'https://schema.org/OutOfStock', url: `https://domokup.ru/${it.url}` } };
+  const related = isFeed ? feeds.filter(f => f.species === it.species && f.group !== it.group && f.inStock) : ALL.filter(i => i.cat === it.cat && i.id !== it.id && i.inStock).slice(0, 8);
   const body = `${cr.html}
 <article class="wrap pdp" data-product data-sku="${esc(it.sku)}">
-  <div class="pdp-media">${img(it, 'full', { lazy: false })}${isFeed ? `<span class="badge badge-gift">${icon('gift')}${esc(t('product.giftBadgeShort', 'Подарок'))}</span><span class="badge badge-kg">${it.kg} кг</span>` : ''}</div>
+  <div class="pdp-media">${img(it, 'full', { lazy: false })}${isFeed ? `<span class="badge badge-gift">${icon('gift')}${esc(t('product.giftBadgeShort', 'Подарок'))}</span><span class="badge badge-kg">${esc(it.pack)}</span>` : ''}</div>
   <div class="pdp-info">
-    ${isFeed ? `<p class="eyebrow">Pure Nature · ${esc(SPECIES_RU[it.species])}</p>` : `<p class="eyebrow">JOYSER</p>`}
+    <p class="eyebrow">${isFeed ? `Pure Nature · ${esc(SPECIES_RU[it.species])}` : esc(it.catName)}</p>
     <h1>${esc(it.displayName)}</h1>
     ${ct.shortTagline ? `<p class="lead">${esc(fill(ct.shortTagline))}</p>` : ''}
-    ${siblings.length > 1 ? `<div class="weights" role="group" aria-label="${esc(t('product.weight', 'Вес'))}"><span>${esc(t('product.weight', 'Вес'))}</span>${siblings.map(s => s.sku === it.sku ? `<a aria-current="true" class="w-on" href="${u(s.url)}">${s.kg} кг<small>${rub(Math.round(s.price / s.kg))}/кг</small></a>` : `<a href="${u(s.url)}">${s.kg} кг<small>${rub(Math.round(s.price / s.kg))}/кг</small></a>`).join('')}</div>` : ''}
+    <p class="muted">${esc(t('product.sku', 'Артикул'))}: ${esc(it.sku)}</p>
+    ${siblings.length > 1 ? `<div class="weights" role="group" aria-label="${esc(t('product.weight', 'Вес'))}"><span>${esc(t('product.otherWeights', 'Вес упаковки'))}</span>${siblings.map(s => `<a${s.id === it.id ? ' aria-current="true" class="w-on"' : ''} href="${u(s.url)}">${esc(s.pack)}<small>${rub(Math.round(s.price / s.kg))}/кг${s.inStock ? '' : ' · нет'}</small></a>`).join('')}</div>` : ''}
     <div class="pdp-price"><b>${rub(it.price)}</b>${isFeed ? `<span class="perkg">${rub(Math.round(it.price / it.kg))} / кг</span>` : ''}</div>
     <p class="stock ${it.inStock ? 'ok' : 'no'}">${icon(it.inStock ? 'check' : 'close')}${esc(it.inStock ? t('product.inStock', 'В наличии') : t('product.outOfStock', 'Нет в наличии'))}</p>
-    ${isFeed ? `<p class="gift-note">${icon('gift')}<span>${esc(t('product.giftNote', 'Игрушка JOYSER в подарок к каждому заказу корма'))}</span></p>` : `<p class="gift-note">${icon('gift')}<span>${esc(t('product.couponNote', 'Ежемесячная скидка 7% на игрушки и шлейки JOYSER — по промокоду месяца.'))}</span></p>`}
+    ${isFeed ? `<p class="gift-note">${icon('gift')}<span>${esc(t('product.giftNote', 'Игрушка JOYSER в подарок к каждому заказу корма'))}</span></p>` : it.joyser ? `<p class="gift-note">${icon('gift')}<span>${esc(t('home.giftBanner.note', 'Каждый месяц — промокод на скидку 7 % на игрушки и шлейки JOYSER.'))}</span></p>` : ''}
     <div class="pdp-buy">
-      ${it.inStock ? `<div class="qty" data-qty><button type="button" data-step="-1" aria-label="Меньше">${icon('minus')}</button><input type="number" min="1" max="20" value="1" inputmode="numeric" aria-label="Количество"><button type="button" data-step="1" aria-label="Больше">${icon('plus')}</button></div><button class="btn btn-primary btn-wide" type="button" data-add="${esc(it.sku)}" data-with-qty>${icon('cart')}${esc(t('product.addToCart', 'Добавить в корзину'))}</button>` : `<a class="btn btn-primary btn-wide" href="https://t.me/domopet_kor" target="_blank" rel="noopener">${icon('bell')}${esc(t('product.notifyMe', 'Сообщить о поступлении'))}</a>`}
+      ${it.inStock ? `<div class="qty" data-qty><button type="button" data-step="-1" aria-label="Меньше">${icon('minus')}</button><input type="number" min="1" max="20" value="1" inputmode="numeric" aria-label="${esc(t('product.quantity', 'Количество'))}"><button type="button" data-step="1" aria-label="Больше">${icon('plus')}</button></div><button class="btn btn-primary btn-wide" type="button" data-add="${esc(it.sku)}" data-with-qty>${icon('cart')}${esc(t('product.addToCart', 'В корзину'))}</button>` : `<a class="btn btn-primary btn-wide" href="https://t.me/domopet_kor" target="_blank" rel="noopener">${icon('bell')}${esc(t('product.notifyMe', 'Сообщить о поступлении'))}</a>`}
     </div>
     <ul class="pdp-facts">
-      <li>${icon('truck')}<span>${esc(t('product.deliveryEstimate', 'Отправка СДЭК за 1–3 рабочих дня'))}</span></li>
-      <li>${icon('pin')}<span>${esc(t('product.pickupNote', 'Самовывоз: Москва, ул. Производственная, 11, стр. 1'))}</span></li>
+      <li>${icon('truck')}<span>${esc(t('product.deliveryEstimate', 'Срок и стоимость доставки рассчитаем при оформлении заказа.'))}</span></li>
+      <li>${icon('pin')}<span>${esc(t('product.pickupNote', 'Самовывоз в Москве: ул. Производственная, д. 11, стр. 1'))}</span></li>
       ${isFeed ? `<li>${icon('shield')}<span>${esc(t('product.importNote', 'Официальный импорт: данные импортёра на русской этикетке'))}</span></li>` : ''}
     </ul>
     ${(ct.bullets || []).length ? `<ul class="bullets">${ct.bullets.map(b => `<li>${icon('check')}<span>${esc(fill(b))}</span></li>`).join('')}</ul>` : ''}
   </div>
   <div class="pdp-tabs" data-tabs>
-    <div class="tablist" role="tablist">${tabs.map(([id, label], i) => `<button role="tab" id="tab-${id}" aria-controls="panel-${id}" aria-selected="${i === 0}" tabindex="${i === 0 ? 0 : -1}">${esc(label)}</button>`).join('')}</div>
+    <div class="tablist" role="tablist">${tabs.map(([id, label], i) => `<button type="button" role="tab" id="tab-${id}" aria-controls="panel-${id}" aria-selected="${i === 0}" tabindex="${i === 0 ? 0 : -1}">${esc(label)}</button>`).join('')}</div>
     ${tabs.map(([id, , html], i) => `<section role="tabpanel" id="panel-${id}" aria-labelledby="tab-${id}"${i === 0 ? '' : ' hidden'}>${html}</section>`).join('')}
   </div>
 </article>
-${isFeed ? `<section class="sec wrap"><div class="sec-h"><h2>${esc(t('product.relatedTitle', 'Вам может пригодиться'))}</h2></div><ul class="grid grid-scroll">${feeds.filter(f => f.species === it.species && f.group !== it.group).map(card).join('')}</ul></section>` : ''}
-<div class="buybar" data-buybar><div><b>${rub(it.price)}</b><small>${esc(it.displayName)}</small></div>${it.inStock ? `<button class="btn btn-primary" type="button" data-add="${esc(it.sku)}">${esc(t('product.addToCartShort', 'В корзину'))}</button>` : `<a class="btn btn-primary" href="https://t.me/domopet_kor" target="_blank" rel="noopener">${esc(t('product.notifyShort', 'Сообщить'))}</a>`}</div>`;
-  page(it.url, layout({ path: it.url, title: `${it.displayName} — купить в ДОМОКУП`, description: fill(ct.shortTagline) || it.name, body, jsonld: [ld, cr.ld], active: 'catalog' }));
+${related.length ? `<section class="sec wrap"><div class="sec-h"><h2>${esc(t('product.relatedTitle', 'Вам может пригодиться'))}</h2></div><ul class="grid grid-scroll">${related.map(card).join('')}</ul></section>` : ''}
+<div class="buybar" data-buybar><div><b>${rub(it.price)}</b><small>${esc(it.displayName)}</small></div>${it.inStock ? `<button class="btn btn-primary" type="button" data-add="${esc(it.sku)}">${esc(t('product.addToCart', 'В корзину'))}</button>` : `<a class="btn btn-primary" href="https://t.me/domopet_kor" target="_blank" rel="noopener">${esc(t('product.notifyShort', 'Сообщить'))}</a>`}</div>`;
+  const descMeta = (fill(ct.shortTagline) || (it.desc || [])[0] || it.name).slice(0, 155);
+  page(it.url, layout({ path: it.url, title: `${it.displayName} — ДОМОКУП`, description: descMeta, body, jsonld: [ld, cr.ld], active: 'catalog' }));
 }
 
 // 장바구니·결제(데모)·검색
-page('cart/', layout({ path: 'cart/', title: `${t('nav.bottomTabs.cart', 'Корзина')} — ДОМОКУП`, description: '', active: 'cart', body: `
+page('cart/', layout({ path: 'cart/', title: `${t('nav.bottomTabs.cart', 'Корзина')} — ДОМОКУП`, description: "Корзина интернет-магазина ДОМОКУП: товары, подарок к заказу корма и промокод.", active: 'cart', body: `
 <section class="wrap cart" data-cart-page>
   <h1>${esc(t('nav.bottomTabs.cart', 'Корзина'))}</h1>
   <div data-cart-empty hidden class="empty-state">${icon('cart', 'ic-lg')}<p>${esc(t('cart.empty.title', 'Корзина пока пуста'))}</p><a class="btn btn-primary" href="${u('catalog/')}">${esc(t('cart.empty.cta', 'Перейти в каталог'))}</a></div>
@@ -379,7 +423,7 @@ page('cart/', layout({ path: 'cart/', title: `${t('nav.bottomTabs.cart', 'Кор
   </div>
 </section>` }));
 
-page('checkout/', layout({ path: 'checkout/', title: `${t('checkout.title', 'Оформление заказа')} — ДОМОКУП`, description: '', active: 'cart', body: `
+page('checkout/', layout({ path: 'checkout/', title: `${t('checkout.title', 'Оформление заказа')} — ДОМОКУП`, description: "Оформление заказа в интернет-магазине ДОМОКУП: доставка СДЭК, самовывоз в Москве, оплата картой или через СБП.", active: 'cart', body: `
 <section class="wrap checkout">
   <h1>${esc(t('checkout.title', 'Оформление заказа'))}</h1>
   <p class="demo-note" role="alert">${esc(t('checkout.demoNotice', 'Это демонстрационная версия сайта: заказ не будет отправлен, данные никуда не передаются.'))}</p>
@@ -405,10 +449,10 @@ page('checkout/', layout({ path: 'checkout/', title: `${t('checkout.title', 'О�
   </form>
 </section>` }));
 
-page('search/', layout({ path: 'search/', title: `${t('nav.bottomTabs.search', 'Поиск')} — ДОМОКУП`, description: '', active: 'search', body: `
+page('search/', layout({ path: 'search/', title: `${t('nav.bottomTabs.search', 'Поиск')} — ДОМОКУП`, description: "Поиск по каталогу ДОМОКУП: корма Pure Nature, игрушки, шлейки, миски и товары для ухода.", active: 'search', body: `
 <section class="wrap search-page">
   <h1>${esc(t('nav.bottomTabs.search', 'Поиск'))}</h1>
-  <form role="search" data-search-form><label class="sr" for="q">${esc(t('nav.searchLabel', 'Поиск'))}</label><input id="q" name="q" type="search" autocomplete="off" placeholder="${esc(t('nav.searchPlaceholder', 'Например: пюр натур лосось'))}"></form>
+  <form role="search" data-search-form><label class="sr" for="q">${esc(t('nav.searchLabel', 'Поиск'))}</label><input id="q" name="q" type="search" autocomplete="off" placeholder="${esc(t('nav.searchPlaceholder', 'Например: пюр натур лосось'))}"><button class="btn btn-primary" type="submit">${esc(t('nav.searchSubmit', 'Найти'))}</button></form>
   <p class="muted" data-search-hint>${esc(t('catalog.searchHint', 'Можно писать по-русски или латиницей: «пюр натур», «pure nature», «лосось».'))}</p>
   <ul class="grid" data-search-results></ul>
   <p class="empty" data-search-empty hidden>${esc(t('catalog.noResults', 'По вашему запросу ничего не нашлось.'))} <a href="https://t.me/domopet_kor" target="_blank" rel="noopener">${esc(t('catalog.askUs', 'Спросите нас в Telegram'))}</a></p>
@@ -428,13 +472,13 @@ textPage('contacts/', t('pages.contacts.title', 'Контакты'), `
 <ul class="contact-list">
 <li>${icon('tg')}<div><b>Telegram</b><a href="https://t.me/domopet_kor" target="_blank" rel="noopener">t.me/domopet_kor</a></div></li>
 <li>${icon('chat')}<div><b>MAX</b><span>${esc(t('pages.contacts.max', 'Напишите нам в MAX — ссылка уточняется'))}</span></div></li>
-<li>${icon('chat')}<div><b>${esc(t('pages.contacts.phone', 'Телефон'))}</b><a href="tel:+79147219286">+7 914 721-92-86</a></div></li>
+<li>${icon('chat')}<div><b>${esc(t('pages.contacts.phoneLabel', 'Телефон'))}</b><a href="tel:+79147219286">${PHONE}</a></div></li>
 <li>${icon('pin')}<div><b>${esc(t('pages.contacts.pickup', 'Самовывоз'))}</b><span>${esc(fill(t('pages.contacts.pickupText', 'г. Москва, ул. Производственная, д. 11, стр. 1 · {{PICKUP_HOURS}}')))}</span></div></li>
 </ul>
 <p class="req">${esc(t('footer.requisites', 'ИП Цхай Наталья Генадьевна · ИНН 250908672910 · ОГРНИП 319253600007389'))}</p>`);
 
-page('404.html', layout({ path: '404.html', title: 'Страница не найдена — ДОМОКУП', description: '', body: `<section class="wrap empty-state">${icon('paw', 'ic-lg')}<h1>${esc(t('pages.notFound.title', 'Страница не найдена'))}</h1><a class="btn btn-primary" href="${u('catalog/')}">${esc(t('cart.empty.cta', 'Перейти в каталог'))}</a></section>` }));
-page('offline/', layout({ path: 'offline/', title: 'Нет соединения — ДОМОКУП', description: '', body: `<section class="wrap empty-state">${icon('paw', 'ic-lg')}<h1>${esc(t('pages.offline', 'Нет подключения к интернету'))}</h1><p>${esc(t('pages.offlineText', 'Корзина сохранится. Проверьте соединение и обновите страницу.'))}</p></section>` }));
+page('404.html', layout({ path: '404.html', title: 'Страница не найдена — ДОМОКУП', description: "Такой страницы нет. Перейдите в каталог интернет-магазина ДОМОКУП.", body: `<section class="wrap empty-state">${icon('paw', 'ic-lg')}<h1>${esc(t('pages.notFound.title', 'Страница не найдена'))}</h1><a class="btn btn-primary" href="${u('catalog/')}">${esc(t('cart.empty.cta', 'Перейти в каталог'))}</a></section>` }));
+page('offline/', layout({ path: 'offline/', title: 'Нет соединения — ДОМОКУП', description: "Нет подключения к интернету. Корзина сохранится.", body: `<section class="wrap empty-state">${icon('paw', 'ic-lg')}<h1>${esc(t('pages.offline', 'Нет подключения к интернету'))}</h1><p>${esc(t('pages.offlineText', 'Корзина сохранится. Проверьте соединение и обновите страницу.'))}</p></section>` }));
 
 // ───────────────────────── 쓰기 ─────────────────────────
 rmSync(DIST, { recursive: true, force: true });
@@ -447,12 +491,12 @@ for (const [path, html] of pages) {
 }
 
 // 클라이언트가 쓰는 상품 데이터(장바구니·검색). 개인정보 없음.
-const clientData = ALL.map(i => ({ s: i.sku, n: i.displayName, f: i.name, p: i.price, k: i.kind, sp: i.species, fl: i.flavor || '', kg: i.kg || 0, u: i.url, t: i.imageRemote ? i.thumb : i.thumb, j: i.joyser ? 1 : 0, st: i.inStock ? 1 : 0 }));
+const clientData = ALL.map(i => ({ s: i.sku, n: i.displayName, f: i.name, p: i.price, k: i.kind, sp: i.species, fl: i.flavor || '', kg: i.kg || 0, u: i.url, t: i.thumb, c: i.cat, j: i.joyser ? 1 : 0, st: i.inStock ? 1 : 0 }));
 writeFileSync(join(DIST, 'data.json'), JSON.stringify({ v: BUILD_DATE, gift: { ...(C.gift || {}), line: t('cart.giftLine', C.gift?.line) }, coupons: [{ code: 'JOY7-NOV26', pct: 7, scope: 'joyser', until: '2026-11-30', single: true }], items: clientData }));
 
 writeFileSync(join(DIST, 'manifest.webmanifest'), toRel(JSON.stringify({
   name: 'ДОМОКУП — корма Pure Nature', short_name: 'ДОМОКУП', lang: 'ru', start_url: './', scope: './', display: 'standalone',
-  background_color: '#ffffff', theme_color: '#1F3A2E',
+  background_color: '#ffffff', theme_color: '#0B6B4A',
   icons: [
     { src: u('assets/img/icon-192.png'), sizes: '192x192', type: 'image/png' },
     { src: u('assets/img/icon-512.png'), sizes: '512x512', type: 'image/png' },
@@ -466,5 +510,5 @@ writeFileSync(join(DIST, '.nojekyll'), '');
 // 무게 보고
 let total = 0; const big = [];
 (function walk(d) { for (const f of readdirSync(d)) { const p = join(d, f); const s = statSync(p); if (s.isDirectory()) walk(p); else { total += s.size; if (/\.(webp|jpg|png)$/.test(f) && s.size > 200 * 1024) big.push(`${f} ${(s.size / 1024).toFixed(0)}KB`); } } })(DIST);
-console.log(`페이지 ${pages.length}개 · 사료 ${feeds.length} · 장난감·하네스 ${accessories.length} · 전체 ${(total / 1024).toFixed(0)}KB`);
+console.log(`페이지 ${pages.length}개 · 사료 ${feeds.length} · 용품 ${accessories.length} · 전체 ${(total / 1024).toFixed(0)}KB`);
 if (big.length) console.log('⚠ 200KB 넘는 이미지:', big.join(', '));

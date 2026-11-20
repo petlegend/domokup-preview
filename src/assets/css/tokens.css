@@ -17,10 +17,10 @@
 :root {
   color-scheme: light;
 
-  /* 브랜드 — 진녹색 #1F3A2E 가 기준이다 */
-  --dk-color-brand: #1F3A2E;            /* 흰 배경 위 12.3:1 */
-  --dk-color-brand-hover: #2B4D3E;      /* 누를 때·올렸을 때 */
-  --dk-color-brand-soft: #E6EEE9;       /* 브랜드 색 옅은 바탕(배지·선택된 칩) */
+  /* 브랜드 — «Хвойный» #0B6B4A — 2026-11-20 대표 확정(앱과 같은 값). 넓은 면은 밝게, 진한 녹색은 포인트만 */
+  --dk-color-brand: #0B6B4A;            /* 흰 배경 위 6.3:1 (앱과 같은 값) */
+  --dk-color-brand-hover: #085338;      /* 누를 때·올렸을 때 */
+  --dk-color-brand-soft: #DCF0E4;       /* 브랜드 색 옅은 바탕(배지·선택된 칩) */
   --dk-color-on-brand: #FFFFFF;         /* 브랜드 버튼 위 글자 */
 
   /* 보조색 — 따뜻한 황토. 선물·강조 표시에만 쓴다(넓은 면적 금지) */
@@ -29,18 +29,18 @@
   --dk-color-on-accent: #FFFFFF;
 
   /* 바탕·면·선 */
-  --dk-color-bg: #FFFFFF;               /* 페이지 바탕 */
-  --dk-color-bg-subtle: #F6F4EE;        /* 구역 구분용 옅은 바탕 */
+  --dk-color-bg: #FBFAF7;               /* 페이지 바탕 */
+  --dk-color-bg-subtle: #F3F1EC;        /* 구역 구분용 옅은 바탕 */
   --dk-color-surface: #FFFFFF;          /* 카드·시트 */
   --dk-color-surface-raised: #FFFFFF;   /* 떠 있는 면(팝오버·하단 시트) */
-  --dk-color-border: #D9DED9;           /* 일반 구분선(장식용, 대비 요구 없음) */
-  --dk-color-border-strong: #7A857F;    /* 입력칸 테두리 3.8:1 (비텍스트 3:1 기준 충족) */
+  --dk-color-border: #E3DFD7;           /* 일반 구분선(장식용, 대비 요구 없음) */
+  --dk-color-border-strong: #878D84;    /* 입력칸 테두리 3.8:1 (비텍스트 3:1 기준 충족) */
 
   /* 글자 */
-  --dk-color-text: #1C2420;             /* 본문 15.9:1 */
-  --dk-color-text-muted: #5A6660;       /* 보조 글자 6.0:1 (옅은 바탕 위 5.5:1) */
+  --dk-color-text: #1A1C19;             /* 본문 15.9:1 */
+  --dk-color-text-muted: #5C6159;       /* 보조 글자 6.0:1 (옅은 바탕 위 5.5:1) */
   --dk-color-text-disabled: #7A857F;    /* 비활성 — 정보 전달에 쓰지 않는다 */
-  --dk-color-link: #1F3A2E;
+  --dk-color-link: #0B6B4A;
 
   /* 상태색 — 글자용(-fg)과 옅은 바탕(-bg)을 짝으로 쓴다 */
   --dk-color-success: #1E7A46;          /* 5.4:1 «В наличии», 완료 */
