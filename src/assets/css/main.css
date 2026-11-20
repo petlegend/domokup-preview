@@ -221,8 +221,9 @@ details p { color: var(--dk-color-text-muted); }
 .tbl { overflow-x: auto; }
 .notes { font-size: var(--dk-font-size-sm); padding-left: 1.2em; }
 @media (min-width: 900px) { .pdp { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: var(--dk-space-7); align-items: start; } .pdp-media { position: sticky; top: calc(var(--dk-header-height) + 16px); } }
-.buybar { position: fixed; left: 0; right: 0; bottom: calc(var(--dk-tabbar-height) + var(--dk-safe-bottom)); z-index: var(--dk-z-sticky); display: flex; align-items: center; justify-content: space-between; gap: var(--dk-space-3); padding: var(--dk-space-2) var(--dk-space-4); background: var(--dk-color-surface-raised); border-top: 1px solid var(--dk-color-border); box-shadow: var(--dk-shadow-3); transform: translateY(110%); visibility: hidden; transition: transform var(--dk-motion-base) var(--dk-motion-easing), visibility 0s linear var(--dk-motion-base); }
-.buybar.show { transform: none; visibility: visible; transition-delay: 0s; }
+.buybar { position: fixed; left: 0; right: 0; bottom: calc(var(--dk-tabbar-height) + var(--dk-safe-bottom)); z-index: var(--dk-z-sticky); align-items: center; justify-content: space-between; gap: var(--dk-space-3); padding: var(--dk-space-2) var(--dk-space-4); background: var(--dk-color-surface-raised); border-top: 1px solid var(--dk-color-border); box-shadow: var(--dk-shadow-3); display: none; }
+.buybar.show { display: flex; animation: up var(--dk-motion-base) var(--dk-motion-easing); }
+@keyframes up { from { transform: translateY(100%); } }
 .buybar div { min-width: 0; }
 .buybar b { display: block; color: var(--dk-color-price); }
 .buybar small { display: block; font-size: 11px; color: var(--dk-color-text-muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
@@ -246,7 +247,7 @@ details p { color: var(--dk-color-text-muted); }
 .checkout input:not([type="radio"]):not([type="checkbox"]) { text-transform: none; width: 100%; display: block; margin-top: 4px; }
 .coupon-msg { font-size: var(--dk-font-size-sm); color: var(--dk-color-coupon); min-height: 1.5em; margin-top: var(--dk-space-2); }
 .totals { display: grid; grid-template-columns: 1fr auto; gap: var(--dk-space-2) var(--dk-space-4); margin: var(--dk-space-4) 0; font-size: var(--dk-font-size-sm); }
-.totals dd { margin: 0; text-align: right; }
+.totals dd { margin: 0; text-align: right; white-space: nowrap; }
 .totals .sum { font-size: var(--dk-font-size-lg); font-weight: var(--dk-font-weight-bold); padding-top: var(--dk-space-2); border-top: 1px solid var(--dk-color-border); }
 
 /* 결제(데모) */
@@ -298,3 +299,11 @@ legend { font-weight: var(--dk-font-weight-bold); padding: 0 var(--dk-space-2); 
 .filter-row { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: var(--dk-space-3); }
 .search-page form { display: flex; gap: var(--dk-space-2); }
 .search-page input { flex: 1; min-width: 0; min-height: var(--dk-tap-min); border: 1px solid var(--dk-color-border-strong); border-radius: var(--dk-radius-pill); padding: 0 var(--dk-space-4); font: inherit; font-size: 16px; background: var(--dk-color-surface); color: var(--dk-color-text); }
+
+/* 결제 데모 */
+.radio span small { display: block; color: var(--dk-color-text-muted); font-size: var(--dk-font-size-xs); }
+.paybox { max-width: 520px; margin: var(--dk-space-5) auto; padding: var(--dk-space-5); border: 1px solid var(--dk-color-border); border-radius: var(--dk-radius-lg); background: var(--dk-color-surface); box-shadow: var(--dk-shadow-1); }
+.pay-methods { display: flex; gap: var(--dk-space-2); margin-bottom: var(--dk-space-4); }
+.pm { flex: 1; text-align: center; padding: var(--dk-space-3); border-radius: var(--dk-radius-md); background: var(--dk-color-bg-subtle); font-weight: var(--dk-font-weight-medium); }
+.pay-actions { display: grid; gap: var(--dk-space-3); }
+.empty-state .btn { margin-top: var(--dk-space-2); }

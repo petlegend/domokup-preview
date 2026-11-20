@@ -117,7 +117,12 @@
         if (new Date() > new Date(cp.until + 'T23:59:59+03:00')) { msg.textContent = 'Срок действия промокода истёк.'; return; }
         save(CKEY, cp.code); renderCart();
       });
-    } else if (f.matches('[data-checkout]')) { e.preventDefault(); }
+    } else if (f.matches('[data-checkout]')) {
+      e.preventDefault();
+      var ok = $('[data-consent]', f).checked; $('[data-consent-msg]', f).hidden = ok;
+      if (ok && cart().lines.length) { track('initiate_payment', {}); location.href = BASE + 'checkout/pay/'; }
+      else if (ok) { toast('Корзина пуста'); }
+    }
   });
 
   // ── 상품 상세 탭 (WAI-ARIA) ──
@@ -220,6 +225,8 @@
     if (bar && buy && 'IntersectionObserver' in window) new IntersectionObserver(function (en) { bar.classList.toggle('show', !en[0].isIntersecting); }).observe(buy);
   }
   if ($('[data-checkout]')) getData().then(function () { paintTotals(); track('initiate_checkout', {}); });
+  else if ($('.paybox')) getData().then(paintTotals);
+  if ($('[data-pay-ok]')) $('[data-pay-ok]').addEventListener('click', function () { track('purchase_demo', {}); setCart({ v: 1, lines: [] }); save(CKEY, null); });
 
   // ── 알림 ──
   var tt;

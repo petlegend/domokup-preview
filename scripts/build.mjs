@@ -26,6 +26,10 @@ const BUILD_DATE = new Date().toISOString().slice(0, 10);
 const readJson = (p, fallback) => (existsSync(p) ? JSON.parse(readFileSync(p, 'utf8')) : fallback);
 const copyFile = readJson(join(SRC, 'data', 'copy-ru.json'), {});
 const contentFile = readJson(join(SRC, 'data', 'products-content-ru.json'), {});
+// 팀 산출물 덮어쓰기: 화면용 이름(names.json)·러시아어 설명(desc-*.json). 파일이 없으면 원문을 쓴다.
+const OV_DIR = join(SRC, 'data', 'overrides');
+const OV_NAMES = readJson(join(OV_DIR, 'names.json'), {});
+const OV_DESC = existsSync(OV_DIR) ? Object.assign({}, ...readdirSync(OV_DIR).filter(n => /^desc-.*.json$/.test(n)).map(n => readJson(join(OV_DIR, n), {}))) : {};
 const C = deepMerge(readJson(join(SRC, 'data', 'copy-defaults-ru.json')), copyFile);
 
 function deepMerge(a, b) {
@@ -58,6 +62,7 @@ const CATS = [
   { key: 'gruming', name: 'Груминг', slugs: ['gruming', 'gruming-cat-products', 'tovary-dlja-krasoty'], sp: 'both', icon: 'check' },
   { key: 'napolniteli', name: 'Наполнители для туалета', slugs: ['ever-dream'], sp: 'cat', icon: 'box' },
 ];
+const PHOTO_BLOCK = new Set([4301, 4375, 4379, 4400, 5148, 5153, 6449, 6472, 6473, 6474, 6475, 6476, 6477, 6478, 6483]);
 const catBySlug = new Map(CATS.flatMap(c => c.slugs.map(sl => [sl, c])));
 
 const FLAVOR_RU = { salmon: 'Лосось', chicken: 'Курица', diet: 'Диета', lamb: 'Ягнёнок' };
@@ -101,9 +106,12 @@ const ALL = SOURCE.map(p => {
       displayName: (ct.displayName || `Pure Nature ${{ salmon: 'с лососем', chicken: 'с курицей', diet: 'Диета', lamb: 'с ягнёнком' }[fi.flavor] || ''} для ${cat.sp === 'cat' ? 'кошек' : 'собак'}`) + (bundle ? ` · набор ${fi.pack}` : ''),
       image: `assets/img/${group}-600.webp`, thumb: `assets/img/${group}-300.webp` };
   }
-  const local = existsSync(join(SRC, 'assets', 'img', 'p', `p-${p.id}-300.webp`));
-  return { ...base, kind: 'acc', displayName: p.name, desc: paras(p.shortDescriptionHtml).concat(paras(p.descriptionHtml)),
-    image: local ? `assets/img/p/p-${p.id}-600.webp` : 'assets/img/icon-512.png', thumb: local ? `assets/img/p/p-${p.id}-300.webp` : 'assets/img/icon-192.png' };
+  // 사진에 금지·효능 문구가 박힌 상품(이미지점검팀 11/20 보고) — 사진을 바꾸기 전까지 중립 이미지
+  const blocked = PHOTO_BLOCK.has(p.id);
+  const local = !blocked && existsSync(join(SRC, 'assets', 'img', 'p', `p-${p.id}-300.webp`));
+  const ov = OV_DESC[String(p.id)] || {};
+  return { ...base, kind: 'acc', displayName: OV_NAMES[String(p.id)]?.displayName || p.name, short: ov.short || '', bullets: ov.bullets || [], desc: ov.description?.length ? ov.description : paras(p.shortDescriptionHtml).concat(paras(p.descriptionHtml)),
+    image: local ? `assets/img/p/p-${p.id}-600.webp` : 'assets/img/no-photo.svg', thumb: local ? `assets/img/p/p-${p.id}-300.webp` : 'assets/img/no-photo.svg' };
 });
 // 진열 순서: 재고 있음 먼저 → 사료 먼저(판매 순위: 고양이 연어 → 치킨 → 다이어트 → 강아지) → 작은 포장 먼저
 const FEED_ORDER = ['cat-salmon', 'cat-chicken', 'cat-diet', 'dog-salmon', 'dog-lamb'];
@@ -370,7 +378,7 @@ for (const it of ALL) {
   const tabs = [];
   const desc = isFeed ? (ct.description || []).map(p => `<p>${esc(fill(p))}</p>`).join('') : (it.desc || []).map(p => `<p>${esc(p)}</p>`).join('');
   tabs.push(['description', t('product.tabs.description', 'Описание'), (desc || `<p>${esc(it.name)}</p>`) + (isFeed ? `<p class="muted">${esc(t('product.healthDisclaimer', ''))}</p>` : '')]);
-  if (isFeed) tabs.push(['composition', t('product.tabs.composition', 'Состав'), (ct.composition?.length ? `<table class="spec">${ct.composition.map(r => `<tr><th scope="row">${esc(r.label)}</th><td>${esc(r.value)}</td></tr>`).join('')}</table><p class="muted">${esc(t('product.compositionPending', ''))}</p>` : `<p>${esc(t('product.compositionPending', ''))}</p>`)]);
+  if (isFeed) tabs.push(['composition', t('product.tabs.composition', 'Состав'), (ct.composition?.length ? `<table class="spec"><tbody>${ct.composition.map(r => `<tr><th scope="row">${esc(r.label)}</th><td>${esc(r.value)}</td></tr>`).join('')}</tbody></table><p class="muted">${esc(t('product.compositionPending', ''))}</p>` : `<p>${esc(t('product.compositionPending', ''))}</p>`)]);
   if (isFeed) tabs.push(['feeding', t('product.tabs.feeding', 'Кормление'), ct.feeding?.rows ? `<div class="tbl"><table class="feed"><thead><tr>${ct.feeding.columns.map(c => `<th scope="col">${esc(c)}</th>`).join('')}</tr></thead><tbody>${ct.feeding.rows.map(r => `<tr>${r.map((c, i) => i ? `<td>${esc(c)}</td>` : `<th scope="row">${esc(c)}</th>`).join('')}</tr>`).join('')}</tbody></table></div><ul class="notes">${(ct.feeding.notes || []).map(n => `<li>${esc(fill(n))}</li>`).join('')}</ul><p class="muted">${esc(t('product.feedingDisclaimer', ''))}</p>` : `<p>${esc(t('product.feedingPending', 'Норма кормления указана на упаковке.'))}</p>`]);
   tabs.push(['delivery', t('product.tabs.delivery', 'Доставка'), `<p>${esc(t('pages.delivery.intro', 'Доставка СДЭК по всей России, самовывоз в Москве.'))}</p><p><a href="${u('delivery/')}">${esc(t('pages.delivery.title', 'Доставка и оплата'))} ${icon('arrow')}</a></p>`]);
   tabs.push(['reviews', `${t('product.tabs.reviews', 'Отзывы')} (${it.reviews || 0})`, `<p class="muted">${esc(t('product.reviewsEmpty', 'Отзывов пока нет.'))}</p>`]);
@@ -383,7 +391,7 @@ for (const it of ALL) {
   <div class="pdp-info">
     <p class="eyebrow">${isFeed ? `Pure Nature · ${esc(SPECIES_RU[it.species])}` : esc(it.catName)}</p>
     <h1>${esc(it.displayName)}</h1>
-    ${ct.shortTagline ? `<p class="lead">${esc(fill(ct.shortTagline))}</p>` : ''}
+    ${ct.shortTagline ? `<p class="lead">${esc(fill(ct.shortTagline))}</p>` : it.short ? `<p class="lead">${esc(it.short)}</p>` : ''}
     <p class="muted">${esc(t('product.sku', 'Артикул'))}: ${esc(it.sku)}</p>
     ${siblings.length > 1 ? `<div class="weights" role="group" aria-label="${esc(t('product.weight', 'Вес'))}"><span>${esc(t('product.otherWeights', 'Вес упаковки'))}</span>${siblings.map(s => `<a${s.id === it.id ? ' aria-current="true" class="w-on"' : ''} href="${u(s.url)}">${esc(s.pack)}<small>${rub(Math.round(s.price / s.kg))}/кг${s.inStock ? '' : ' · нет'}</small></a>`).join('')}</div>` : ''}
     <div class="pdp-price"><b>${rub(it.price)}</b>${isFeed ? `<span class="perkg">${rub(Math.round(it.price / it.kg))} / кг</span>` : ''}</div>
@@ -397,7 +405,7 @@ for (const it of ALL) {
       <li>${icon('pin')}<span>${esc(t('product.pickupNote', 'Самовывоз в Москве: ул. Производственная, д. 11, стр. 1'))}</span></li>
       ${isFeed ? `<li>${icon('shield')}<span>${esc(t('product.importNote', 'Официальный импорт: данные импортёра на русской этикетке'))}</span></li>` : ''}
     </ul>
-    ${(ct.bullets || []).length ? `<ul class="bullets">${ct.bullets.map(b => `<li>${icon('check')}<span>${esc(fill(b))}</span></li>`).join('')}</ul>` : ''}
+    ${(ct.bullets || it.bullets || []).length ? `<ul class="bullets">${(ct.bullets || it.bullets).map(b => `<li>${icon('check')}<span>${esc(fill(b))}</span></li>`).join('')}</ul>` : ''}
   </div>
   <div class="pdp-tabs" data-tabs>
     <div class="tablist" role="tablist">${tabs.map(([id, label], i) => `<button type="button" role="tab" id="tab-${id}" aria-controls="panel-${id}" aria-selected="${i === 0}" tabindex="${i === 0 ? 0 : -1}">${esc(label)}</button>`).join('')}</div>
@@ -406,7 +414,7 @@ for (const it of ALL) {
 </article>
 ${related.length ? `<section class="sec wrap"><div class="sec-h"><h2>${esc(t('product.relatedTitle', 'Вам может пригодиться'))}</h2></div><ul class="grid grid-scroll">${related.map(card).join('')}</ul></section>` : ''}
 <div class="buybar" data-buybar><div><b>${rub(it.price)}</b><small>${esc(it.displayName)}</small></div>${it.inStock ? `<button class="btn btn-primary" type="button" data-add="${esc(it.sku)}">${esc(t('product.addToCart', 'В корзину'))}</button>` : `<a class="btn btn-primary" href="https://t.me/domopet_kor" target="_blank" rel="noopener">${esc(t('product.notifyShort', 'Сообщить'))}</a>`}</div>`;
-  const descMeta = (fill(ct.shortTagline) || (it.desc || [])[0] || it.name).slice(0, 155);
+  const descMeta = (fill(ct.shortTagline) || it.short || (it.desc || [])[0] || it.name).slice(0, 155);
   page(it.url, layout({ path: it.url, title: `${it.displayName} — ДОМОКУП`, description: descMeta, body, jsonld: [ld, cr.ld], active: 'catalog' }));
 }
 
@@ -414,7 +422,7 @@ ${related.length ? `<section class="sec wrap"><div class="sec-h"><h2>${esc(t('pr
 page('cart/', layout({ path: 'cart/', title: `${t('nav.bottomTabs.cart', 'Корзина')} — ДОМОКУП`, description: "Корзина интернет-магазина ДОМОКУП: товары, подарок к заказу корма и промокод.", active: 'cart', body: `
 <section class="wrap cart" data-cart-page>
   <h1>${esc(t('nav.bottomTabs.cart', 'Корзина'))}</h1>
-  <div data-cart-empty hidden class="empty-state">${icon('cart', 'ic-lg')}<p>${esc(t('cart.empty.title', 'Корзина пока пуста'))}</p><a class="btn btn-primary" href="${u('catalog/')}">${esc(t('cart.empty.cta', 'Перейти в каталог'))}</a></div>
+  <div data-cart-empty class="empty-state">${icon('cart', 'ic-lg')}<p>${esc(t('cart.empty.title', 'Корзина пока пуста'))}</p><a class="btn btn-primary" href="${u('catalog/')}">${esc(t('cart.empty.cta', 'Перейти в каталог'))}</a></div>
   <div data-cart-full hidden>
     <ul class="cart-lines" data-cart-lines></ul>
     <form class="coupon" data-coupon><label for="coupon">${esc(t('cart.coupon.label', 'Промокод'))}</label><div><input id="coupon" autocomplete="off" placeholder="JOY7-NOV26"><button class="btn btn-light" type="submit">${esc(t('cart.coupon.apply', 'Применить'))}</button></div><p class="coupon-msg" data-coupon-msg></p></form>
@@ -423,30 +431,69 @@ page('cart/', layout({ path: 'cart/', title: `${t('nav.bottomTabs.cart', 'Кор
   </div>
 </section>` }));
 
-page('checkout/', layout({ path: 'checkout/', title: `${t('checkout.title', 'Оформление заказа')} — ДОМОКУП`, description: "Оформление заказа в интернет-магазине ДОМОКУП: доставка СДЭК, самовывоз в Москве, оплата картой или через СБП.", active: 'cart', body: `
+// 결제 흐름(데모) — 운영과 같은 순서를 그대로 보여 준다:
+// 주문서(WooCommerce) → 「Перейти к оплате」 → PayKeeper 결제 화면(카드·СБП) → 성공 / 실패 화면.
+// 🔴 데모: 입력칸은 잠겨 있고 어떤 정보도 보내지 않는다. 실제 운영에서는 WooCommerce 기본 결제 화면 + PayKeeper 모듈을 그대로 쓴다(테마는 모양만 바꾼다).
+const DEMO = 'Демонстрация: так будет выглядеть этот шаг. Платёж не выполняется, данные не передаются.';
+page('checkout/', layout({ path: 'checkout/', title: `${t('checkout.title', 'Оформление заказа')} — ДОМОКУП`, description: 'Оформление заказа в интернет-магазине ДОМОКУП: доставка СДЭК, самовывоз в Москве, оплата картой или через СБП.', active: 'cart', body: `
 <section class="wrap checkout">
   <h1>${esc(t('checkout.title', 'Оформление заказа'))}</h1>
-  <p class="demo-note" role="alert">${esc(t('checkout.demoNotice', 'Это демонстрационная версия сайта: заказ не будет отправлен, данные никуда не передаются.'))}</p>
+  <p class="demo-note" role="note">${esc(t('checkout.demoNotice', DEMO))}</p>
   <ol class="steps"><li aria-current="step">${esc(t('checkout.steps.contacts', 'Контакты'))}</li><li>${esc(t('checkout.steps.delivery', 'Доставка'))}</li><li>${esc(t('checkout.steps.payment', 'Оплата'))}</li></ol>
   <form data-checkout novalidate autocomplete="off">
     <fieldset><legend>${esc(t('checkout.steps.contacts', 'Контакты'))}</legend>
-      <label>${esc(t('checkout.fields.name', 'Имя и фамилия'))}<input name="n" disabled></label>
+      <label>${esc(t('checkout.fields.name', 'Имя и фамилия'))}<input name="n" disabled placeholder="Иван Иванов"></label>
       <label>${esc(t('checkout.fields.phone', 'Телефон'))}<input name="p" type="tel" disabled placeholder="+7"></label>
+      <label>${esc(t('checkout.fields.email', 'Электронная почта'))}<input name="e" type="email" disabled placeholder="для чека и статуса заказа"></label>
     </fieldset>
     <fieldset><legend>${esc(t('checkout.deliveryMethods.title', 'Способ доставки'))}</legend>
-      <label class="radio"><input type="radio" name="d" checked>${esc(t('checkout.deliveryMethods.cdekPickupPoint', 'СДЭК — пункт выдачи'))}</label>
-      <label class="radio"><input type="radio" name="d">${esc(t('checkout.deliveryMethods.courier', 'Курьерская доставка'))}</label>
-      <label class="radio"><input type="radio" name="d">${esc(t('checkout.deliveryMethods.selfPickup', 'Самовывоз в Москве'))}</label>
+      <label class="radio"><input type="radio" name="d" checked><span>${esc(t('checkout.deliveryMethods.cdekPickupPoint', 'СДЭК — пункт выдачи'))}<small>${esc(t('checkout.deliveryMethods.cdekPickupPointHint', 'Выберите удобный пункт на карте'))}</small></span></label>
+      <label class="radio"><input type="radio" name="d"><span>${esc(t('checkout.deliveryMethods.courier', 'Курьерская доставка'))}<small>${esc(t('checkout.deliveryMethods.courierHint', 'Привезём по указанному адресу'))}</small></span></label>
+      <label class="radio"><input type="radio" name="d"><span>${esc(t('checkout.deliveryMethods.selfPickup', 'Самовывоз в Москве'))}<small>${esc(fill(t('checkout.deliveryMethods.selfPickupHint', 'ул. Производственная, д. 11, стр. 1')))}</small></span></label>
     </fieldset>
     <fieldset><legend>${esc(t('checkout.paymentMethods.title', 'Способ оплаты'))}</legend>
-      <label class="radio"><input type="radio" name="pay" checked>${esc(t('checkout.paymentMethods.sbp', 'СБП'))}</label>
-      <label class="radio"><input type="radio" name="pay">${esc(t('checkout.paymentMethods.card', 'Банковская карта'))}</label>
+      <label class="radio"><input type="radio" name="pay" checked><span>${esc('Онлайн: банковская карта или СБП')}<small>${esc(t('checkout.paymentMethods.provider', 'Платёж проходит через защищённый сервис PayKeeper. Данные карты мы не видим и не храним.'))}</small></span></label>
     </fieldset>
-    <label class="check"><input type="checkbox" disabled>${esc(t('checkout.consents.personalData', 'Я даю согласие на обработку персональных данных'))}</label>
-    <label class="check"><input type="checkbox" disabled>${esc(t('checkout.consents.marketing', 'Хочу получать новости и персональные предложения'))}</label>
     <dl class="totals" data-totals></dl>
-    <button class="btn btn-primary btn-wide" type="submit" disabled>${esc(t('checkout.submitDemo', 'Оформление недоступно в демо-версии'))}</button>
+    <label class="check"><input type="checkbox" data-consent required><span>${esc(t('checkout.consents.personalData', 'Я даю согласие на обработку персональных данных'))}</span></label>
+    <label class="check"><input type="checkbox"><span>${esc(t('checkout.consents.marketing', 'Хочу получать новости и персональные предложения'))}</span></label>
+    <p class="coupon-msg" data-consent-msg hidden>${esc(t('checkout.consents.personalDataRequired', 'Без этого согласия мы не сможем оформить заказ.'))}</p>
+    <button class="btn btn-primary btn-wide" type="submit">${esc('Перейти к оплате')}</button>
+    <p class="muted">${esc('После нажатия откроется защищённая страница оплаты PayKeeper. После оплаты Вы вернётесь на сайт и увидите номер заказа.')}</p>
   </form>
+</section>` }));
+
+page('checkout/pay/', layout({ path: 'checkout/pay/', title: 'Оплата заказа — ДОМОКУП', description: 'Шаг оплаты: защищённая страница PayKeeper, банковская карта или СБП.', active: 'cart', body: `
+<section class="wrap checkout">
+  <p class="demo-note" role="note">${esc('Демонстрация страницы оплаты PayKeeper. В рабочей версии здесь откроется сервис оплаты банка; на сайте данные карты не вводятся.')}</p>
+  <div class="paybox">
+    <p class="eyebrow">PayKeeper · АО «Альфа-Банк»</p>
+    <h1>${esc('Оплата заказа')}</h1>
+    <dl class="totals" data-totals></dl>
+    <div class="pay-methods"><span class="pm">Банковская карта</span><span class="pm">СБП</span></div>
+    <div class="pay-actions">
+      <a class="btn btn-primary btn-wide" href="${u('checkout/order-received/')}" data-pay-ok>${esc('Показать: оплата прошла')}</a>
+      <a class="btn btn-light btn-wide" href="${u('checkout/payment-failed/')}">${esc('Показать: оплата не прошла')}</a>
+    </div>
+  </div>
+</section>` }));
+
+page('checkout/order-received/', layout({ path: 'checkout/order-received/', title: 'Заказ оплачен — ДОМОКУП', description: 'Заказ оплачен. Чек придёт на электронную почту.', active: 'cart', body: `
+<section class="wrap empty-state">
+  ${icon('check', 'ic-lg')}
+  <h1>${esc('Спасибо! Заказ оплачен')}</h1>
+  <p>${esc('Номер заказа: № 0000 (демо). Электронный чек придёт на почту, статус заказа — в сообщении.')}</p>
+  <p class="demo-note" role="note">${esc('Демонстрация. В рабочей версии номер заказа и чек формирует магазин после подтверждения оплаты банком.')}</p>
+  <a class="btn btn-primary" href="${u('catalog/')}">${esc(t('cart.continueShopping', 'Продолжить покупки'))}</a>
+</section>` }));
+
+page('checkout/payment-failed/', layout({ path: 'checkout/payment-failed/', title: 'Оплата не прошла — ДОМОКУП', description: 'Оплата не прошла. Заказ сохранён, можно оплатить ещё раз.', active: 'cart', body: `
+<section class="wrap empty-state">
+  ${icon('close', 'ic-lg')}
+  <h1>${esc('Оплата не прошла')}</h1>
+  <p>${esc('Деньги не списаны. Заказ сохранён — можно попробовать ещё раз или выбрать другой способ: карта или СБП.')}</p>
+  <a class="btn btn-primary" href="${u('checkout/pay/')}">${esc('Оплатить ещё раз')}</a>
+  <a class="btn btn-light" href="https://t.me/domopet_kor" target="_blank" rel="noopener">${icon('tg')}${esc('Написать нам')}</a>
 </section>` }));
 
 page('search/', layout({ path: 'search/', title: `${t('nav.bottomTabs.search', 'Поиск')} — ДОМОКУП`, description: "Поиск по каталогу ДОМОКУП: корма Pure Nature, игрушки, шлейки, миски и товары для ухода.", active: 'search', body: `
