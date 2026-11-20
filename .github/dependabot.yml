@@ -1,0 +1,16 @@
+# Dependabot — GitHub Actions 버전을 매주 확인해 갱신 PR 을 자동으로 올린다 (무료)
+# PR 은 다른 PR 과 똑같이 CI 검사를 통과해야 병합할 수 있다.
+version: 2
+updates:
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly
+      day: monday
+      time: "09:00"
+      timezone: Asia/Seoul
+    open-pull-requests-limit: 5
+    labels:
+      - dependencies
+    commit-message:
+      prefix: "의존성"

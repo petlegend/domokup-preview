@@ -1,0 +1,235 @@
+/*
+ * DOMOKUP 디자인 토큰 — 웹(리뉴얼 미리보기)·PWA 공통
+ * 판: v0.1 (2026-11-20, 앱연동팀 초안 — 대표·앱 팀 합의 전)
+ * 규격 문서: domokup-renewal/docs/renewal/web-app-contract-20261120.md 2장
+ *
+ * 규칙
+ *  - 이 파일에는 CSS 변수만 둔다. 요소 선택자·레이아웃 규칙을 넣지 않는다.
+ *  - 이름은 --dk-<분류>-<역할>[-<상태>] 로 짓는다. 색 이름(green 등)이 아니라 역할 이름을 쓴다.
+ *  - 이 파일이 원본이다. 앱(PWA)은 빌드할 때 이 파일을 그대로 복사해 쓴다. 고칠 때는 여기서만 고친다.
+ *  - 웹폰트를 쓰지 않는다(외부 요청 0, 무게 0). 시스템 글꼴만 쓴다.
+ *  - 다크 모드: 기기 설정(prefers-color-scheme)을 따르고,
+ *    사용자가 고르면 <html data-theme="light|dark"> 가 기기 설정보다 우선한다.
+ *  - 글자/배경 대비는 WCAG AA(본문 4.5:1) 이상으로 맞췄다. 값마다 대비를 주석에 적었다.
+ */
+
+/* ───────────────────────── 라이트(기본) ───────────────────────── */
+:root {
+  color-scheme: light;
+
+  /* 브랜드 — 진녹색 #1F3A2E 가 기준이다 */
+  --dk-color-brand: #1F3A2E;            /* 흰 배경 위 12.3:1 */
+  --dk-color-brand-hover: #2B4D3E;      /* 누를 때·올렸을 때 */
+  --dk-color-brand-soft: #E6EEE9;       /* 브랜드 색 옅은 바탕(배지·선택된 칩) */
+  --dk-color-on-brand: #FFFFFF;         /* 브랜드 버튼 위 글자 */
+
+  /* 보조색 — 따뜻한 황토. 선물·강조 표시에만 쓴다(넓은 면적 금지) */
+  --dk-color-accent: #8A5A12;           /* 흰 배경 위 5.9:1 */
+  --dk-color-accent-soft: #F5EBD8;
+  --dk-color-on-accent: #FFFFFF;
+
+  /* 바탕·면·선 */
+  --dk-color-bg: #FFFFFF;               /* 페이지 바탕 */
+  --dk-color-bg-subtle: #F6F4EE;        /* 구역 구분용 옅은 바탕 */
+  --dk-color-surface: #FFFFFF;          /* 카드·시트 */
+  --dk-color-surface-raised: #FFFFFF;   /* 떠 있는 면(팝오버·하단 시트) */
+  --dk-color-border: #D9DED9;           /* 일반 구분선(장식용, 대비 요구 없음) */
+  --dk-color-border-strong: #7A857F;    /* 입력칸 테두리 3.8:1 (비텍스트 3:1 기준 충족) */
+
+  /* 글자 */
+  --dk-color-text: #1C2420;             /* 본문 15.9:1 */
+  --dk-color-text-muted: #5A6660;       /* 보조 글자 6.0:1 (옅은 바탕 위 5.5:1) */
+  --dk-color-text-disabled: #7A857F;    /* 비활성 — 정보 전달에 쓰지 않는다 */
+  --dk-color-link: #1F3A2E;
+
+  /* 상태색 — 글자용(-fg)과 옅은 바탕(-bg)을 짝으로 쓴다 */
+  --dk-color-success: #1E7A46;          /* 5.4:1 «В наличии», 완료 */
+  --dk-color-success-bg: #E5F3EA;
+  --dk-color-warning: #9A5B00;          /* 5.4:1 «Осталось мало», 보관기한 임박 */
+  --dk-color-warning-bg: #FBF0DC;
+  --dk-color-danger: #B3261E;           /* 6.5:1 오류·품절 */
+  --dk-color-danger-bg: #FBE7E5;
+  --dk-color-info: #1F5F8B;             /* 6.8:1 안내 */
+  --dk-color-info-bg: #E4EFF7;
+
+  /* 쇼핑 전용 의미색 — 역할을 고정해 웹·앱이 같은 뜻으로 쓴다 */
+  --dk-color-price: var(--dk-color-text);          /* 판매가 */
+  --dk-color-price-old: var(--dk-color-text-muted); /* 취소선 이전가 */
+  --dk-color-gift: var(--dk-color-accent);         /* «Подарок» 배지·선물 줄 */
+  --dk-color-gift-bg: var(--dk-color-accent-soft);
+  --dk-color-coupon: var(--dk-color-accent);       /* JOYSER 7% 쿠폰 표시 */
+
+  /* 초점 표시(키보드 이동) — 지우지 않는다 */
+  --dk-color-focus: #1F5F8B;
+  --dk-focus-ring: 0 0 0 3px var(--dk-color-bg), 0 0 0 5px var(--dk-color-focus);
+
+  /* 겹침 배경(모달 뒤) */
+  --dk-color-overlay: rgba(17, 26, 22, 0.48);
+
+  /* 그림자 — 3단계. 다크 모드에서는 그림자 대신 면 밝기로 구분한다 */
+  --dk-shadow-1: 0 1px 2px rgba(17, 26, 22, 0.08);                                  /* 카드 */
+  --dk-shadow-2: 0 2px 8px rgba(17, 26, 22, 0.10), 0 1px 2px rgba(17, 26, 22, 0.06); /* 떠 있는 버튼·드롭다운 */
+  --dk-shadow-3: 0 8px 24px rgba(17, 26, 22, 0.14);                                 /* 하단 시트·모달 */
+}
+
+/* ───────────────────────── 다크 — 기기 설정을 따를 때 ───────────────────────── */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+
+    --dk-color-brand: #8CC7A6;           /* 어두운 바탕 위 9.2:1 — 진녹색은 어두운 바탕에서 안 보여 밝힌다 */
+    --dk-color-brand-hover: #A6D6BB;
+    --dk-color-brand-soft: #1E3328;
+    --dk-color-on-brand: #111A16;        /* 밝은 녹색 버튼 위 어두운 글자 9.2:1 */
+
+    --dk-color-accent: #E3C27A;          /* 10.4:1 */
+    --dk-color-accent-soft: #3A2F1A;
+    --dk-color-on-accent: #111A16;
+
+    --dk-color-bg: #111A16;
+    --dk-color-bg-subtle: #16211C;
+    --dk-color-surface: #18241F;
+    --dk-color-surface-raised: #1F2D27;
+    --dk-color-border: #2C3A33;
+    --dk-color-border-strong: #6E7F77;
+
+    --dk-color-text: #E7EEEA;            /* 15.1:1 */
+    --dk-color-text-muted: #9FB0A8;      /* 7.8:1 */
+    --dk-color-text-disabled: #6E7F77;
+    --dk-color-link: #8CC7A6;
+
+    --dk-color-success: #7FD1A0;
+    --dk-color-success-bg: #173426;
+    --dk-color-warning: #F2B84B;
+    --dk-color-warning-bg: #3A2C12;
+    --dk-color-danger: #FF8A80;
+    --dk-color-danger-bg: #3D1C1A;
+    --dk-color-info: #7DB8E8;
+    --dk-color-info-bg: #16293A;
+
+    --dk-color-focus: #7DB8E8;
+    --dk-color-overlay: rgba(0, 0, 0, 0.6);
+
+    --dk-shadow-1: none;
+    --dk-shadow-2: 0 2px 8px rgba(0, 0, 0, 0.45);
+    --dk-shadow-3: 0 8px 24px rgba(0, 0, 0, 0.55);
+  }
+}
+
+/* ───────────────────────── 다크 — 사용자가 직접 고른 경우 ───────────────────────── */
+/* 위 블록과 값이 같아야 한다. 하나를 고치면 다른 하나도 고친다. */
+:root[data-theme="dark"] {
+  color-scheme: dark;
+
+  --dk-color-brand: #8CC7A6;
+  --dk-color-brand-hover: #A6D6BB;
+  --dk-color-brand-soft: #1E3328;
+  --dk-color-on-brand: #111A16;
+
+  --dk-color-accent: #E3C27A;
+  --dk-color-accent-soft: #3A2F1A;
+  --dk-color-on-accent: #111A16;
+
+  --dk-color-bg: #111A16;
+  --dk-color-bg-subtle: #16211C;
+  --dk-color-surface: #18241F;
+  --dk-color-surface-raised: #1F2D27;
+  --dk-color-border: #2C3A33;
+  --dk-color-border-strong: #6E7F77;
+
+  --dk-color-text: #E7EEEA;
+  --dk-color-text-muted: #9FB0A8;
+  --dk-color-text-disabled: #6E7F77;
+  --dk-color-link: #8CC7A6;
+
+  --dk-color-success: #7FD1A0;
+  --dk-color-success-bg: #173426;
+  --dk-color-warning: #F2B84B;
+  --dk-color-warning-bg: #3A2C12;
+  --dk-color-danger: #FF8A80;
+  --dk-color-danger-bg: #3D1C1A;
+  --dk-color-info: #7DB8E8;
+  --dk-color-info-bg: #16293A;
+
+  --dk-color-focus: #7DB8E8;
+  --dk-color-overlay: rgba(0, 0, 0, 0.6);
+
+  --dk-shadow-1: none;
+  --dk-shadow-2: 0 2px 8px rgba(0, 0, 0, 0.45);
+  --dk-shadow-3: 0 8px 24px rgba(0, 0, 0, 0.55);
+}
+
+/* ───────────────────────── 테마와 무관한 값 ───────────────────────── */
+:root {
+  /* 글꼴 — 시스템 글꼴 스택(키릴 문자 지원 확인된 기본 글꼴 순서). 웹폰트 금지 */
+  --dk-font-family-base: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+  --dk-font-family-mono: ui-monospace, "SFMono-Regular", Consolas, "Liberation Mono", monospace; /* 수령 코드·SKU 표시 */
+
+  /* 글자 크기 — 본문 16px 아래로 내리지 않는다(그룹 5대 원칙 5번). xs·sm 은 보조 표기에만 */
+  --dk-font-size-xs: 0.75rem;    /* 12px 배지 */
+  --dk-font-size-sm: 0.875rem;   /* 14px 보조 설명 */
+  --dk-font-size-md: 1rem;       /* 16px 본문 기본 */
+  --dk-font-size-lg: 1.125rem;   /* 18px 가격·강조 */
+  --dk-font-size-xl: 1.375rem;   /* 22px 상품명(상세) */
+  --dk-font-size-2xl: 1.75rem;   /* 28px 페이지 제목 */
+  --dk-font-size-3xl: 2.25rem;   /* 36px 첫 화면 큰 제목(넓은 화면) */
+
+  --dk-font-weight-regular: 400;
+  --dk-font-weight-medium: 500;
+  --dk-font-weight-bold: 700;
+
+  --dk-line-height-tight: 1.25;  /* 제목 */
+  --dk-line-height-base: 1.5;    /* 본문 */
+
+  /* 간격 — 4px 단위 */
+  --dk-space-0: 0;
+  --dk-space-1: 0.25rem;  /* 4px */
+  --dk-space-2: 0.5rem;   /* 8px */
+  --dk-space-3: 0.75rem;  /* 12px */
+  --dk-space-4: 1rem;     /* 16px 화면 좌우 여백 기본 */
+  --dk-space-5: 1.5rem;   /* 24px */
+  --dk-space-6: 2rem;     /* 32px */
+  --dk-space-7: 3rem;     /* 48px */
+  --dk-space-8: 4rem;     /* 64px 구역 간격 */
+
+  /* 모서리 */
+  --dk-radius-sm: 4px;    /* 입력칸·작은 배지 */
+  --dk-radius-md: 8px;    /* 버튼·카드 */
+  --dk-radius-lg: 16px;   /* 하단 시트·큰 카드 */
+  --dk-radius-pill: 999px; /* 칩·수량 배지 */
+
+  /* 크기 */
+  --dk-tap-min: 44px;           /* 누를 수 있는 것의 최소 크기(그룹 5대 원칙 5번) */
+  --dk-container-max: 1200px;   /* 내용 최대 폭 */
+  --dk-header-height: 56px;
+  --dk-tabbar-height: 56px;     /* 모바일 하단 탭바 */
+  --dk-safe-bottom: env(safe-area-inset-bottom, 0px); /* 아이폰 홈 막대 영역 */
+
+  /* 겹침 순서 — 이 표 밖의 숫자를 쓰지 않는다 */
+  --dk-z-base: 0;
+  --dk-z-sticky: 100;    /* 고정 헤더 */
+  --dk-z-tabbar: 200;    /* 하단 탭바 */
+  --dk-z-overlay: 900;   /* 모달 뒤 어둡게 */
+  --dk-z-modal: 1000;    /* 모달·하단 시트 */
+  --dk-z-toast: 1100;    /* 알림 띠 */
+
+  /* 움직임 — 기기에서 「동작 줄이기」를 켜면 0 으로 */
+  --dk-motion-fast: 120ms;
+  --dk-motion-base: 200ms;
+  --dk-motion-easing: cubic-bezier(0.2, 0, 0, 1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --dk-motion-fast: 0ms;
+    --dk-motion-base: 0ms;
+  }
+}
+
+/*
+ * 화면 폭 기준(참고 — CSS 변수는 @media 안에서 쓸 수 없어 숫자로 적는다)
+ *   모바일 기본 : ~767px   (320px 에서 가로 스크롤 0)
+ *   태블릿      : 768px~
+ *   데스크톱    : 1024px~
+ *   넓은 화면   : 1280px~
+ */

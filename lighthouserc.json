@@ -1,0 +1,53 @@
+{
+  "ci": {
+    "collect": {
+      "staticDistDir": "./dist",
+      "numberOfRuns": 3,
+      "maxAutodiscoverUrls": 20,
+      "settings": {
+        "formFactor": "mobile",
+        "screenEmulation": {
+          "mobile": true,
+          "width": 412,
+          "height": 823,
+          "deviceScaleFactor": 1.75,
+          "disabled": false
+        },
+        "throttlingMethod": "simulate",
+        "chromeFlags": "--no-sandbox --headless=new"
+      }
+    },
+    "assert": {
+      "assertions": {
+        "categories:performance": ["error", { "minScore": 0.9, "aggregationMethod": "median-run" }],
+        "categories:accessibility": ["error", { "minScore": 0.9, "aggregationMethod": "median-run" }],
+        "categories:best-practices": ["error", { "minScore": 0.9, "aggregationMethod": "median-run" }],
+        "categories:seo": ["warn", { "minScore": 0.9, "aggregationMethod": "median-run" }],
+
+        "is-crawlable": "off",
+        "robots-txt": "off",
+
+        "document-title": "error",
+        "meta-description": "error",
+        "html-has-lang": "error",
+        "image-alt": "error",
+        "link-text": "error",
+        "crawlable-anchors": "error",
+        "hreflang": "error",
+        "canonical": "warn",
+        "http-status-code": "error",
+
+        "largest-contentful-paint": ["error", { "maxNumericValue": 2500, "aggregationMethod": "median-run" }],
+        "cumulative-layout-shift": ["error", { "maxNumericValue": 0.1, "aggregationMethod": "median-run" }],
+
+        "resource-summary:total:size": ["error", { "maxNumericValue": 1228800 }],
+        "resource-summary:script:size": ["error", { "maxNumericValue": 30720 }],
+        "resource-summary:third-party:count": ["error", { "maxNumericValue": 0 }]
+      }
+    },
+    "upload": {
+      "target": "filesystem",
+      "outputDir": "./lhci-report"
+    }
+  }
+}

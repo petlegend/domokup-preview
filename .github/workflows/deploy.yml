@@ -1,0 +1,86 @@
+# 미리보기 배포 — main 에 병합되면 GitHub Pages 로 자동 배포
+# 보는 주소: https://petlegend.github.io/domokup-preview/
+#
+# 🔴 이 작업은 GitHub Pages(미리보기)만 갱신한다. 운영 중인 domokup.ru 에는 절대 접속하지 않는다.
+#
+# 되돌리기: Actions → 「Deploy preview」 → Run workflow → ref 칸에 이전 승인 태그(예: v1.0-approved) 입력
+#           → 그 시점의 화면으로 다시 배포된다 (docs/APPROVAL-FLOW.md 「되돌리기」).
+#
+# 액션 버전 확인일: 2026-11-20 (GitHub Releases 직접 조회)
+#   actions/checkout v7.0.1 · actions/setup-node v7.1.0 · actions/configure-pages v6.0.0
+#   actions/upload-pages-artifact v5.0.0 · actions/deploy-pages v5.0.1
+
+name: Deploy preview
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+    inputs:
+      ref:
+        description: "배포할 태그·커밋 (비우면 main 최신). 되돌릴 때 이전 승인 태그 입력"
+        required: false
+        default: ""
+
+# 기본은 아무 권한 없음 — 작업별로 필요한 것만 연다
+permissions: {}
+
+# 배포는 한 번에 하나만. 진행 중인 배포는 끊지 않는다(반쯤 배포된 상태 방지)
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    name: 빌드
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          ref: ${{ inputs.ref || github.sha }}
+          persist-credentials: false
+
+      - uses: actions/setup-node@v7
+        with:
+          node-version: lts/*
+
+      - name: 의존성 설치 (package-lock.json 이 있을 때만)
+        run: |
+          if [ -f package-lock.json ]; then npm ci --ignore-scripts; fi
+
+      - name: 빌드 (node scripts/build.mjs → dist/)
+        run: node scripts/build.mjs
+
+      - name: 미리보기 표시 확인 (noindex 가 빠지면 배포 중단)
+        run: |
+          missing=$(grep -L -i 'noindex' $(find dist -name '*.html') || true)
+          if [ -n "$missing" ]; then
+            echo "::error::noindex 가 없는 페이지가 있습니다 — 미리보기가 검색에 잡히면 안 됩니다"
+            echo "$missing"
+            exit 1
+          fi
+
+      - uses: actions/configure-pages@v6
+
+      - uses: actions/upload-pages-artifact@v5
+        with:
+          path: dist
+
+  deploy:
+    name: 배포
+    needs: build
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      pages: write      # Pages 에 올리기
+      id-token: write   # 배포 출처 확인(OIDC)
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: GitHub Pages 배포
+        id: deployment
+        uses: actions/deploy-pages@v5

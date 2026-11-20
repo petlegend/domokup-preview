@@ -1,0 +1,65 @@
+name: 버그
+description: 미리보기가 깨지거나 작동하지 않을 때
+title: "[버그] "
+labels: ["버그"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        🔴 고객 개인정보·비밀번호는 적지 마세요 (이 저장소는 공개입니다).
+        운영 중인 domokup.ru 의 문제라면 여기가 아니라 담당자에게 바로 알려 주세요.
+
+  - type: input
+    id: page
+    attributes:
+      label: 어느 페이지인가요
+      placeholder: "https://petlegend.github.io/domokup-preview/..."
+    validations:
+      required: true
+
+  - type: dropdown
+    id: device
+    attributes:
+      label: 기기
+      multiple: true
+      options:
+        - 휴대폰 (Android)
+        - 휴대폰 (iPhone)
+        - 태블릿
+        - PC
+    validations:
+      required: true
+
+  - type: input
+    id: browser
+    attributes:
+      label: 브라우저
+      placeholder: "예: Chrome, Яндекс Браузер, Safari"
+    validations:
+      required: false
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: 어떻게 하면 생기나요
+      placeholder: |
+        1. 메인 화면에서
+        2. 「Каталог」 버튼을 누르면
+        3. 빈 화면이 나온다
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: 원래 어떻게 되어야 하나요
+    validations:
+      required: true
+
+  - type: textarea
+    id: screenshot
+    attributes:
+      label: 스크린샷
+      description: 끌어다 놓거나 붙여넣기 (계정·메일함이 찍힌 부분은 가려 주세요)
+    validations:
+      required: false

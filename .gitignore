@@ -1,0 +1,26 @@
+# 도구가 만드는 것
+node_modules/
+dist/
+.lighthouseci/
+lhci-report/
+
+# 비밀값 — 절대 올리지 않는다
+.env
+.env.*
+*.pem
+*.key
+
+# 기록 파일
+*.log
+npm-debug.log*
+
+# 비공개 자료 (실수 방지용, 보관 장소 아님)
+_private/
+
+# 운영체제·편집기
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+.claude/

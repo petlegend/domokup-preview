@@ -1,0 +1,6003 @@
+{
+ "fetchedAt": "2026-11-20",
+ "source": "domokup.ru WooCommerce Store API (공개·읽기 전용)",
+ "counts": {
+  "total": 178,
+  "inStock": 145,
+  "withWeight": 23,
+  "withReviews": 2
+ },
+ "products": [
+  {
+   "id": 6472,
+   "name": "Браслет HATE ME для защиты от насекомых для собак голубой",
+   "slug": "braslet-hate-me-dlja-zashhity-ot-nasekomyh-dlja-sobak-goluboj",
+   "sku": "881502",
+   "priceMinor": 145000,
+   "regularPriceMinor": 145000,
+   "currencyMinorUnit": 2,
+   "inStock": false,
+   "purchasable": true,
+   "reviewCount": 0,
+   "averageRating": "0",
+   "categories": [
+    {
+     "id": 169,
+     "name": "Средства от блох и клещей",
+     "slug": "sredstva-ot-bloh-i-kleshhej"
+    },
+    {
+     "id": 170,
+     "name": "Средства от блох и клещей",
+     "slug": "sredstva-ot-bloh-i-kleshhej-cat-products"
+    }
+   ],
+   "derived": {
+    "weightKg": null,
+    "weightSource": null,
+    "species": null,
+    "form": null
+   },
+   "image": {
+    "src": "https://domokup.ru/wp-content/uploads/2026/05/11-1.png",
+    "thumbnail": "https://domokup.ru/wp-content/uploads/2026/05/11-1-300x300.png",
+    "alt": "Браслет HATE ME для защиты от насекомых для собак голубой"
+   },
+   "permalink": "https://domokup.ru/product/braslet-hate-me-dlja-zashhity-ot-nasekomyh-dlja-sobak-goluboj/"
+  },
+  {
+   "id": 6473,
+   "name": "Браслет HATE ME для защиты от насекомых для собак желтый",
+   "slug": "braslet-hate-me-dlja-zashhity-ot-nasekomyh-dlja-sobak-zheltyj",
+   "sku": "881503",
+   "priceMinor": 145000,
+   "regularPriceMinor": 145000,
+   "currencyMinorUnit": 2,
+   "inStock": true,
+   "purchasable": true,
+   "reviewCount": 0,
+   "averageRating": "0",
+   "categories": [
+    {
+     "id": 169,
+     "name": "Средства от блох и клещей",
+     "slug": "sredstva-ot-bloh-i-kleshhej"
+    },
+    {
+     "id": 170,
+     "name": "Средства от блох и клещей",
+     "slug": "sredstva-ot-bloh-i-kleshhej-cat-products"
+    }
+   ],
+   "derived": {
+    "weightKg": null,
+    "weightSource": null,
+    "species": null,
+    "form": null
+   },
+   "image": {
+    "src": "https://domokup.ru/wp-content/uploads/2026/05/9.png",
+    "thumbnail": "https://domokup.ru/wp-content/uploads/2026/05/9-300x300.png",
+    "alt": "Браслет HATE ME для защиты от насекомых для собак желтый"
+   },
+   "permalink": "https://domokup.ru/product/braslet-hate-me-dlja-zashhity-ot-nasekomyh-dlja-sobak-zheltyj/"
+  },
+  {
+   "id": 6449,
+   "name": "Браслет HATE ME для защиты от насекомых для собак розовый",
+   "slug": "braslet-hate-me-dlja-zashhity-ot-nasekomyh-dlja-sobak-rozovyj",
+   "sku": "881501",
+   "priceMinor": 145000,
+   "regularPriceMinor": 145000,
+   "currencyMinorUnit": 2,
+   "inStock": true,
+   "purchasable": true,
+   "reviewCount": 0,
+   "averageRating": "0",
+   "categories": [
+    {
+     "id": 169,
+     "name": "Средства от блох и клещей",
+     "slug": "sredstva-ot-bloh-i-kleshhej"
+    },
+    {
+     "id": 170,
+     "name": "Средства от блох и клещей",
+     "slug": "sredstva-ot-bloh-i-kleshhej-cat-products"
+    }
+   ],
+   "derived": {
+    "weightKg": null,
+    "weightSource": null,
+    "species": null,
+    "form": null
+   },
+   "image": {
+    "src": "https://domokup.ru/wp-content/uploads/2026/05/10.png",
+    "thumbnail": "https://domokup.ru/wp-content/uploads/2026/05/10-300x300.png",
+    "alt": "Браслет HATE ME для защиты от насекомых для собак розовый"
+   },
+   "permalink": "https://domokup.ru/product/braslet-hate-me-dlja-zashhity-ot-nasekomyh-dlja-sobak-rozovyj/"
+  },
+  {
+   "id": 5148,
+   "name": "Гидрогелевые патчи для глаз Anju Aqua &#038; Collagen 60 шт.",
+   "slug": "gidrogelevye-patchi-dlja-glaz-anju-gold-pearl-60-sht",
+   "sku": "885002",
+   "priceMinor": 65900,
+   "regularPriceMinor": 65900,
+   "currencyMinorUnit": 2,
+   "inStock": true,
+   "purchasable": true,
+   "reviewCount": 0,
+   "averageRating": "0",
+   "categories": [
+    {
+     "id": 156,
+     "name": "Товары для красоты",
+     "slug": "tovary-dlja-krasoty"
+    }
+   ],
+   "derived": {
+    "weightKg": null,
+    "weightSource": null,
+    "species": null,
+    "form": null
+   },
+   "image": {
+    "src": "https://domokup.ru/wp-content/uploads/2025/02/1.png",
+    "thumbnail": "https://domokup.ru/wp-content/uploads/2025/02/1-300x300.png",
+    "alt": "Гидрогелевые патчи для глаз Anju Aqua &#038; Collagen 60 шт."
+   },
+   "permalink": "https://domokup.ru/product/gidrogelevye-patchi-dlja-glaz-anju-gold-pearl-60-sht/"
+  },
+  {
+   "id": 5153,
+   "name": "Гидрогелевые патчи для глаз Anju Gold &#038; Pearl 60 шт.",
+   "slug": "gidrogelevye-patchi-dlja-glaz-anju-gold-pearl-60-sht-2",
+   "sku": "885001",
+   "priceMinor": 65900,
+   "regularPriceMinor": 65900,
+   "currencyMinorUnit": 2,
+   "inStock": true,
+   "purchasable": true,
+   "reviewCount": 0,
+   "averageRating": "0",
+   "categories": [
+    {
+     "id": 156,
+     "name": "Товары для красоты",
+     "slug": "tovary-dlja-krasoty"
+    }
+   ],
+   "derived": {
+    "weightKg": null,
+    "weightSource": null,
+    "species": null,
+    "form": null
+   },
+   "image": {
+    "src": "https://domokup.ru/wp-content/uploads/2025/02/1-1.png",
+    "thumbnail": "https://domokup.ru/wp-content/uploads/2025/02/1-1-300x300.png",
+    "alt": "Гидрогелевые патчи для глаз Anju Gold &#038; Pearl 60 шт."
+   },
+   "permalink": "https://domokup.ru/product/gidrogelevye-patchi-dlja-glaz-anju-gold-pearl-60-sht-2/"
+  },
+  {
+   "id": 6664,
+   "name": "Гипоаллергенный корм для кошек сухой Pure Nature с лососем 2 + 2 кг",
+   "slug": "gipoallergennyj-korm-dlja-koshek-suhoj-pure-nature-s-lososem-2-2-kg",
+   "sku": "88103-2",
+   "priceMinor": 621000,
+   "regularPriceMinor": 621000,
+   "currencyMinorUnit": 2,
+   "inStock": true,
+   "purchasable": true,
+   "reviewCount": 0,
+   "averageRating": "0",
+   "categories": [
+    {
+     "id": 138,
+     "name": "Сухой беззерновой корм Pure Nature для кошек",
+     "slug": "pure-nature"
+    }
+   ],
+   "derived": {
+    "weightKg": 4,
+    "weightSource": "name-sum",
+    "species": "cat",
+    "form": "dry"
+   },
+   "image": {
+    "src": "https://domokup.ru/wp-content/uploads/2024/11/4-1.png",
+    "thumbnail": "https://domokup.ru/wp-content/uploads/2024/11/4-1-300x300.png",
+    "alt": "Гипоаллергенный корм для кошек сухой Pure Nature с лососем 2 + 2 кг"
+   },
+   "permalink": "https://domokup.ru/product/gipoallergennyj-korm-dlja-koshek-suhoj-pure-nature-s-lososem-2-2-kg/"
+  },
+  {
+   "id": 4466,
+   "name": "Гипоаллергенный корм для кошек сухой Pure Nature с лососем 2 кг",
+   "slug": "gipoallergennyj-suhoj-korm-dlja-koshek-pure-nature-s-lososem-2-kg",
+   "sku": "88103",
+   "priceMinor": 346000,
+   "regularPriceMinor": 346000,
+   "currencyMinorUnit": 2,
+   "inStock": true,
+   "purchasable": true,
+   "reviewCount": 0,
+   "averageRating": "0",
+   "categories": [
+    {
+     "id": 138,
+     "name": "Сухой беззерновой корм Pure Nature для кошек",
+     "slug": "pure-nature"
+    }
+   ],
+   "derived": {
+    "weightKg": 2,
+    "weightSource": "name",
+    "species": "cat",
+    "form": "dry"
+   },
+   "image": {
+    "src": "https://domokup.ru/wp-content/uploads/2025/04/2-7.png",
+    "thumbnail": "https://domokup.ru/wp-content/uploads/2025/04/2-7-300x300.png",
+    "alt": "Гипоаллергенный корм для кошек сухой Pure Nature с лососем 2 кг"
+   },
+   "permalink": "https://domokup.ru/product/gipoallergennyj-suhoj-korm-dlja-koshek-pure-nature-s-lososem-2-kg/"
+  },
+  {
+   "id": 5474,
+   "name": "Гипоаллергенный корм для кошек сухой Pure Nature с лососем 200 гр",
+   "slug": "gipoallergennyj-suhoj-korm-dlja-koshek-pure-nature-s-lososem-200-gr",
+   "sku": "88103-200",
+   "priceMinor": 48000,
+   "regularPriceMinor": 48000,
+   "currencyMinorUnit": 2,
+   "inStock": false,
+   "purchasable": true,
+   "reviewCount": 0,
+   "averageRating": "0",
+   "categories": [
+    {
+     "id": 138,
+     "name": "Сухой беззерновой корм Pure Nature для кошек",
+     "slug": "pure-nature"
+    }
+   ],
+   "derived": {
+    "weightKg": null,
+    "weightSource": null,
+    "species": "cat",
+    "form": "dry"
+   },
+   "image": {
+    "src": "https://domokup.ru/wp-content/uploads/2025/04/3-7.png",
+    "thumbnail": "https://domokup.ru/wp-content/uploads/2025/04/3-7-300x300.png",
+    "alt": "Гипоаллергенный корм для кошек сухой Pure Nature с лососем 200 гр"
+   },
+   "permalink": "https://domokup.ru/product/gipoallergennyj-suhoj-korm-dlja-koshek-pure-nature-s-lososem-200-gr/"
+  },
+  {
+   "id": 6665,
+   "name": "Гипоаллергенный корм для кошек сухой Pure Nature с лососем 5 + 5 кг",
+   "slug": "gipoallergennyj-korm-dlja-koshek-suhoj-pure-nature-s-lososem-5-5-kg",
+   "sku": "88104-2",
+   "priceMinor": 1250000,
+   "regularPriceMinor": 1250000,
+   "currencyMinorUnit": 2,
+   "inStock": true,
+   "purchasable": true,
+   "reviewCount": 0,
+   "averageRating": "0",
+   "categories": [
+    {
+     "id": 138,
+     "name": "Сухой беззерновой корм Pure Nature для кошек",
+     "slug": "pure-nature"
+    }
+   ],
+   "derived": {
+    "weightKg": 10,
+    "weightSource": "name-sum",
+    "species": "cat",
+    "form": "dry"
+   },
+   "image": {
+    "src": "https://domokup.ru/wp-content/uploads/2024/11/3-1.png",
+    "thumbnail": "https://domokup.ru/wp-content/uploads/2024/11/3-1-300x300.png",
+    "alt": "Гипоаллергенный корм для кошек сухой Pure Nature с лососем 5 + 5 кг"
+   },
+   "permalink": "https://domokup.ru/product/gipoallergennyj-korm-dlja-koshek-suhoj-pure-nature-s-lososem-5-5-kg/"
+  },
+  {
+   "id": 5472,
+   "name": "Гипоаллергенный корм для кошек сухой Pure Nature с лососем 500 гр",
+   "slug": "gipoallergennyj-suhoj-korm-dlja-koshek-pure-nature-s-lososem-500-gr",
+   "sku": "88104-500",
+   "priceMinor": 90000,
+   "regularPriceMinor": 90000,
+   "currencyMinorUnit": 2,
+   "inStock": true,
+   "purchasable": true,
+   "reviewCount": 0,
+   "averageRating": "0",
+   "categories": [
+    {
+     "id": 138,
+     "name": "Сухой беззерновой корм Pure Nature для кошек",
+     "slug": "pure-nature"
+    }
+   ],
+   "derived": {
+    "weightKg": null,
+    "weightSource": null,
+    "species": "cat",
+    "form": "dry"
+   },
+   "image": {
+    "src": "https://domokup.ru/wp-content/uploads/2025/04/4-7.png",
+    "thumbnail": "https://domokup.ru/wp-content/uploads/2025/04/4-7-300x300.png",
+    "alt": "Гипоаллергенный корм для кошек сухой Pure Nature с лососем 500 гр"
+   },
+   "permalink": "https://domokup.ru/product/gipoallergennyj-suhoj-korm-dlja-koshek-pure-nature-s-lososem-500-gr/"
+  },
+  {
+   "id": 4480,
+   "name": "Гипоаллергенный корм для кошек сухой Pure Nature с лососем 5кг",
+   "slug": "gipoallergennyj-suhoj-korm-dlja-koshek-pure-nature-s-lososem-5-kg",
+   "sku": "88104",
+   "priceMinor": 696000,
+   "regularPriceMinor": 696000,
+   "currencyMinorUnit": 2,
+   "inStock": true,
+   "purchasable": true,
+   "reviewCount": 0,
+   "averageRating": "0",
+   "categories": [
+    {
+     "id": 138,
+     "name": "Сухой беззерновой корм Pure Nature для кошек",
+     "slug": "pure-nature"
+    }
+   ],
+   "derived": {
+    "weightKg": 5,
+    "weightSource": "name",
+    "species": "cat",
+    "form": "dry"
+   },
+   "image": {
+    "src": "https://domokup.ru/wp-content/uploads/2025/04/1-7.png",
+    "thumbnail": "https://domokup.ru/wp-content/uploads/2025/04/1-7-300x300.png",
+    "alt": "Гипоаллергенный корм для кошек сухой Pure Nature с лососем 5кг"
+   },
+   "permalink": "https://domokup.ru/product/gipoallergennyj-suhoj-korm-dlja-koshek-pure-nature-s-lososem-5-kg/"
+  },
+  {
+   "id": 4484,
+   "name": "Гипоаллергенный сухой корм для кошек Pure Nature Диета 2 кг",
+   "slug": "gipoallergennyj-suhoj-korm-dlja-koshek-pure-nature-dieta-2-kg",
+   "sku": "88105",
+   "priceMinor": 411000,
+   "regularPriceMinor": 411000,
+   "currencyMinorUnit": 2,
+   "inStock": false,
+   "purchasable": true,
+   "reviewCount": 0,
+   "averageRating": "0",
+   "categories": [
+    {
+     "id": 138,
+     "name": "Сухой беззерновой корм Pure Nature для кошек",
+     "slug": "pure-nature"
+    }
+   ],
+   "derived": {
+    "weightKg": 2,
+    "weightSource": "name",
+    "species": "cat",
+    "form": "dry"
+   },
+   "image": {
+    "src": "https://domokup.ru/wp-content/uploads/2025/04/2-8.png",
+    "thumbnail": "https://domokup.ru/wp-content/uploads/2025/04/2-8-300x300.png",
+    "alt": "Гипоаллергенный сухой корм для кошек Pure Nature Диета 2 кг"
+   },
+   "permalink": "https://domokup.ru/product/gipoallergennyj-suhoj-korm-dlja-koshek-pure-nature-dieta-2-kg/"
+  },
+  {
+   "id": 5443,
+   "name": "Гипоаллергенный сухой корм для кошек Pure Nature Диета 200 гр",
+   "slug": "gipoallergennyj-suhoj-korm-dlja-koshek-pure-nature-dieta-200-gr",
+   "sku": "88105-200",
+   "priceMinor": 45000,
+   "regularPriceMinor": 45000,
+   "currencyMinorUnit": 2,
+   "inStock": false,
+   "purchasable": true,
+   "reviewCount": 1,
+   "averageRating": "1.00",
+   "categories": [
+    {
+     "id": 138,
+     "name": "Сухой беззерновой корм Pure Nature для кошек",
+     "slug": "pure-nature"
+    }
+   ],
+   "derived": {
+    "weightKg": null,
+    "weightSource": null,
+    "species": "cat",
+    "form": "dry"
+   },
+   "image": {
+    "src": "https://domokup.ru/wp-content/uploads/2025/04/4-8.png",
+    "thumbnail": "https://domokup.ru/wp-content/uploads/2025/04/4-8-300x300.png",
+    "alt": "Гипоаллергенный сухой корм для кошек Pure Nature Диета 200 гр"
+   },
+   "permalink": "https://domokup.ru/product/gipoallergennyj-suhoj-korm-dlja-koshek-pure-nature-dieta-200-gr/"
+  },
+  {
+   "id": 6666,
+   "name": "Гипоаллергенный сухой корм для кошек Pure Nature Диета 5 + 5 кг",
+   "slug": "gipoallergennyj-suhoj-korm-dlja-koshek-pure-nature-dieta-5-5-kg",
+   "sku": "88106-2",
+   "priceMinor": 1205000,
+   "regularPriceMinor": 1205000,
+   "currencyMinorUnit": 2,
+   "inStock": true,
+   "purchasable": true,
+   "reviewCount": 0,
+   "averageRating": "0",
+   "categories": [
+    {
+     "id": 138,
+     "name": "Сухой беззерновой корм Pure Nature для кошек",
+     "slug": "pure-nature"
+    }
+   ],
+   "derived": {
+    "weightKg": 10,
+    "weightSource": "name-sum",
+    "species": "cat",
+    "form": "dry"
+   },
+   "image": {
+    "src": "https://domokup.ru/wp-content/uploads/2025/04/ДОМОПЕТ-диета-4.png",
+    "thumbnail": "https://domokup.ru/wp-content/uploads/2025/04/ДОМОПЕТ-диета-4-300x300.png",
+    "alt": "Гипоаллергенный сухой корм для кошек Pure Nature Диета 5 + 5 кг"
+   },
+   "permalink": "https://domokup.ru/product/gipoallergennyj-suhoj-korm-dlja-koshek-pure-nature-dieta-5-5-kg/"
+  },
+  {
+   "id": 4491,
+   "name": "Гипоаллергенный сухой корм для кошек Pure Nature Диета 5 кг",
+   "slug": "gipoallergennyj-suhoj-korm-dlja-koshek-pure-nature-dieta-5-kg",
+   "sku": "88106",
+   "priceMinor": 669000,
+   "regularPriceMinor": 669000,
+   "currencyMinorUnit": 2,
+   "inStock": true,
+   "purchasable": true,
+   "reviewCount": 0,
+   "averageRating": "0",
+   "categories": [
+    {
+     "id": 138,
+     "name": "Сухой беззерновой корм Pure Nature для кошек",
+     "slug": "pure-nature"
+    }
+   ],
+   "derived": {
+    "weightKg": 5,
+    "weightSource": "name",
+    "species": "cat",
+    "form": "dry"
+   },
+   "image": {
+    "src": "https://domokup.ru/wp-content/uploads/2025/04/1-8.png",
+    "thumbnail": "https://domokup.ru/wp-content/uploads/2025/04/1-8-300x300.png",
+    "alt": "Гипоаллергенный сухой корм для кошек Pure Nature Диета 5 кг"
+   },
+   "permalink": "https://domokup.ru/product/gipoallergennyj-suhoj-korm-dlja-koshek-pure-nature-dieta-5-kg/"
+  },
+  {
+   "id": 5442,
+   "name": "Гипоаллергенный сухой корм для кошек Pure Nature Диета 500 гр",
+   "slug": "gipoallergennyj-suhoj-korm-dlja-koshek-pure-nature-dieta-500-gr",
+   "sku": "88106-500",
+   "priceMinor": 69000,
+   "regularPriceMinor": 69000,
+   "currencyMinorUnit": 2,
+   "inStock": true,
+   "purchasable": true,
+   "reviewCount": 0,
+   "averageRating": "0",
+   "categories": [
+    {
+     "id": 138,
+     "name": "Сухой беззерновой корм Pure Nature для кошек",
+     "slug": "pure-nature"
+    }
+   ],
+   "derived": {
+    "weightKg": null,
+    "weightSource": null,
+    "species": "cat",
+    "form": "dry"
+   },
+   "image": {
+    "src": "https://domokup.ru/wp-content/uploads/2025/04/3-8.png",
+    "thumbnail": "https://domokup.ru/wp-content/uploads/2025/04/3-8-300x300.png",
+    "alt": "Гипоаллергенный сухой корм для кошек Pure Nature Диета 500 гр"
+   },
+   "permalink": "https://domokup.ru/product/gipoallergennyj-suhoj-korm-dlja-koshek-pure-nature-dieta-500-gr/"
+  },
+  {
+   "id": 6667,
+   "name": "Гипоаллергенный сухой корм для кошек Pure Nature с курицей 2 + 2 кг",
+   "slug": "gipoallergennyj-suhoj-korm-dlja-koshek-pure-nature-s-kuricej-2-2-kg",
+   "sku": "88101-2",
+   "priceMinor": 561000,
+   "regularPriceMinor": 561000,
+   "currencyMinorUnit": 2,
+   "inStock": true,
+   "purchasable": true,
+   "reviewCount": 0,
+   "averageRating": "0",
+   "categories": [
+    {
+     "id": 138,
+     "name": "Сухой беззерновой корм Pure Nature для кошек",
+     "slug": "pure-nature"
+    }
+   ],
+   "derived": {
+    "weightKg": 4,
+    "weightSource": "name-sum",
+    "species": "cat",
+    "form": "dry"
+   },
+   "image": {
+    "src": "https://domokup.ru/wp-content/uploads/2024/11/6-1.png",
+    "thumbnail": "https://domokup.ru/wp-content/uploads/2024/11/6-1-300x300.png",
+    "alt": "Гипоаллергенный сухой корм для кошек Pure Nature с курицей 2 + 2 кг"
+   },
+   "permalink": "https://domokup.ru/product/gipoallergennyj-suhoj-korm-dlja-koshek-pure-nature-s-kuricej-2-2-kg/"
+  },
+  {
+   "id": 4192,
+   "name": "Гипоаллергенный сухой корм для кошек Pure Nature с курицей 2 кг",
+   "slug": "gipoallergennyj-suhoj-korm-dlja-koshek-pure-nature-s-kuricej-2-kg",
+   "sku": "88101",
+   "priceMinor": 312000,
+   "regularPriceMinor": 312000,
+   "currencyMinorUnit": 2,
+   "inStock": true,
+   "purchasable": true,
+   "reviewCount": 0,
+   "averageRating": "0",
+   "categories": [
+    {
+     "id": 138,
+     "name": "Сухой беззерновой корм Pure Nature для кошек",
+     "slug": "pure-nature"
+    }
+   ],
+   "derived": {
+    "weightKg": 2,
+    "weightSource": "name",
+    "species": "cat",
+    "form": "dry"
+   },
+   "image": {
+    "src": "https://domokup.ru/wp-content/uploads/2025/04/2-6.png",
+    "thumbnail": "https://domokup.ru/wp-content/uploads/2025/04/2-6-300x300.png",
+    "alt": "Гипоаллергенный сухой корм для кошек Pure Nature с курицей 2 кг"
+   },
+   "permalink": "https://domokup.ru/product/gipoallergennyj-suhoj-korm-dlja-koshek-pure-nature-s-kuricej-2-kg/"
+  },
+  {
+   "id": 5475,
+   "name": "Гипоаллергенный сухой корм для кошек Pure Nature с курицей 200 гр",
+   "slug": "gipoallergennyj-suhoj-korm-dlja-koshek-pure-nature-s-kuricej-200-gr",
+   "sku": "88101-200",
+   "priceMinor": 46000,
+   "regularPriceMinor": 46000,
+   "currencyMinorUnit": 2,
+   "inStock": false,
+   "purchasable": true,
+   "reviewCount": 0,
+   "averageRating": "0",
+   "categories": [
+    {
+     "id": 138,
+     "name": "Сухой беззерновой корм Pure Nature для кошек",
+     "slug": "pure-nature"
+    }
+   ],
+   "derived": {
+    "weightKg": null,
+    "weightSource": null,
+    "species": "cat",
+    "form": "dry"
+   },
+   "image": {
+    "src": "https://domokup.ru/wp-content/uploads/2025/04/3-6.png",
+    "thumbnail": "https://domokup.ru/wp-content/uploads/2025/04/3-6-300x300.png",
+    "alt": "Гипоаллергенный сухой корм для кошек Pure Nature с курицей 200 гр"
+   },
+   "permalink": "https://domokup.ru/product/gipoallergennyj-suhoj-korm-dlja-koshek-pure-nature-s-kuricej-200-gr/"
+  },
+  {
+   "id": 6668,
+   "name": "Гипоаллергенный сухой корм для кошек Pure Nature с курицей 5 + 5 кг",
+   "slug": "gipoallergennyj-suhoj-korm-dlja-koshek-pure-nature-s-kuricej-5-5-kg",
+   "sku": "88102-2",
+   "priceMinor": 1205000,
+   "regularPriceMinor": 1205000,
+   "currencyMinorUnit": 2,
+   "inStock": true,
+   "purchasable": true,
+   "reviewCount": 0,
+   "averageRating": "0",
+   "categories": [
+    {
+     "id": 138,
+     "name": "Сухой беззерновой корм Pure Nature для кошек",
+     "slug": "pure-nature"
+    }
+   ],
+   "derived": {
+    "weightKg": 10,
+    "weightSource": "name-sum",
+    "species": "cat",
+    "form": "dry"
+   },
+   "image": {
+    "src": "https://domokup.ru/wp-content/uploads/2024/11/5-1.png",
+    "thumbnail": "https://domokup.ru/wp-content/uploads/2024/11/5-1-300x300.png",
+    "alt": "Гипоаллергенный сухой корм для кошек Pure Nature с курицей 5 + 5 кг"
+   },
+   "permalink": "https://domokup.ru/product/gipoallergennyj-suhoj-korm-dlja-koshek-pure-nature-s-kuricej-5-5-kg/"
+  },
+  {
+   "id": 4451,
+   "name": "Гипоаллергенный сухой корм для кошек Pure Nature с курицей 5 кг",
+   "slug": "gipoallergennyj-suhoj-korm-dlja-koshek-pure-nature-s-kuricej-5-kg",
+   "sku": "88102",
+   "priceMinor": 669000,
+   "regularPriceMinor": 669000,
+   "currencyMinorUnit": 2,
+   "inStock": true,
+   "purchasable": true,
+   "reviewCount": 1,
+   "averageRating": "5.00",
+   "categories": [
+    {
+     "id": 138,
+     "name": "Сухой беззерновой корм Pure Nature для кошек",
+     "slug": "pure-nature"
+    }
+   ],
+   "derived": {
+    "weightKg": 5,
+    "weightSource": "name",
+    "species": "cat",
+    "form": "dry"
+   },
+   "image": {
+    "src": "https://domokup.ru/wp-content/uploads/2025/04/1-6.png",
+    "thumbnail": "https://domokup.ru/wp-content/uploads/2025/04/1-6-300x300.png",
+    "alt": "Гипоаллергенный сухой корм для кошек Pure Nature с курицей 5 кг"
+   },
+   "permalink": "https://domokup.ru/product/gipoallergennyj-suhoj-korm-dlja-koshek-pure-nature-s-kuricej-5-kg/"
+  },
+  {
+   "id": 5476,
+   "name": "Гипоаллергенный сухой корм для кошек Pure Nature с курицей 500 гр",
+   "slug": "gipoallergennyj-suhoj-korm-dlja-koshek-pure-nature-s-kuricej-500-gr",
+   "sku": "88102-500",
+   "priceMinor": 69000,
+   "regularPriceMinor": 69000,
+   "currencyMinorUnit": 2,
+   "inStock": true,
+   "purchasable": true,
+   "reviewCount": 0,
+   "averageRating": "0",
+   "categories": [
+    {
+     "id": 138,
+     "name": "Сухой беззерновой корм Pure Nature для кошек",
+     "slug": "pure-nature"
+    }
+   ],
+   "derived": {
+    "weightKg": null,
+    "weightSource": null,
+    "species": "cat",
+    "form": "dry"
+   },
+   "image": {
+    "src": "https://domokup.ru/wp-content/uploads/2025/04/4-6.png",
+    "thumbnail": "https://domokup.ru/wp-content/uploads/2025/04/4-6-300x300.png",
+    "alt": "Гипоаллергенный сухой корм для кошек Pure Nature с курицей 500 гр"
+   },
+   "permalink": "https://domokup.ru/product/gipoallergennyj-suhoj-korm-dlja-koshek-pure-nature-s-kuricej-500-gr/"
+  },
+  {
+   "id": 4421,
+   "name": "Гипоаллергенный сухой корм для собак Pure Nature 1,2 кг с уткой",
+   "slug": "gipoallergennyj-suhoj-korm-dlja-sobak-pure-nature-s-utkoj-1-2-kg",
+   "sku": "88201",
+   "priceMinor": 273000,
+   "regularPriceMinor": 273000,
+   "currencyMinorUnit": 2,
+   "inStock": false,
+   "purchasable": true,
+   "reviewCount": 0,
+   "averageRating": "0",
+   "categories": [
+    {
+     "id": 144,
+     "name": "Беззерновой корм Pure Nature для собак",
+     "slug": "pure-nature-dog-products"
+    }
+   ],
+   "derived": {
+    "weightKg": 1.2,
+    "weightSource": "name",
+    "species": "dog",
+    "form": "dry"
+   },
+   "image": {
+    "src": "https://domokup.ru/wp-content/uploads/2025/04/2-4.png",
+    "thumbnail": "https://domokup.ru/wp-content/uploads/2025/04/2-4-300x300.png",
+    "alt": "Гипоаллергенный сухой корм для собак Pure Nature 1,2 кг с уткой"
+   },
+   "permalink": "https://domokup.ru/product/gipoallergennyj-suhoj-korm-dlja-sobak-pure-nature-s-utkoj-1-2-kg/"
+  },
+  {
+   "id": 4293,
+   "name": "Гипоаллергенный сухой корм для собак Pure Nature 1,2 кг с ягненком",
+   "slug": "gipoallergennyj-suhoj-korm-dlja-sobak-pure-nature-s-jagnenkom-1-2-kg",
+   "sku": "88205",
+   "priceMinor": 273000,
+   "regularPriceMinor": 273000,
+   "currencyMinorUnit": 2,
+   "inStock": false,
+   "purchasable": true,
+   "reviewCount": 0,
+   "averageRating": "0",
+   "categories": [
+    {
+     "id": 144,
+     "name": "Беззерновой корм Pure Nature для собак",
+     "slug": "pure-nature-dog-products"
+    }
+   ],
+   "derived": {
+    "weightKg": 1.2,
+    "weightSource": "name",
+    "species": "dog",
+    "form": "dry"
+   },
+   "image": {
+    "src": "https://domokup.ru/wp-content/uploads/2025/04/2-5.png",
+    "thumbnail": "https://domokup.ru/wp-content/uploads/2025/04/2-5-300x300.png",
+    "alt": "Гипоаллергенный сухой корм для собак Pure Nature 1,2 кг с ягненком"
+   },
+   "permalink": "https://domokup.ru/product/gipoallergennyj-suhoj-korm-dlja-sobak-pure-nature-s-jagnenkom-1-2-kg/"
+  },
+  {
+   "id": 5520,
+   "name": "Гипоаллергенный сухой корм для собак Pure Nature 200 гр с уткой",
+   "slug": "gipoallergennyj-suhoj-korm-dlja-sobak-pure-nature-s-utkoj-200-gr",
+   "sku": "88201-200",
+   "priceMinor": 50000,
+   "regularPriceMinor": 50000,
+   "currencyMinorUnit": 2,
+   "inStock": false,
+   "purchasable": true,
+   "reviewCount": 0,
+   "averageRating": "0",
+   "categories": [
+    {
+     "id": 144,
+     "name": "Беззерновой корм Pure Nature для собак",
+     "slug": "pure-nature-dog-products"
+    }
+   ],
+   "derived": {
+    "weightKg": null,
+    "weightSource": null,
+    "species": "dog",
+    "form": "dry"
+   },
+   "image": {
+    "src": "https://domokup.ru/wp-content/uploads/2025/04/3-1.png",
+    "thumbnail": "https://domokup.ru/wp-content/uploads/2025/04/3-1-300x300.png",
+    "alt": "Гипоаллергенный сухой корм для собак Pure Nature 200 гр с уткой"
+   },
+   "permalink": "https://domokup.ru/product/gipoallergennyj-suhoj-korm-dlja-sobak-pure-nature-s-utkoj-200-gr/"
+  },
+  {
+   "id": 5516,
+   "name": "Гипоаллергенный сухой корм для собак Pure Nature 200 гр с ягненком",
+   "slug": "gipoallergennyj-suhoj-korm-dlja-sobak-pure-nature-s-jagnenkom-200-gr",
+   "sku": "88205-200",
+   "priceMinor": 50000,
+   "regularPriceMinor": 50000,
+   "currencyMinorUnit": 2,
+   "inStock": false,
+   "purchasable": true,
+   "reviewCount": 0,
+   "averageRating": "0",
+   "categories": [
+    {
+     "id": 144,
+     "name": "Беззерновой корм Pure Nature для собак",
+     "slug": "pure-nature-dog-products"
+    }
+   ],
+   "derived": {
+    "weightKg": null,
+    "weightSource": null,
+    "species": "dog",
+    "form": "dry"
+   },
+   "image": {
+    "src": "https://domokup.ru/wp-content/uploads/2025/04/3-5.png",
+    "thumbnail": "https://domokup.ru/wp-content/uploads/2025/04/3-5-300x300.png",
+    "alt": "Гипоаллергенный сухой корм для собак Pure Nature 200 гр с ягненком"
+   },
+   "permalink": "https://domokup.ru/product/gipoallergennyj-suhoj-korm-dlja-sobak-pure-nature-s-jagnenkom-200-gr/"
+  },
+  {
+   "id": 4428,
+   "name": "Гипоаллергенный сухой корм для собак Pure Nature 5 кг с уткой",
+   "slug": "gipoallergennyj-suhoj-korm-dlja-sobak-pure-nature-s-utkoj-5-kg",
+   "sku": "88202",
+   "priceMinor": 840000,
+   "regularPriceMinor": 840000,
+   "currencyMinorUnit": 2,
+   "inStock": false,
+   "purchasable": true,
+   "reviewCount": 0,
+   "averageRating": "0",
+   "categories": [
+    {
+     "id": 144,
+     "name": "Беззерновой корм Pure Nature для собак",
+     "slug": "pure-nature-dog-products"
+    }
+   ],
+   "derived": {
+    "weightKg": 5,
+    "weightSource": "name",
+    "species": "dog",
+    "form": "dry"
+   },
+   "image": {
+    "src": "https://domokup.ru/wp-content/uploads/2025/04/1-4.png",
+    "thumbnail": "https://domokup.ru/wp-content/uploads/2025/04/1-4-300x300.png",
+    "alt": "Гипоаллергенный сухой корм для собак Pure Nature 5 кг с уткой"
+   },
+   "permalink": "https://domokup.ru/product/gipoallergennyj-suhoj-korm-dlja-sobak-pure-nature-s-utkoj-5-kg/"
+  },
+  {
+   "id": 4414,
+   "name": "Гипоаллергенный сухой корм для собак Pure Nature 5 кг с ягненком",
+   "slug": "gipoallergennyj-suhoj-korm-dlja-sobak-pure-nature-s-jagnenkom-5-kg",
+   "sku": "88206",
+   "priceMinor": 659000,
+   "regularPriceMinor": 659000,
+   "currencyMinorUnit": 2,
+   "inStock": true,
+   "purchasable": true,
+   "reviewCount": 0,
+   "averageRating": "0",
+   "categories": [
+    {
+     "id": 144,
+     "name": "Беззерновой корм Pure Nature для собак",
+     "slug": "pure-nature-dog-products"
+    }
+   ],
+   "derived": {
+    "weightKg": 5,
+    "weightSource": "name",
+    "species": "dog",
+    "form": "dry"
+   },
+   "image": {
+    "src": "https://domokup.ru/wp-content/uploads/2025/04/1-5.png",
+    "thumbnail": "https://domokup.ru/wp-content/uploads/2025/04/1-5-300x300.png",
+    "alt": "Гипоаллергенный сухой корм для собак Pure Nature 5 кг с ягненком"
+   },
+   "permalink": "https://domokup.ru/product/gipoallergennyj-suhoj-korm-dlja-sobak-pure-nature-s-jagnenkom-5-kg/"
+  },
+  {
+   "id": 5521,
+   "name": "Гипоаллергенный сухой корм для собак Pure Nature 500 гр с уткой",
+   "slug": "gipoallergennyj-suhoj-korm-dlja-sobak-pure-nature-s-utkoj-500-gr",
+   "sku": "88202-500",
+   "priceMinor": 93000,
+   "regularPriceMinor": 93000,
+   "currencyMinorUnit": 2,
+   "inStock": false,
+   "purchasable": true,
+   "reviewCount": 0,
+   "averageRating": "0",
+   "categories": [
+    {
+     "id": 144,
+     "name": "Беззерновой корм Pure Nature для собак",
+     "slug": "pure-nature-dog-products"
+    }
+   ],
+   "derived": {
+    "weightKg": null,
+    "weightSource": null,
+    "species": "dog",
+    "form": "dry"
+   },
+   "image": {
+    "src": "https://domokup.ru/wp-content/uploads/2025/04/4-1.png",
+    "thumbnail": "https://domokup.ru/wp-content/uploads/2025/04/4-1-300x300.png",
+    "alt": "Гипоаллергенный сухой корм для собак Pure Nature 500 гр с уткой"
+   },
+   "permalink": "https://domokup.ru/product/gipoallergennyj-suhoj-korm-dlja-sobak-pure-nature-s-utkoj-500-gr/"
+  },
+  {
+   "id": 5517,
+   "name": "Гипоаллергенный сухой корм для собак Pure Nature 500 гр с ягненком",
+   "slug": "gipoallergennyj-suhoj-korm-dlja-sobak-pure-nature-s-jagnenkom-500-gr",
+   "sku": "88206-500",
+   "priceMinor": 69000,
+   "regularPriceMinor": 69000,
+   "currencyMinorUnit": 2,
+   "inStock": false,
+   "purchasable": true,
+   "reviewCount": 0,
+   "averageRating": "0",
+   "categories": [
+    {
+     "id": 144,
+     "name": "Беззерновой корм Pure Nature для собак",
+     "slug": "pure-nature-dog-products"
+    }
+   ],
+   "derived": {
+    "weightKg": null,
+    "weightSource": null,
+    "species": "dog",
+    "form": "dry"
+   },
+   "image": {
+    "src": "https://domokup.ru/wp-content/uploads/2025/04/4-5.png",
+    "thumbnail": "https://domokup.ru/wp-content/uploads/2025/04/4-5-300x300.png",
+    "alt": "Гипоаллергенный сухой корм для собак Pure Nature 500 гр с ягненком"
+   },
+   "permalink": "https://domokup.ru/product/gipoallergennyj-suhoj-korm-dlja-sobak-pure-nature-s-jagnenkom-500-gr/"
+  },
+  {
+   "id": 4436,
+   "name": "Гипоаллергенный сухой корм для собак Pure Nature с лососем 1,2 кг",
+   "slug": "gipoallergennyj-suhoj-korm-dlja-sobak-pure-nature-s-lososem-1-2-kg",
+   "sku": "88203",
+   "priceMinor": 273000,
+   "regularPriceMinor": 273000,
+   "currencyMinorUnit": 2,
+   "inStock": false,
+   "purchasable": true,
+   "reviewCount": 0,
+   "averageRating": "0",
+   "categories": [
+    {
+     "id": 144,
+     "name": "Беззерновой корм Pure Nature для собак",
+     "slug": "pure-nature-dog-products"
+    }
+   ],
+   "derived": {
+    "weightKg": 1.2,
+    "weightSource": "name",
+    "species": "dog",
+    "form": "dry"
+   },
+   "image": {
+    "src": "https://domokup.ru/wp-content/uploads/2025/04/2-3.png",
+    "thumbnail": "https://domokup.ru/wp-content/uploads/2025/04/2-3-300x300.png",
+    "alt": "Гипоаллергенный сухой корм для собак Pure Nature с лососем 1,2 кг"
+   },
+   "permalink": "https://domokup.ru/product/gipoallergennyj-suhoj-korm-dlja-sobak-pure-nature-s-lososem-1-2-kg/"
+  },
+  {
+   "id": 5519,
+   "name": "Гипоаллергенный сухой корм для собак Pure Nature с лососем 200 гр",
+   "slug": "gipoallergennyj-suhoj-korm-dlja-sobak-pure-nature-s-lososem-200-gr",
+   "sku": "88203-200",
+   "priceMinor": 50000,
+   "regularPriceMinor": 50000,
+   "currencyMinorUnit": 2,
+   "inStock": false,
+   "purchasable": true,
+   "reviewCount": 0,
+   "averageRating": "0",
+   "categories": [
+    {
+     "id": 144,
+     "name": "Беззерновой корм Pure Nature для собак",
+     "slug": "pure-nature-dog-products"
+    }
+   ],
+   "derived": {
+    "weightKg": null,
+    "weightSource": null,
+    "species": "dog",
+    "form": "dry"
+   },
+   "image": {
+    "src": "https://domokup.ru/wp-content/uploads/2025/04/3.png",
+    "thumbnail": "https://domokup.ru/wp-content/uploads/2025/04/3-300x300.png",
+    "alt": "Гипоаллергенный сухой корм для собак Pure Nature с лососем 200 гр"
+   },
+   "permalink": "https://domokup.ru/product/gipoallergennyj-suhoj-korm-dlja-sobak-pure-nature-s-lososem-200-gr/"
+  },
+  {
+   "id": 5518,
+   "name": "Гипоаллергенный сухой корм для собак Pure Nature с лососем 500 гр",
+   "slug": "gipoallergennyj-suhoj-korm-dlja-sobak-pure-nature-s-lososem-500-gr",
+   "sku": "88204-500",
+   "priceMinor": 69000,
+   "regularPriceMinor": 69000,
+   "currencyMinorUnit": 2,
+   "inStock": false,
+   "purchasable": true,
+   "reviewCount": 0,
+   "averageRating": "0",
+   "categories": [
+    {
+     "id": 144,
+     "name": "Беззерновой корм Pure Nature для собак",
+     "slug": "pure-nature-dog-products"
+    }
+   ],
+   "derived": {
+    "weightKg": null,
+    "weightSource": null,
+    "species": "dog",
+    "form": "dry"
+   },
+   "image": {
+    "src": "https://domokup.ru/wp-content/uploads/2025/04/4-3.png",
+    "thumbnail": "https://domokup.ru/wp-content/uploads/2025/04/4-3-300x300.png",
+    "alt": "Гипоаллергенный сухой корм для собак Pure Nature с лососем 500 гр"
+   },
+   "permalink": "https://domokup.ru/product/gipoallergennyj-suhoj-korm-dlja-sobak-pure-nature-s-lososem-500-gr/"
+  },
+  {
+   "id": 4444,
+   "name": "Гипоаллергенный сухой корм для собак Pure Nature с лососем 5кг",
+   "slug": "gipoallergennyj-suhoj-korm-dlja-sobak-pure-nature-s-lososem-5-kg",
+   "sku": "88204",
+   "priceMinor": 659000,
+   "regularPriceMinor": 659000,
+   "currencyMinorUnit": 2,
+   "inStock": true,
+   "purchasable": true,
+   "reviewCount": 0,
+   "averageRating": "0",
+   "categories": [
+    {
+     "id": 144,
+     "name": "Беззерновой корм Pure Nature для собак",
+     "slug": "pure-nature-dog-products"
+    }
+   ],
+   "derived": {
+    "weightKg": 5,
+    "weightSource": "name",
+    "species": "dog",
+    "form": "dry"
+   },
+   "image": {
+    "src": "https://domokup.ru/wp-content/uploads/2025/04/1-3.png",
+    "thumbnail": "https://domokup.ru/wp-content/uploads/2025/04/1-3-300x300.png",
+    "alt": "Гипоаллергенный сухой корм для собак Pure Nature с лососем 5кг"
+   },
+   "permalink": "https://domokup.ru/product/gipoallergennyj-suhoj-korm-dlja-sobak-pure-nature-s-lososem-5-kg/"
+  },
+  {
+   "id": 6477,
+   "name": "Зажим Easy Safe Clip для защиты от насекомых для собак бежевый",
+   "slug": "zazhim-easy-safe-clip-dlja-zashhity-ot-nasekomyh-dlja-sobak-bezhevyj",
+   "sku": "881510",
+   "priceMinor": 135000,
+   "regularPriceMinor": 135000,
+   "currencyMinorUnit": 2,
+   "inStock": true,
+   "purchasable": true,
+   "reviewCount": 0,
+   "averageRating": "0",
+   "categories": [
+    {
+     "id": 169,
+     "name": "Средства от блох и клещей",
+     "slug": "sredstva-ot-bloh-i-kleshhej"
+    },
+    {
+     "id": 170,
+     "name": "Средства от блох и клещей",
+     "slug": "sredstva-ot-bloh-i-kleshhej-cat-products"
+    }
+   ],
+   "derived": {
+    "weightKg": null,
+    "weightSource": null,
+    "species": null,
+    "form": null
+   },
+   "image": {
+    "src": "https://domokup.ru/wp-content/uploads/2026/05/11.png",
+    "thumbnail": "https://domokup.ru/wp-content/uploads/2026/05/11-300x300.png",
+    "alt": "Зажим Easy Safe Clip для защиты от насекомых для собак бежевый"
+   },
+   "permalink": "https://domokup.ru/product/zazhim-easy-safe-clip-dlja-zashhity-ot-nasekomyh-dlja-sobak-bezhevyj/"
+  },
+  {
+   "id": 6483,
+   "name": "Зажим Easy Safe Clip для защиты от насекомых для собак желтый",
+   "slug": "zazhim-easy-safe-clip-dlja-zashhity-ot-nasekomyh-dlja-sobak-zheltyj",
+   "sku": "881509",
+   "priceMinor": 135000,
+   "regularPriceMinor": 135000,
+   "currencyMinorUnit": 2,
+   "inStock": true,
+   "purchasable": true,
+   "reviewCount": 0,
+   "averageRating": "0",
+   "categories": [
+    {
+     "id": 169,
+     "name": "Средства от блох и клещей",
+     "slug": "sredstva-ot-bloh-i-kleshhej"
+    },
+    {
+     "id": 170,
+     "name": "Средства от блох и клещей",
+     "slug": "sredstva-ot-bloh-i-kleshhej-cat-products"
+    }
+   ],
+   "derived": {
+    "weightKg": null,
+    "weightSource": null,
+    "species": null,
+    "form": null
+   },
+   "image": {
+    "src": "https://domokup.ru/wp-content/uploads/2026/05/7-2.png",
+    "thumbnail": "https://domokup.ru/wp-content/uploads/2026/05/7-2-300x300.png",
+    "alt": "Зажим Easy Safe Clip для защиты от насекомых для собак желтый"
+   },
+   "permalink": "https://domokup.ru/product/zazhim-easy-safe-clip-dlja-zashhity-ot-nasekomyh-dlja-sobak-zheltyj/"
+  },
+  {
+   "id": 6474,
+   "name": "Зажим Easy Safe Clip для защиты от насекомых для собак зеленый",
+   "slug": "zazhim-easy-safe-clip-dlja-zashhity-ot-nasekomyh-dlja-sobak-zelenyj",
+   "sku": "881505",
+   "priceMinor": 135000,
+   "regularPriceMinor": 135000,
+   "currencyMinorUnit": 2,
+   "inStock": true,
+   "purchasable": true,
+   "reviewCount": 0,
+   "averageRating": "0",
+   "categories": [
+    {
+     "id": 169,
+     "name": "Средства от блох и клещей",
+     "slug": "sredstva-ot-bloh-i-kleshhej"
+    },
+    {
+     "id": 170,
+     "name": "Средства от блох и клещей",
+     "slug": "sredstva-ot-bloh-i-kleshhej-cat-products"
+    }
+   ],
+   "derived": {
+    "weightKg": null,
+    "weightSource": null,
+    "species": null,
+    "form": null
+   },
+   "image": {
+    "src": "https://domokup.ru/wp-content/uploads/2026/05/1-3.png",
+    "thumbnail": "https://domokup.ru/wp-content/uploads/2026/05/1-3-300x300.png",
+    "alt": "Зажим Easy Safe Clip для защиты от насекомых для собак зеленый"
+   },
+   "permalink": "https://domokup.ru/product/zazhim-easy-safe-clip-dlja-zashhity-ot-nasekomyh-dlja-sobak-zelenyj/"
+  },
+  {
+   "id": 6476,
+   "name": "Зажим Easy Safe Clip для защиты от насекомых для собак красный",
+   "slug": "zazhim-easy-safe-clip-dlja-zashhity-ot-nasekomyh-dlja-sobak-krasnyj",
+   "sku": "881508",
+   "priceMinor": 135000,
+   "regularPriceMinor": 135000,
+   "currencyMinorUnit": 2,
+   "inStock": true,
+   "purchasable": true,
+   "reviewCount": 0,
+   "averageRating": "0",
+   "categories": [
+    {
+     "id": 169,
+     "name": "Средства от блох и клещей",
+     "slug": "sredstva-ot-bloh-i-kleshhej"
+    },
+    {
+     "id": 170,
+     "name": "Средства от блох и клещей",
+     "slug": "sredstva-ot-bloh-i-kleshhej-cat-products"
+    }
+   ],
+   "derived": {
+    "weightKg": null,
+    "weightSource": null,
+    "species": null,
+    "form": null
+   },
+   "image": {
+    "src": "https://domokup.ru/wp-content/uploads/2026/05/5.png",
+    "thumbnail": "https://domokup.ru/wp-content/uploads/2026/05/5-300x300.png",
+    "alt": "Зажим Easy Safe Clip для защиты от насекомых для собак красный"
+   },
+   "permalink": "https://domokup.ru/product/zazhim-easy-safe-clip-dlja-zashhity-ot-nasekomyh-dlja-sobak-krasnyj/"
+  },
+  {
+   "id": 6478,
+   "name": "Зажим Easy Safe Clip для защиты от насекомых для собак оранжевый",
+   "slug": "zazhim-easy-safe-clip-dlja-zashhity-ot-nasekomyh-dlja-sobak-oranzhevyj",
+   "sku": "881507",
+   "priceMinor": 135000,
+   "regularPriceMinor": 135000,
+   "currencyMinorUnit": 2,
+   "inStock": true,
+   "purchasable": true,
+   "reviewCount": 0,
+   "averageRating": "0",
+   "categories": [
+    {
+     "id": 169,
+     "name": "Средства от блох и клещей",
+     "slug": "sredstva-ot-bloh-i-kleshhej"
+    },
+    {
+     "id": 170,
+     "name": "Средства от блох и клещей",
+     "slug": "sredstva-ot-bloh-i-kleshhej-cat-products"
+    }
+   ],
+   "derived": {
+    "weightKg": null,
+    "weightSource": null,
+    "species": null,
+    "form": null
+   },
+   "image": {
+    "src": "https://domokup.ru/wp-content/uploads/2026/05/4.png",
+    "thumbnail": "https://domokup.ru/wp-content/uploads/2026/05/4-300x300.png",
+    "alt": "Зажим Easy Safe Clip для защиты от насекомых для собак оранжевый"
+   },
+   "permalink": "https://domokup.ru/product/zazhim-easy-safe-clip-dlja-zashhity-ot-nasekomyh-dlja-sobak-oranzhevyj/"
+  },
+  {
+   "id": 6475,
+   "name": "Зажим Easy Safe Clip для защиты от насекомых для собак синий",
+   "slug": "zazhim-easy-safe-clip-dlja-zashhity-ot-nasekomyh-dlja-sobak-sinij",
+   "sku": "881506",
+   "priceMinor": 135000,
+   "regularPriceMinor": 135000,
+   "currencyMinorUnit": 2,
+   "inStock": true,
+   "purchasable": true,
+   "reviewCount": 0,
+   "averageRating": "0",
+   "categories": [
+    {
+     "id": 169,
+     "name": "Средства от блох и клещей",
+     "slug": "sredstva-ot-bloh-i-kleshhej"
+    },
+    {
+     "id": 170,
+     "name": "Средства от блох и клещей",
+     "slug": "sredstva-ot-bloh-i-kleshhej-cat-products"
+    }
+   ],
+   "derived": {
+    "weightKg": null,
+    "weightSource": null,
+    "species": null,
+    "form": null
+   },
+   "image": {
+    "src": "https://domokup.ru/wp-content/uploads/2026/05/3.png",
+    "thumbnail": "https://domokup.ru/wp-content/uploads/2026/05/3-300x300.png",
+    "alt": "Зажим Easy Safe Clip для защиты от насекомых для собак синий"
+   },
+   "permalink": "https://domokup.ru/product/zazhim-easy-safe-clip-dlja-zashhity-ot-nasekomyh-dlja-sobak-sinij/"
+  },
+  {
+   "id": 6157,
+   "name": "Игрушка для кошек Авокадо с мятой внутри (9 см)",
+   "slug": "igrushka-dlja-koshek-avokado-s-mjatoj-vnutri-9-sm",
+   "sku": "7174",
+   "priceMinor": 41600,
+   "regularPriceMinor": 41600,
+   "currencyMinorUnit": 2,
+   "inStock": true,
+   "purchasable": true,
+   "reviewCount": 0,
+   "averageRating": "0",
+   "categories": [
+    {
+     "id": 166,
+     "name": "Игрушки для кошек",
+     "slug": "igrushki-dlja-koshek"
+    }
+   ],
+   "derived": {
+    "weightKg": null,
+    "weightSource": null,
+    "species": "cat",
+    "form": null
+   },
+   "image": {
+    "src": "https://domokup.ru/wp-content/uploads/2026/04/7174.jpg",
+    "thumbnail": "https://domokup.ru/wp-content/uploads/2026/04/7174-300x300.jpg",
+    "alt": "Игрушка для кошек Авокадо с мятой внутри (9 см)"
+   },
+   "permalink": "https://domokup.ru/product/igrushka-dlja-koshek-avokado-s-mjatoj-vnutri-9-sm/"
+  },
+  {
+   "id": 6153,
+   "name": "Игрушка для кошек Баклажан с мятой внутри (9 см)",
+   "slug": "igrushka-dlja-koshek-baklazhan-s-mjatoj-vnutri-9-sm",
+   "sku": "7172",
+   "priceMinor": 35200,
+   "regularPriceMinor": 35200,
+   "currencyMinorUnit": 2,
+   "inStock": true,
+   "purchasable": true,
+   "reviewCount": 0,
+   "averageRating": "0",
+   "categories": [
+    {
+     "id": 166,
+     "name": "Игрушки для кошек",
+     "slug": "igrushki-dlja-koshek"
+    }
+   ],
+   "derived": {
+    "weightKg": null,
+    "weightSource": null,
+    "species": "cat",
+    "form": null
+   },
+   "image": {
+    "src": "https://domokup.ru/wp-content/uploads/2026/04/7172_1000.jpg",
+    "thumbnail": "https://domokup.ru/wp-content/uploads/2026/04/7172_1000-300x300.jpg",
+    "alt": "Игрушка для кошек Баклажан с мятой внутри (9 см)"
+   },
+   "permalink": "https://domokup.ru/product/igrushka-dlja-koshek-baklazhan-s-mjatoj-vnutri-9-sm/"
+  },
+  {
+   "id": 6159,
+   "name": "Игрушка для кошек Кукуруза с мятой внутри (9 см)",
+   "slug": "igrushka-dlja-koshek-kukuruza-s-mjatoj-vnutri-9-sm",
+   "sku": "7175",
+   "priceMinor": 41600,
+   "regularPriceMinor": 41600,
+   "currencyMinorUnit": 2,
+   "inStock": true,
+   "purchasable": true,
+   "reviewCount": 0,
+   "averageRating": "0",
+   "categories": [
+    {
+     "id": 166,
+     "name": "Игрушки для кошек",
+     "slug": "igrushki-dlja-koshek"
+    }
+   ],
+   "derived": {
+    "weightKg": null,
+    "weightSource": null,
+    "species": "cat",
+    "form": null
+   },
+   "image": {
+    "src": "https://domokup.ru/wp-content/uploads/2026/04/7175.jpg",
+    "thumbnail": "https://domokup.ru/wp-content/uploads/2026/04/7175-300x300.jpg",
+    "alt": "Игрушка для кошек Кукуруза с мятой внутри (9 см)"
+   },
+   "permalink": "https://domokup.ru/product/igrushka-dlja-koshek-kukuruza-s-mjatoj-vnutri-9-sm/"
+  },
+  {
+   "id": 6165,
+   "name": "Игрушка для кошек Логотип JS с перьями и мятой внутри (11см)",
+   "slug": "igrushka-dlja-koshek-logotip-js-s-perjami-i-mjatoj-vnutri-11sm-3",
+   "sku": "7151",
+   "priceMinor": 25600,
+   "regularPriceMinor": 25600,
+   "currencyMinorUnit": 2,
+   "inStock": true,
+   "purchasable": true,
+   "reviewCount": 0,
+   "averageRating": "0",
+   "categories": [
+    {
+     "id": 166,
+     "name": "Игрушки для кошек",
+     "slug": "igrushki-dlja-koshek"
+    }
+   ],
+   "derived": {
+    "weightKg": null,
+    "weightSource": null,
+    "species": "cat",
+    "form": null
+   },
+   "image": {
+    "src": "https://domokup.ru/wp-content/uploads/2026/04/7151.jpg",
+    "thumbnail": "https://domokup.ru/wp-content/uploads/2026/04/7151-300x300.jpg",
+    "alt": "Игрушка для кошек Логотип JS с перьями и мятой внутри (11см)"
+   },
+   "permalink": "https://domokup.ru/product/igrushka-dlja-koshek-logotip-js-s-perjami-i-mjatoj-vnutri-11sm-3/"
+  },
+  {
+   "id": 6163,
+   "name": "Игрушка для кошек Логотип JS с перьями и мятой внутри (11см)",
+   "slug": "igrushka-dlja-koshek-logotip-js-s-perjami-i-mjatoj-vnutri-11sm-2",
+   "sku": "7150",
+   "priceMinor": 25600,
+   "regularPriceMinor": 25600,
+   "currencyMinorUnit": 2,
+   "inStock": true,
+   "purchasable": true,
+   "reviewCount": 0,
+   "averageRating": "0",
+   "categories": [
+    {
+     "id": 166,
+     "name": "Игрушки для кошек",
+     "slug": "igrushki-dlja-koshek"
+    }
+   ],
+   "derived": {
+    "weightKg": null,
+    "weightSource": null,
+    "species": "cat",
+    "form": null
+   },
+   "image": {
+    "src": "https://domokup.ru/wp-content/uploads/2026/04/7150.jpg",
+    "thumbnail": "https://domokup.ru/wp-content/uploads/2026/04/7150-300x300.jpg",
+    "alt": "Игрушка для кошек Логотип JS с перьями и мятой внутри (11см)"
+   },
+   "permalink": "https://domokup.ru/product/igrushka-dlja-koshek-logotip-js-s-perjami-i-mjatoj-vnutri-11sm-2/"
+  },
+  {
+   "id": 6161,
+   "name": "Игрушка для кошек Логотип JS с перьями и мятой внутри (11см)",
+   "slug": "igrushka-dlja-koshek-logotip-js-s-perjami-i-mjatoj-vnutri-11sm",
+   "sku": "7149",
+   "priceMinor": 25600,
+   "regularPriceMinor": 25600,
+   "currencyMinorUnit": 2,
+   "inStock": true,
+   "purchasable": true,
+   "reviewCount": 0,
+   "averageRating": "0",
+   "categories": [
+    {
+     "id": 166,
+     "name": "Игрушки для кошек",
+     "slug": "igrushki-dlja-koshek"
+    }
+   ],
+   "derived": {
+    "weightKg": null,
+    "weightSource": null,
+    "species": "cat",
+    "form": null
+   },
+   "image": {
+    "src": "https://domokup.ru/wp-content/uploads/2026/04/7149.jpg",
+    "thumbnail": "https://domokup.ru/wp-content/uploads/2026/04/7149-300x300.jpg",
+    "alt": "Игрушка для кошек Логотип JS с перьями и мятой внутри (11см)"
+   },
+   "permalink": "https://domokup.ru/product/igrushka-dlja-koshek-logotip-js-s-perjami-i-mjatoj-vnutri-11sm/"
+  },
+  {
+   "id": 6151,
+   "name": "Игрушка для кошек Монстр с мятой внутри (6 см)",
+   "slug": "igrushka-dlja-koshek-monstr-s-mjatoj-vnutri-6-sm-5",
+   "sku": "7176",
+   "priceMinor": 41600,
+   "regularPriceMinor": 41600,
+   "currencyMinorUnit": 2,
+   "inStock": true,
+   "purchasable": true,
+   "reviewCount": 0,
+   "averageRating": "0",
+   "categories": [
+    {
+     "id": 166,
+     "name": "Игрушки для кошек",
+     "slug": "igrushki-dlja-koshek"
+    }
+   ],
+   "derived": {
+    "weightKg": null,
+    "weightSource": null,
+    "species": "cat",
+    "form": null
+   },
+   "image": {
+    "src": "https://domokup.ru/wp-content/uploads/2026/04/7176.jpg",
+    "thumbnail": "https://domokup.ru/wp-content/uploads/2026/04/7176-300x300.jpg",
+    "alt": "Игрушка для кошек Монстр с мятой внутри (6 см)"
+   },
+   "permalink": "https://domokup.ru/product/igrushka-dlja-koshek-monstr-s-mjatoj-vnutri-6-sm-5/"
+  },
+  {
+   "id": 6149,
+   "name": "Игрушка для кошек Монстр с мятой внутри (6 см)",
+   "slug": "igrushka-dlja-koshek-monstr-s-mjatoj-vnutri-6-sm-4",
+   "sku": "7159",
+   "priceMinor": 41600,
+   "regularPriceMinor": 41600,
+   "currencyMinorUnit": 2,
+   "inStock": true,
+   "purchasable": true,
+   "reviewCount": 0,
+   "averageRating": "0",
+   "categories": [
+    {
+     "id": 166,
+     "name": "Игрушки для кошек",
+     "slug": "igrushki-dlja-koshek"
+    }
+   ],
+   "derived": {
+    "weightKg": null,
+    "weightSource": null,
+    "species": "cat",
+    "form": null
+   },
+   "image": {
+    "src": "https://domokup.ru/wp-content/uploads/2026/04/7159.jpg",
+    "thumbnail": "https://domokup.ru/wp-content/uploads/2026/04/7159-300x300.jpg",
+    "alt": "Игрушка для кошек Монстр с мятой внутри (6 см)"
+   },
+   "permalink": "https://domokup.ru/product/igrushka-dlja-koshek-monstr-s-mjatoj-vnutri-6-sm-4/"
+  },
+  {
+   "id": 6147,
+   "name": "Игрушка для кошек Монстр с мятой внутри (6 см)",
+   "slug": "igrushka-dlja-koshek-monstr-s-mjatoj-vnutri-6-sm-3",
+   "sku": "7158",
+   "priceMinor": 41600,
+   "regularPriceMinor": 41600,
+   "currencyMinorUnit": 2,
+   "inStock": true,
+   "purchasable": true,
+   "reviewCount": 0,
+   "averageRating": "0",
+   "categories": [
+    {
+     "id": 166,
+     "name": "Игрушки для кошек",
+     "slug": "igrushki-dlja-koshek"
+    }
+   ],
+   "derived": {
+    "weightKg": null,
+    "weightSource": null,
+    "species": "cat",
+    "form": null
+   },
+   "image": {
+    "src": "https://domokup.ru/wp-content/uploads/2026/04/7158.jpg",
+    "thumbnail": "https://domokup.ru/wp-content/uploads/2026/04/7158-300x300.jpg",
+    "alt": "Игрушка для кошек Монстр с мятой внутри (6 см)"
+   },
+   "permalink": "https://domokup.ru/product/igrushka-dlja-koshek-monstr-s-mjatoj-vnutri-6-sm-3/"
+  },
+  {
+   "id": 6145,
+   "name": "Игрушка для кошек Монстр с мятой внутри (6 см)",
+   "slug": "igrushka-dlja-koshek-monstr-s-mjatoj-vnutri-6-sm-2",
+   "sku": "7157",
+   "priceMinor": 41600,
+   "regularPriceMinor": 41600,
+   "currencyMinorUnit": 2,
+   "inStock": true,
+   "purchasable": true,
+   "reviewCount": 0,
+   "averageRating": "0",
+   "categories": [
+    {
+     "id": 166,
+     "name": "Игрушки для кошек",
+     "slug": "igrushki-dlja-koshek"
+    }
+   ],
+   "derived": {
+    "weightKg": null,
+    "weightSource": null,
+    "species": "cat",
+    "form": null
+   },
+   "image": {
+    "src": "https://domokup.ru/wp-content/uploads/2026/04/7157.jpg",
+    "thumbnail": "https://domokup.ru/wp-content/uploads/2026/04/7157-300x300.jpg",
+    "alt": "Игрушка для кошек Монстр с мятой внутри (6 см)"
+   },
+   "permalink": "https://domokup.ru/product/igrushka-dlja-koshek-monstr-s-mjatoj-vnutri-6-sm-2/"
+  },
+  {
+   "id": 6138,
+   "name": "Игрушка для кошек Монстр с мятой внутри (6 см)",
+   "slug": "igrushka-dlja-koshek-monstr-s-mjatoj-vnutri-6-sm",
+   "sku": "7116",
+   "priceMinor": 49600,
+   "regularPriceMinor": 49600,
+   "currencyMinorUnit": 2,
+   "inStock": true,
+   "purchasable": true,
+   "reviewCount": 0,
+   "averageRating": "0",
+   "categories": [
+    {
+     "id": 166,
+     "name": "Игрушки для кошек",
+     "slug": "igrushki-dlja-koshek"
+    }
+   ],
+   "derived": {
+    "weightKg": null,
+    "weightSource": null,
+    "species": "cat",
+    "form": null
+   },
+   "image": {
+    "src": "https://domokup.ru/wp-content/uploads/2026/04/7117_001.jpg",
+    "thumbnail": "https://domokup.ru/wp-content/uploads/2026/04/7117_001-300x300.jpg",
+    "alt": "Игрушка для кошек Монстр с мятой внутри (6 см)"
+   },
+   "permalink": "https://domokup.ru/product/igrushka-dlja-koshek-monstr-s-mjatoj-vnutri-6-sm/"
+  },
+  {
+   "id": 6155,
+   "name": "Игрушка для кошек Морковка с мятой внутри (9 см)",
+   "slug": "igrushka-dlja-koshek-morkovka-s-mjatoj-vnutri-9-sm",
+   "sku": "7173",
+   "priceMinor": 35200,
+   "regularPriceMinor": 35200,
+   "currencyMinorUnit": 2,
+   "inStock": true,
+   "purchasable": true,
+   "reviewCount": 0,
+   "averageRating": "0",
+   "categories": [
+    {
+     "id": 166,
+     "name": "Игрушки для кошек",
+     "slug": "igrushki-dlja-koshek"
+    }
+   ],
+   "derived": {
+    "weightKg": null,
+    "weightSource": null,
+    "species": "cat",
+    "form": null
+   },
+   "image": {
+    "src": "https://domokup.ru/wp-content/uploads/2026/04/7173.jpg",
+    "thumbnail": "https://domokup.ru/wp-content/uploads/2026/04/7173-300x300.jpg",
+    "alt": "Игрушка для кошек Морковка с мятой внутри (9 см)"
+   },
+   "permalink": "https://domokup.ru/product/igrushka-dlja-koshek-morkovka-s-mjatoj-vnutri-9-sm/"
+  },
+  {
+   "id": 6116,
+   "name": "Игрушка для кошек Мышка со звуковым чипом",
+   "slug": "igrushka-dlja-koshek-myshka-so-zvukovym-chipom-2",
+   "sku": "7057",
+   "priceMinor": 38400,
+   "regularPriceMinor": 38400,
+   "currencyMinorUnit": 2,
+   "inStock": true,
+   "purchasable": true,
+   "reviewCount": 0,
+   "averageRating": "0",
+   "categories": [
+    {
+     "id": 166,
+     "name": "Игрушки для кошек",
+     "slug": "igrushki-dlja-koshek"
+    }
+   ],
+   "derived": {
+    "weightKg": null,
+    "weightSource": null,
+    "species": "cat",
+    "form": null
+   },
+   "image": {
+    "src": "https://domokup.ru/wp-content/uploads/2026/04/01-11.jpg",
+    "thumbnail": "https://domokup.ru/wp-content/uploads/2026/04/01-11-300x300.jpg",
+    "alt": "Игрушка для кошек Мышка со звуковым чипом"
+   },
+   "permalink": "https://domokup.ru/product/igrushka-dlja-koshek-myshka-so-zvukovym-chipom-2/"
+  },
+  {
+   "id": 6109,
+   "name": "Игрушка для кошек Мышка со звуковым чипом",
+   "slug": "igrushka-dlja-koshek-myshka-so-zvukovym-chipom",
+   "sku": "7056",
+   "priceMinor": 38400,
+   "regularPriceMinor": 38400,
+   "currencyMinorUnit": 2,
+   "inStock": true,
+   "purchasable": true,
+   "reviewCount": 0,
+   "averageRating": "0",
+   "categories": [
+    {
+     "id": 166,
+     "name": "Игрушки для кошек",
+     "slug": "igrushki-dlja-koshek"
+    }
+   ],
+   "derived": {
+    "weightKg": null,
+    "weightSource": null,
+    "species": "cat",
+    "form": null
+   },
+   "image": {
+    "src": "https://domokup.ru/wp-content/uploads/2026/04/7056_001.jpg",
+    "thumbnail": "https://domokup.ru/wp-content/uploads/2026/04/7056_001-300x300.jpg",
+    "alt": "Игрушка для кошек Мышка со звуковым чипом"
+   },
+   "permalink": "https://domokup.ru/product/igrushka-dlja-koshek-myshka-so-zvukovym-chipom/"
+  },
+  {
+   "id": 6142,
+   "name": "Игрушка для кошек Пирамидка с мятой внутри (16 см)",
+   "slug": "igrushka-dlja-koshek-piramidka-s-mjatoj-vnutri-16-sm",
+   "sku": "7117",
+   "priceMinor": 45600,
+   "regularPriceMinor": 45600,
+   "currencyMinorUnit": 2,
+   "inStock": true,
+   "purchasable": true,
+   "reviewCount": 0,
+   "averageRating": "0",
+   "categories": [
+    {
+     "id": 166,
+     "name": "Игрушки для кошек",
+     "slug": "igrushki-dlja-koshek"
+    }
+   ],
+   "derived": {
+    "weightKg": null,
+    "weightSource": null,
+    "species": "cat",
+    "form": null
+   },
+   "image": {
+    "src": "https://domokup.ru/wp-content/uploads/2026/04/7117_001-2.jpg",
+    "thumbnail": "https://domokup.ru/wp-content/uploads/2026/04/7117_001-2-300x300.jpg",
+    "alt": "Игрушка для кошек Пирамидка с мятой внутри (16 см)"
+   },
+   "permalink": "https://domokup.ru/product/igrushka-dlja-koshek-piramidka-s-mjatoj-vnutri-16-sm/"
+  },
+  {
+   "id": 6102,
+   "name": "Игрушка для кошек Птичка со звуковым чипом",
+   "slug": "igrushka-dlja-koshek-ptichka-so-zvukovym-chipom-2",
+   "sku": "7054",
+   "priceMinor": 38400,
+   "regularPriceMinor": 38400,
+   "currencyMinorUnit": 2,
+   "inStock": true,
+   "purchasable": true,
+   "reviewCount": 0,
+   "averageRating": "0",
+   "categories": [
+    {
+     "id": 166,
+     "name": "Игрушки для кошек",
+     "slug": "igrushki-dlja-koshek"
+    }
+   ],
+   "derived": {
+    "weightKg": null,
+    "weightSource": null,
+    "species": "cat",
+    "form": null
+   },
+   "image": {
+    "src": "https://domokup.ru/wp-content/uploads/2026/04/01-10.jpg",
+    "thumbnail": "https://domokup.ru/wp-content/uploads/2026/04/01-10-300x300.jpg",
+    "alt": "Игрушка для кошек Птичка со звуковым чипом"
+   },
+   "permalink": "https://domokup.ru/product/igrushka-dlja-koshek-ptichka-so-zvukovym-chipom-2/"
+  },
+  {
+   "id": 6097,
+   "name": "Игрушка для кошек Птичка со звуковым чипом",
+   "slug": "igrushka-dlja-koshek-ptichka-so-zvukovym-chipom",
+   "sku": "7053",
+   "priceMinor": 38400,
+   "regularPriceMinor": 38400,
+   "currencyMinorUnit": 2,
+   "inStock": true,
+   "purchasable": true,
+   "reviewCount": 0,
+   "averageRating": "0",
+   "categories": [
+    {
+     "id": 166,
+     "name": "Игрушки для кошек",
+     "slug": "igrushki-dlja-koshek"
+    }
+   ],
+   "derived": {
+    "weightKg": null,
+    "weightSource": null,
+    "species": "cat",
+    "form": null
+   },
+   "image": {
+    "src": "https://domokup.ru/wp-content/uploads/2026/04/7065_001.png",
+    "thumbnail": "https://domokup.ru/wp-content/uploads/2026/04/7065_001-300x300.png",
+    "alt": "Игрушка для кошек Птичка со звуковым чипом"
+   },
+   "permalink": "https://domokup.ru/product/igrushka-dlja-koshek-ptichka-so-zvukovym-chipom/"
+  },
+  {
+   "id": 6135,
+   "name": "Игрушка для кошек Рыба с мятой внутри (6 см)",
+   "slug": "igrushka-dlja-koshek-ryba-s-mjatoj-vnutri-6-sm",
+   "sku": "7109",
+   "priceMinor": 49600,
+   "regularPriceMinor": 49600,
+   "currencyMinorUnit": 2,
+   "inStock": true,
+   "purchasable": true,
+   "reviewCount": 0,
+   "averageRating": "0",
+   "categories": [
+    {
+     "id": 166,
+     "name": "Игрушки для кошек",
+     "slug": "igrushki-dlja-koshek"
+    }
+   ],
+   "derived": {
+    "weightKg": null,
+    "weightSource": null,
+    "species": "cat",
+    "form": null
+   },
+   "image": {
+    "src": "https://domokup.ru/wp-content/uploads/2026/04/7109_001.jpg",
+    "thumbnail": "https://domokup.ru/wp-content/uploads/2026/04/7109_001-300x300.jpg",
+    "alt": "Игрушка для кошек Рыба с мятой внутри (6 см)"
+   },
+   "permalink": "https://domokup.ru/product/igrushka-dlja-koshek-ryba-s-mjatoj-vnutri-6-sm/"
+  },
+  {
+   "id": 6017,
+   "name": "Игрушка для кошек с мятой Catnip Ball с лентами",
+   "slug": "igrushka-dlja-koshek-s-mjatoj-catnip-ball-s-lentami",
+   "sku": "7048",
+   "priceMinor": 28800,
+   "regularPriceMinor": 28800,
+   "currencyMinorUnit": 2,
+   "inStock": true,
+   "purchasable": true,
+   "reviewCount": 0,
+   "averageRating": "0",
+   "categories": [
+    {
+     "id": 166,
+     "name": "Игрушки для кошек",
+     "slug": "igrushki-dlja-koshek"
+    }
+   ],
+   "derived": {
+    "weightKg": null,
+    "weightSource": null,
+    "species": "cat",
+    "form": null
+   },
+   "image": {
+    "src": "https://domokup.ru/wp-content/uploads/2026/04/7048_001.jpg",
+    "thumbnail": "https://domokup.ru/wp-content/uploads/2026/04/7048_001-300x300.jpg",
+    "alt": "Игрушка для кошек с мятой Catnip Ball с лентами"
+   },
+   "permalink": "https://domokup.ru/product/igrushka-dlja-koshek-s-mjatoj-catnip-ball-s-lentami/"
+  },
+  {
+   "id": 6007,
+   "name": "Игрушка для кошек с мятой Catnip Ball с перьями",
+   "slug": "igrushka-dlja-koshek-s-mjatoj-catnip-ball-s-perjami-2",
+   "sku": "7046",
+   "priceMinor": 28800,
+   "regularPriceMinor": 28800,
+   "currencyMinorUnit": 2,
+   "inStock": true,
+   "purchasable": true,
+   "reviewCount": 0,
+   "averageRating": "0",
+   "categories": [
+    {
+     "id": 166,
+     "name": "Игрушки для кошек",
+     "slug": "igrushki-dlja-koshek"
+    }
+   ],
+   "derived": {
+    "weightKg": null,
+    "weightSource": null,
+    "species": "cat",
+    "form": null
+   },
+   "image": {
+    "src": "https://domokup.ru/wp-content/uploads/2026/04/01.jpg",
+    "thumbnail": "https://domokup.ru/wp-content/uploads/2026/04/01-300x300.jpg",
+    "alt": "Игрушка для кошек с мятой Catnip Ball с перьями"
+   },
+   "permalink": "https://domokup.ru/product/igrushka-dlja-koshek-s-mjatoj-catnip-ball-s-perjami-2/"
+  },
+  {
+   "id": 6012,
+   "name": "Игрушка для кошек с мятой Catnip Ball с перьями",
+   "slug": "igrushka-dlja-koshek-s-mjatoj-catnip-ball-s-perjami",
+   "sku": "7047",
+   "priceMinor": 28800,
+   "regularPriceMinor": 28800,
+   "currencyMinorUnit": 2,
+   "inStock": true,
+   "purchasable": true,
+   "reviewCount": 0,
+   "averageRating": "0",
+   "categories": [
+    {
+     "id": 166,
+     "name": "Игрушки для кошек",
+     "slug": "igrushki-dlja-koshek"
+    }
+   ],
+   "derived": {
+    "weightKg": null,
+    "weightSource": null,
+    "species": "cat",
+    "form": null
+   },
+   "image": {
+    "src": "https://domokup.ru/wp-content/uploads/2026/04/01-1.jpg",
+    "thumbnail": "https://domokup.ru/wp-content/uploads/2026/04/01-1-300x300.jpg",
+    "alt": "Игрушка для кошек с мятой Catnip Ball с перьями"
+   },
+   "permalink": "https://domokup.ru/product/igrushka-dlja-koshek-s-mjatoj-catnip-ball-s-perjami/"
+  },
+  {
+   "id": 6039,
+   "name": "Игрушка для кошек с мятой Catnip DouBall с лентами",
+   "slug": "igrushka-dlja-koshek-s-mjatoj-catnip-douball-s-lentami",
+   "sku": "7052",
+   "priceMinor": 28800,
+   "regularPriceMinor": 28800,
+   "currencyMinorUnit": 2,
+   "inStock": true,
+   "purchasable": true,
+   "reviewCount": 0,
+   "averageRating": "0",
+   "categories": [
+    {
+     "id": 166,
+     "name": "Игрушки для кошек",
+     "slug": "igrushki-dlja-koshek"
+    }
+   ],
+   "derived": {
+    "weightKg": null,
+    "weightSource": null,
+    "species": "cat",
+    "form": null
+   },
+   "image": {
+    "src": "https://domokup.ru/wp-content/uploads/2026/04/7052_003.jpg",
+    "thumbnail": "https://domokup.ru/wp-content/uploads/2026/04/7052_003-300x300.jpg",
+    "alt": "Игрушка для кошек с мятой Catnip DouBall с лентами"
+   },
+   "permalink": "https://domokup.ru/product/igrushka-dlja-koshek-s-mjatoj-catnip-douball-s-lentami/"
+  },
+  {
+   "id": 6033,
+   "name": "Игрушка для кошек с мятой Catnip DouBall с перьями",
+   "slug": "igrushka-dlja-koshek-s-mjatoj-catnip-douball-s-perjami-3",
+   "sku": "7051",
+   "priceMinor": 28800,
+   "regularPriceMinor": 28800,
+   "currencyMinorUnit": 2,
+   "inStock": true,
+   "purchasable": true,
+   "reviewCount": 0,
+   "averageRating": "0",
+   "categories": [
+    {
+     "id": 166,
+     "name": "Игрушки для кошек",
+     "slug": "igrushki-dlja-koshek"
+    }
+   ],
+   "derived": {
+    "weightKg": null,
+    "weightSource": null,
+    "species": "cat",
+    "form": null
+   },
+   "image": {
+    "src": "https://domokup.ru/wp-content/uploads/2026/04/00.jpg",
+    "thumbnail": "https://domokup.ru/wp-content/uploads/2026/04/00-300x300.jpg",
+    "alt": "Игрушка для кошек с мятой Catnip DouBall с перьями"
+   },
+   "permalink": "https://domokup.ru/product/igrushka-dlja-koshek-s-mjatoj-catnip-douball-s-perjami-3/"
+  },
+  {
+   "id": 6028,
+   "name": "Игрушка для кошек с мятой Catnip DouBall с перьями",
+   "slug": "igrushka-dlja-koshek-s-mjatoj-catnip-douball-s-perjami-2",
+   "sku": "7050",
+   "priceMinor": 28800,
+   "regularPriceMinor": 28800,
+   "currencyMinorUnit": 2,
+   "inStock": true,
+   "purchasable": true,
+   "reviewCount": 0,
+   "averageRating": "0",
+   "categories": [
+    {
+     "id": 166,
+     "name": "Игрушки для кошек",
+     "slug": "igrushki-dlja-koshek"
+    }
+   ],
+   "derived": {
+    "weightKg": null,
+    "weightSource": null,
+    "species": "cat",
+    "form": null
+   },
+   "image": {
+    "src": "https://domokup.ru/wp-content/uploads/2026/04/01-3.jpg",
+    "thumbnail": "https://domokup.ru/wp-content/uploads/2026/04/01-3-300x300.jpg",
+    "alt": "Игрушка для кошек с мятой Catnip DouBall с перьями"
+   },
+   "permalink": "https://domokup.ru/product/igrushka-dlja-koshek-s-mjatoj-catnip-douball-s-perjami-2/"
+  },
+  {
+   "id": 6023,
+   "name": "Игрушка для кошек с мятой Catnip DouBall с перьями",
+   "slug": "igrushka-dlja-koshek-s-mjatoj-catnip-douball-s-perjami",
+   "sku": "7049",
+   "priceMinor": 28800,
+   "regularPriceMinor": 28800,
+   "currencyMinorUnit": 2,
+   "inStock": true,
+   "purchasable": true,
+   "reviewCount": 0,
+   "averageRating": "0",
+   "categories": [
+    {
+     "id": 166,
+     "name": "Игрушки для кошек",
+     "slug": "igrushki-dlja-koshek"
+    }
+   ],
+   "derived": {
+    "weightKg": null,
+    "weightSource": null,
+    "species": "cat",
+    "form": null
+   },
+   "image": {
+    "src": "https://domokup.ru/wp-content/uploads/2026/04/01-2.jpg",
+    "thumbnail": "https://domokup.ru/wp-content/uploads/2026/04/01-2-300x300.jpg",
+    "alt": "Игрушка для кошек с мятой Catnip DouBall с перьями"
+   },
+   "permalink": "https://domokup.ru/product/igrushka-dlja-koshek-s-mjatoj-catnip-douball-s-perjami/"
+  },
+  {
+   "id": 6125,
+   "name": "Игрушка для кошек с мятой Catnip WoBall зеленый монстр",
+   "slug": "igrushka-dlja-koshek-s-mjatoj-catnip-woball-zelenyj-monstr",
+   "sku": "7103",
+   "priceMinor": 99200,
+   "regularPriceMinor": 99200,
+   "currencyMinorUnit": 2,
+   "inStock": true,
+   "purchasable": true,
+   "reviewCount": 0,
+   "averageRating": "0",
+   "categories": [
+    {
+     "id": 166,
+     "name": "Игрушки для кошек",
+     "slug": "igrushki-dlja-koshek"
+    }
+   ],
+   "derived": {
+    "weightKg": null,
+    "weightSource": null,
+    "species": "cat",
+    "form": null
+   },
+   "image": {
+    "src": "https://domokup.ru/wp-content/uploads/2026/04/7103_001.jpg",
+    "thumbnail": "https://domokup.ru/wp-content/uploads/2026/04/7103_001-300x300.jpg",
+    "alt": "Игрушка для кошек с мятой Catnip WoBall зеленый монстр"
+   },
+   "permalink": "https://domokup.ru/product/igrushka-dlja-koshek-s-mjatoj-catnip-woball-zelenyj-monstr/"
+  },
+  {
+   "id": 6129,
+   "name": "Игрушка для кошек с мятой Catnip WoBall рыба",
+   "slug": "igrushka-dlja-koshek-s-mjatoj-catnip-woball-ryba",
+   "sku": "7104",
+   "priceMinor": 99200,
+   "regularPriceMinor": 99200,
+   "currencyMinorUnit": 2,
+   "inStock": true,
+   "purchasable": true,
+   "reviewCount": 0,
+   "averageRating": "0",
+   "categories": [
+    {
+     "id": 166,
+     "name": "Игрушки для кошек",
+     "slug": "igrushki-dlja-koshek"
+    }
+   ],
+   "derived": {
+    "weightKg": null,
+    "weightSource": null,
+    "species": "cat",
+    "form": null
+   },
+   "image": {
+    "src": "https://domokup.ru/wp-content/uploads/2026/04/7104_002.png",
+    "thumbnail": "https://domokup.ru/wp-content/uploads/2026/04/7104_002-300x300.png",
+    "alt": "Игрушка для кошек с мятой Catnip WoBall рыба"
+   },
+   "permalink": "https://domokup.ru/product/igrushka-dlja-koshek-s-mjatoj-catnip-woball-ryba/"
+  },
+  {
+   "id": 6132,
+   "name": "Игрушка для кошек с мятой Catnip WoBall с лентами",
+   "slug": "igrushka-dlja-koshek-s-mjatoj-catnip-woball-s-lentami",
+   "sku": "7105",
+   "priceMinor": 88000,
+   "regularPriceMinor": 88000,
+   "currencyMinorUnit": 2,
+   "inStock": true,
+   "purchasable": true,
+   "reviewCount": 0,
+   "averageRating": "0",
+   "categories": [
+    {
+     "id": 166,
+     "name": "Игрушки для кошек",
+     "slug": "igrushki-dlja-koshek"
+    }
+   ],
+   "derived": {
+    "weightKg": null,
+    "weightSource": null,
+    "species": "cat",
+    "form": null
+   },
+   "image": {
+    "src": "https://domokup.ru/wp-content/uploads/2026/04/7105_002.png",
+    "thumbnail": "https://domokup.ru/wp-content/uploads/2026/04/7105_002-300x300.png",
+    "alt": "Игрушка для кошек с мятой Catnip WoBall с лентами"
+   },
+   "permalink": "https://domokup.ru/product/igrushka-dlja-koshek-s-mjatoj-catnip-woball-s-lentami/"
+  },
+  {
+   "id": 6121,
+   "name": "Игрушка для кошек с мятой Catnip WoBall с перьями",
+   "slug": "igrushka-dlja-koshek-s-mjatoj-catnip-woball-s-perjami",
+   "sku": "7101",
+   "priceMinor": 84000,
+   "regularPriceMinor": 84000,
+   "currencyMinorUnit": 2,
+   "inStock": true,
+   "purchasable": true,
+   "reviewCount": 0,
+   "averageRating": "0",
+   "categories": [
+    {
+     "id": 166,
+     "name": "Игрушки для кошек",
+     "slug": "igrushki-dlja-koshek"
+    }
+   ],
+   "derived": {
+    "weightKg": null,
+    "weightSource": null,
+    "species": "cat",
+    "form": null
+   },
+   "image": {
+    "src": "https://domokup.ru/wp-content/uploads/2026/04/7101_001.jpg",
+    "thumbnail": "https://domokup.ru/wp-content/uploads/2026/04/7101_001-300x300.jpg",
+    "alt": "Игрушка для кошек с мятой Catnip WoBall с перьями"
+   },
+   "permalink": "https://domokup.ru/product/igrushka-dlja-koshek-s-mjatoj-catnip-woball-s-perjami/"
+  },
+  {
+   "id": 6173,
+   "name": "Игрушка для собак Белка 20 см с пищалкой",
+   "slug": "igrushka-dlja-sobak-bronirovannaja-gorilla-32-sm",
+   "sku": "7011",
+   "priceMinor": 31200,
+   "regularPriceMinor": 31200,
+   "currencyMinorUnit": 2,
+   "inStock": true,
+   "purchasable": true,
+   "reviewCount": 0,
+   "averageRating": "0",
+   "categories": [
+    {
+     "id": 167,
+     "name": "Игрушки для собак",
+     "slug": "igrushki-dlja-sobak"
+    }
+   ],
+   "derived": {
+    "weightKg": null,
+    "weightSource": null,
+    "species": "dog",
+    "form": null
+   },
+   "image": {
+    "src": "https://domokup.ru/wp-content/uploads/2026/04/01-14.jpg",
+    "thumbnail": "https://domokup.ru/wp-content/uploads/2026/04/01-14-300x300.jpg",
+    "alt": "Игрушка для собак Белка 20 см с пищалкой"
+   },
+   "permalink": "https://domokup.ru/product/igrushka-dlja-sobak-bronirovannaja-gorilla-32-sm/"
+  },
+  {
+   "id": 6215,
+   "name": "Игрушка для собак Белка с кольцом (21 см) с пищалкой",
+   "slug": "igrushka-dlja-sobak-belka-s-kolcom-21-sm-s-pishhalkoj",
+   "sku": "7037",
+   "priceMinor": 39200,
+   "regularPriceMinor": 39200,
+   "currencyMinorUnit": 2,
+   "inStock": true,
+   "purchasable": true,
+   "reviewCount": 0,
+   "averageRating": "0",
+   "categories": [
+    {
+     "id": 167,
+     "name": "Игрушки для собак",
+     "slug": "igrushki-dlja-sobak"
+    }
+   ],
+   "derived": {
+    "weightKg": null,
+    "weightSource": null,
+    "species": "dog",
+    "form": null
+   },
+   "image": {
+    "src": "https://domokup.ru/wp-content/uploads/2026/04/01-21.jpg",
+    "thumbnail": "https://domokup.ru/wp-content/uploads/2026/04/01-21-300x300.jpg",
+    "alt": "Игрушка для собак Белка с кольцом (21 см) с пищалкой"
+   },
+   "permalink": "https://domokup.ru/product/igrushka-dlja-sobak-belka-s-kolcom-21-sm-s-pishhalkoj/"
+  },
+  {
+   "id": 6169,
+   "name": "Игрушка для собак Бронированная белка 32 см",
+   "slug": "igrushka-dlja-sobak-bronirovannaja-belka-32-sm",
+   "sku": "7009",
+   "priceMinor": 79200,
+   "regularPriceMinor": 79200,
+   "currencyMinorUnit": 2,
+   "inStock": true,
+   "purchasable": true,
+   "reviewCount": 0,
+   "averageRating": "0",
+   "categories": [
+    {
+     "id": 167,
+     "name": "Игрушки для собак",
+     "slug": "igrushki-dlja-sobak"
+    }
+   ],
+   "derived": {
+    "weightKg": null,
+    "weightSource": null,
+    "species": "dog",
+    "form": null
+   },
+   "image": {
+    "src": "https://domokup.ru/wp-content/uploads/2026/04/01-12.jpg",
+    "thumbnail": "https://domokup.ru/wp-content/uploads/2026/04/01-12-300x300.jpg",
+    "alt": "Игрушка для собак Бронированная белка 32 см"
+   },
+   "permalink": "https://domokup.ru/product/igrushka-dlja-sobak-bronirovannaja-belka-32-sm/"
+  },
+  {
+   "id": 6187,
+   "name": "Игрушка для собак Бык (27 см на 20 см)",
+   "slug": "igrushka-dlja-sobak-veselaja-golova-20-sm-s-pishhalkoj",
+   "sku": "7023",
+   "priceMinor": 119200,
+   "regularPriceMinor": 119200,
+   "currencyMinorUnit": 2,
+   "inStock": true,
+   "purchasable": true,
+   "reviewCount": 0,
+   "averageRating": "0",
+   "categories": [
+    {
+     "id": 167,
+     "name": "Игрушки для собак",
+     "slug": "igrushki-dlja-sobak"
+    }
+   ],
+   "derived": {
+    "weightKg": null,
+    "weightSource": null,
+    "species": "dog",
+    "form": null
+   },
+   "image": {
+    "src": "https://domokup.ru/wp-content/uploads/2026/04/01-18.jpg",
+    "thumbnail": "https://domokup.ru/wp-content/uploads/2026/04/01-18-300x300.jpg",
+    "alt": "Игрушка для собак Бык (27 см на 20 см)"
+   },
+   "permalink": "https://domokup.ru/product/igrushka-dlja-sobak-veselaja-golova-20-sm-s-pishhalkoj/"
+  },
+  {
+   "id": 6181,
+   "name": "Игрушка для собак Горилла 20 см с пищалкой",
+   "slug": "igrushka-dlja-sobak-gorilla-20-sm-s-pishhalkoj",
+   "sku": "7016",
+   "priceMinor": 31200,
+   "regularPriceMinor": 31200,
+   "currencyMinorUnit": 2,
+   "inStock": true,
+   "purchasable": true,
+   "reviewCount": 0,
+   "averageRating": "0",
+   "categories": [
+    {
+     "id": 167,
+     "name": "Игрушки для собак",
+     "slug": "igrushki-dlja-sobak"
+    }
+   ],
+   "derived": {
+    "weightKg": null,
+    "weightSource": null,
+    "species": "dog",
+    "form": null
+   },
+   "image": {
+    "src": "https://domokup.ru/wp-content/uploads/2026/04/01-15.jpg",
+    "thumbnail": "https://domokup.ru/wp-content/uploads/2026/04/01-15-300x300.jpg",
+    "alt": "Игрушка для собак Горилла 20 см с пищалкой"
+   },
+   "permalink": "https://domokup.ru/product/igrushka-dlja-sobak-gorilla-20-sm-s-pishhalkoj/"
+  },
+  {
+   "id": 6195,
+   "name": "Игрушка для собак Кит (23 см)",
+   "slug": "igrushka-dlja-sobak-kit-23-sm",
+   "sku": "7100",
+   "priceMinor": 60000,
+   "regularPriceMinor": 60000,
+   "currencyMinorUnit": 2,
+   "inStock": true,
+   "purchasable": true,
+   "reviewCount": 0,
+   "averageRating": "0",
+   "categories": [
+    {
+     "id": 167,
+     "name": "Игрушки для собак",
+     "slug": "igrushki-dlja-sobak"
+    }
+   ],
+   "derived": {
+    "weightKg": null,
+    "weightSource": null,
+    "species": "dog",
+    "form": null
+   },
+   "image": {
+    "src": "https://domokup.ru/wp-content/uploads/2026/04/7100_001.jpg",
+    "thumbnail": "https://domokup.ru/wp-content/uploads/2026/04/7100_001-300x300.jpg",
+    "alt": "Игрушка для собак Кит (23 см)"
+   },
+   "permalink": "https://domokup.ru/product/igrushka-dlja-sobak-kit-23-sm/"
+  },
+  {
+   "id": 6184,
+   "name": "Игрушка для собак Медведь 20 см с пищалкой",
+   "slug": "igrushka-dlja-sobak-medved-20-sm-s-pishhalkoj",
+   "sku": "7017",
+   "priceMinor": 63200,
+   "regularPriceMinor": 63200,
+   "currencyMinorUnit": 2,
+   "inStock": true,
+   "purchasable": true,
+   "reviewCount": 0,
+   "averageRating": "0",
+   "categories": [
+    {
+     "id": 167,
+     "name": "Игрушки для собак",
+     "slug": "igrushki-dlja-sobak"
+    }
+   ],
+   "derived": {
+    "weightKg": null,
+    "weightSource": null,
+    "species": "dog",
+    "form": null
+   },
+   "image": {
+    "src": "https://domokup.ru/wp-content/uploads/2026/04/01-16.jpg",
+    "thumbnail": "https://domokup.ru/wp-content/uploads/2026/04/01-16-300x300.jpg",
+    "alt": "Игрушка для собак Медведь 20 см с пищалкой"
+   },
+   "permalink": "https://domokup.ru/product/igrushka-dlja-sobak-medved-20-sm-s-pishhalkoj/"
+  },
+  {
+   "id": 6206,
+   "name": "Игрушка для собак Мишка с кольцом (21 см) с пищалкой",
+   "slug": "igrushka-dlja-sobak-mishka-s-kolcom-21-sm-s-pishhalkoj",
+   "sku": "7033",
+   "priceMinor": 39200,
+   "regularPriceMinor": 39200,
+   "currencyMinorUnit": 2,
+   "inStock": true,
+   "purchasable": true,
+   "reviewCount": 0,
+   "averageRating": "0",
+   "categories": [
+    {
+     "id": 167,
+     "name": "Игрушки для собак",
+     "slug": "igrushki-dlja-sobak"
+    }
+   ],
+   "derived": {
+    "weightKg": null,
+    "weightSource": null,
+    "species": "dog",
+    "form": null
+   },
+   "image": {
+    "src": "https://domokup.ru/wp-content/uploads/2026/04/01-19.jpg",
+    "thumbnail": "https://domokup.ru/wp-content/uploads/2026/04/01-19-300x300.jpg",
+    "alt": "Игрушка для собак Мишка с кольцом (21 см) с пищалкой"
+   },
+   "permalink": "https://domokup.ru/product/igrushka-dlja-sobak-mishka-s-kolcom-21-sm-s-pishhalkoj/"
+  },
+  {
+   "id": 6204,
+   "name": "Игрушка для собак Неваляшка Джек (25 см) с пищалкой",
+   "slug": "igrushka-dlja-sobak-nevaljashka-dzhek-25-sm-s-pishhalkoj",
+   "sku": "7110",
+   "priceMinor": 92800,
+   "regularPriceMinor": 92800,
+   "currencyMinorUnit": 2,
+   "inStock": true,
+   "purchasable": true,
+   "reviewCount": 0,
+   "averageRating": "0",
+   "categories": [
+    {
+     "id": 167,
+     "name": "Игрушки для собак",
+     "slug": "igrushki-dlja-sobak"
+    }
+   ],
+   "derived": {
+    "weightKg": null,
+    "weightSource": null,
+    "species": "dog",
+    "form": null
+   },
+   "image": {
+    "src": "https://domokup.ru/wp-content/uploads/2026/04/7110.png",
+    "thumbnail": "https://domokup.ru/wp-content/uploads/2026/04/7110-300x300.png",
+    "alt": "Игрушка для собак Неваляшка Джек (25 см) с пищалкой"
+   },
+   "permalink": "https://domokup.ru/product/igrushka-dlja-sobak-nevaljashka-dzhek-25-sm-s-pishhalkoj/"
+  },
+  {
+   "id": 6200,
+   "name": "Игрушка для собак Неваляшка Кролик (19 см) с пищалкой",
+   "slug": "igrushka-dlja-sobak-nevaljashka-krolik-19-sm-s-pishhalkoj",
+   "sku": "7113",
+   "priceMinor": 92800,
+   "regularPriceMinor": 92800,
+   "currencyMinorUnit": 2,
+   "inStock": true,
+   "purchasable": true,
+   "reviewCount": 0,
+   "averageRating": "0",
+   "categories": [
+    {
+     "id": 167,
+     "name": "Игрушки для собак",
+     "slug": "igrushki-dlja-sobak"
+    }
+   ],
+   "derived": {
+    "weightKg": null,
+    "weightSource": null,
+    "species": "dog",
+    "form": null
+   },
+   "image": {
+    "src": "https://domokup.ru/wp-content/uploads/2026/04/7113.png",
+    "thumbnail": "https://domokup.ru/wp-content/uploads/2026/04/7113-300x300.png",
+    "alt": "Игрушка для собак Неваляшка Кролик (19 см) с пищалкой"
+   },
+   "permalink": "https://domokup.ru/product/igrushka-dlja-sobak-nevaljashka-krolik-19-sm-s-pishhalkoj/"
+  },
+  {
+   "id": 6202,
+   "name": "Игрушка для собак Неваляшка Монстр (14 см) с пищалкой",
+   "slug": "igrushka-dlja-sobak-nevaljashka-monstr-14-sm-s-pishhalkoj",
+   "sku": "7111",
+   "priceMinor": 92800,
+   "regularPriceMinor": 92800,
+   "currencyMinorUnit": 2,
+   "inStock": true,
+   "purchasable": true,
+   "reviewCount": 0,
+   "averageRating": "0",
+   "categories": [
+    {
+     "id": 167,
+     "name": "Игрушки для собак",
+     "slug": "igrushki-dlja-sobak"
+    }
+   ],
+   "derived": {
+    "weightKg": null,
+    "weightSource": null,
+    "species": "dog",
+    "form": null
+   },
+   "image": {
+    "src": "https://domokup.ru/wp-content/uploads/2026/04/7111.png",
+    "thumbnail": "https://domokup.ru/wp-content/uploads/2026/04/7111-300x300.png",
+    "alt": "Игрушка для собак Неваляшка Монстр (14 см) с пищалкой"
+   },
+   "permalink": "https://domokup.ru/product/igrushka-dlja-sobak-nevaljashka-monstr-14-sm-s-pishhalkoj/"
+  },
+  {
+   "id": 6210,
+   "name": "Игрушка для собак Слоник с кольцом (21 см) с пищалкой",
+   "slug": "igrushka-dlja-sobak-slonik-s-kolcom-21-sm-s-pishhalkoj",
+   "sku": "7035",
+   "priceMinor": 39200,
+   "regularPriceMinor": 39200,
+   "currencyMinorUnit": 2,
+   "inStock": true,
+   "purchasable": true,
+   "reviewCount": 0,
+   "averageRating": "0",
+   "categories": [
+    {
+     "id": 167,
+     "name": "Игрушки для собак",
+     "slug": "igrushki-dlja-sobak"
+    }
+   ],
+   "derived": {
+    "weightKg": null,
+    "weightSource": null,
+    "species": "dog",
+    "form": null
+   },
+   "image": {
+    "src": "https://domokup.ru/wp-content/uploads/2026/04/02-7.jpg",
+    "thumbnail": "https://domokup.ru/wp-content/uploads/2026/04/02-7-300x300.jpg",
+    "alt": "Игрушка для собак Слоник с кольцом (21 см) с пищалкой"
+   },
+   "permalink": "https://domokup.ru/product/igrushka-dlja-sobak-slonik-s-kolcom-21-sm-s-pishhalkoj/"
+  },
+  {
+   "id": 6218,
+   "name": "Игрушка для собак Хвост с кольцом (14 см) с пищалкой",
+   "slug": "igrushka-dlja-sobak-hvost-s-kolcom-14-sm-s-pishhalkoj",
+   "sku": "7044",
+   "priceMinor": 25600,
+   "regularPriceMinor": 25600,
+   "currencyMinorUnit": 2,
+   "inStock": true,
+   "purchasable": true,
+   "reviewCount": 0,
+   "averageRating": "0",
+   "categories": [
+    {
+     "id": 167,
+     "name": "Игрушки для собак",
+     "slug": "igrushki-dlja-sobak"
+    }
+   ],
+   "derived": {
+    "weightKg": null,
+    "weightSource": null,
+    "species": "dog",
+    "form": null
+   },
+   "image": {
+    "src": "https://domokup.ru/wp-content/uploads/2026/04/7044_002.png",
+    "thumbnail": "https://domokup.ru/wp-content/uploads/2026/04/7044_002-300x300.png",
+    "alt": "Игрушка для собак Хвост с кольцом (14 см) с пищалкой"
+   },
+   "permalink": "https://domokup.ru/product/igrushka-dlja-sobak-hvost-s-kolcom-14-sm-s-pishhalkoj/"
+  },
+  {
+   "id": 6222,
+   "name": "Игрушка для собак Шкура лисы голубая (38 см) с мячом",
+   "slug": "igrushka-dlja-sobak-shkura-lisy-golubaja-38-sm-s-mjachom",
+   "sku": "7027",
+   "priceMinor": 79200,
+   "regularPriceMinor": 79200,
+   "currencyMinorUnit": 2,
+   "inStock": true,
+   "purchasable": true,
+   "reviewCount": 0,
+   "averageRating": "0",
+   "categories": [
+    {
+     "id": 167,
+     "name": "Игрушки для собак",
+     "slug": "igrushki-dlja-sobak"
+    }
+   ],
+   "derived": {
+    "weightKg": null,
+    "weightSource": null,
+    "species": "dog",
+    "form": null
+   },
+   "image": {
+    "src": "https://domokup.ru/wp-content/uploads/2026/04/7027_002.png",
+    "thumbnail": "https://domokup.ru/wp-content/uploads/2026/04/7027_002-300x300.png",
+    "alt": "Игрушка для собак Шкура лисы голубая (38 см) с мячом"
+   },
+   "permalink": "https://domokup.ru/product/igrushka-dlja-sobak-shkura-lisy-golubaja-38-sm-s-mjachom/"
+  },
+  {
+   "id": 6228,
+   "name": "Игрушка для собак Шкура лисы розовая (38 см) с мячом",
+   "slug": "igrushka-dlja-sobak-shkura-lisy-rozovaja-38-sm-s-mjachom",
+   "sku": "7028",
+   "priceMinor": 79200,
+   "regularPriceMinor": 79200,
+   "currencyMinorUnit": 2,
+   "inStock": true,
+   "purchasable": true,
+   "reviewCount": 0,
+   "averageRating": "0",
+   "categories": [
+    {
+     "id": 167,
+     "name": "Игрушки для собак",
+     "slug": "igrushki-dlja-sobak"
+    }
+   ],
+   "derived": {
+    "weightKg": null,
+    "weightSource": null,
+    "species": "dog",
+    "form": null
+   },
+   "image": {
+    "src": "https://domokup.ru/wp-content/uploads/2026/04/7028_002.png",
+    "thumbnail": "https://domokup.ru/wp-content/uploads/2026/04/7028_002-300x300.png",
+    "alt": "Игрушка для собак Шкура лисы розовая (38 см) с мячом"
+   },
+   "permalink": "https://domokup.ru/product/igrushka-dlja-sobak-shkura-lisy-rozovaja-38-sm-s-mjachom/"
+  },
+  {
+   "id": 6234,
+   "name": "Игрушка для собак Шкура лисы розовая (39 см)",
+   "slug": "igrushka-dlja-sobak-shkura-lisy-rozovaja-39-sm",
+   "sku": "7032",
+   "priceMinor": 48000,
+   "regularPriceMinor": 48000,
+   "currencyMinorUnit": 2,
+   "inStock": true,
+   "purchasable": true,
+   "reviewCount": 0,
+   "averageRating": "0",
+   "categories": [
+    {
+     "id": 167,
+     "name": "Игрушки для собак",
+     "slug": "igrushki-dlja-sobak"
+    }
+   ],
+   "derived": {
+    "weightKg": null,
+    "weightSource": null,
+    "species": "dog",
+    "form": null
+   },
+   "image": {
+    "src": "https://domokup.ru/wp-content/uploads/2026/04/01-1.png",
+    "thumbnail": "https://domokup.ru/wp-content/uploads/2026/04/01-1-300x300.png",
+    "alt": "Игрушка для собак Шкура лисы розовая (39 см)"
+   },
+   "permalink": "https://domokup.ru/product/igrushka-dlja-sobak-shkura-lisy-rozovaja-39-sm/"
+  },
+  {
+   "id": 4400,
+   "name": "Кошачий наполнитель комкующийся Ever Dream 9 кг без запаха",
+   "slug": "koshachij-napolnitel-komkujushhijsja-ever-drream-10-l",
+   "sku": "88304",
+   "priceMinor": 290000,
+   "regularPriceMinor": 290000,
+   "currencyMinorUnit": 2,
+   "inStock": true,
+   "purchasable": true,
+   "reviewCount": 0,
+   "averageRating": "0",
+   "categories": [
+    {
+     "id": 142,
+     "name": "Наполнители Ever Dream",
+     "slug": "ever-dream"
+    }
+   ],
+   "derived": {
+    "weightKg": 9,
+    "weightSource": "name",
+    "species": "cat",
+    "form": null
+   },
+   "image": {
+    "src": "https://domokup.ru/wp-content/uploads/2024/11/photo_5285255788476097625_y.jpg",
+    "thumbnail": "https://domokup.ru/wp-content/uploads/2024/11/photo_5285255788476097625_y-300x300.jpg",
+    "alt": "Кошачий наполнитель комкующийся Ever Dream 9 кг без запаха"
+   },
+   "permalink": "https://domokup.ru/product/koshachij-napolnitel-komkujushhijsja-ever-drream-10-l/"
+  },
+  {
+   "id": 4375,
+   "name": "Кошачий наполнитель комкующийся Ever Dream 9 кг с запахом травы и свежести",
+   "slug": "testovyj-tovar",
+   "sku": "88303",
+   "priceMinor": 290000,
+   "regularPriceMinor": 290000,
+   "currencyMinorUnit": 2,
+   "inStock": true,
+   "purchasable": true,
+   "reviewCount": 0,
+   "averageRating": "0",
+   "categories": [
+    {
+     "id": 142,
+     "name": "Наполнители Ever Dream",
+     "slug": "ever-dream"
+    }
+   ],
+   "derived": {
+    "weightKg": 9,
+    "weightSource": "name",
+    "species": "cat",
+    "form": null
+   },
+   "image": {
+    "src": "https://domokup.ru/wp-content/uploads/2024/11/photo_5285255788476097617_y.jpg",
+    "thumbnail": "https://domokup.ru/wp-content/uploads/2024/11/photo_5285255788476097617_y-300x300.jpg",
+    "alt": "Кошачий наполнитель комкующийся Ever Dream 9 кг с запахом травы и свежести"
+   },
+   "permalink": "https://domokup.ru/product/testovyj-tovar/"
+  },
+  {
+   "id": 4379,
+   "name": "Кошачий наполнитель комкующийся Ever Dream 9 кг со слабым запахом свежести",
+   "slug": "koshachij-napolnitel-komkujushhijsja-10-l-so",
+   "sku": "88301",
+   "priceMinor": 290000,
+   "regularPriceMinor": 290000,
+   "currencyMinorUnit": 2,
+   "inStock": true,
+   "purchasable": true,
+   "reviewCount": 0,
+   "averageRating": "0",
+   "categories": [
+    {
+     "id": 142,
+     "name": "Наполнители Ever Dream",
+     "slug": "ever-dream"
+    }
+   ],
+   "derived": {
+    "weightKg": 9,
+    "weightSource": "name",
+    "species": "cat",
+    "form": null
+   },
+   "image": {
+    "src": "https://domokup.ru/wp-content/uploads/2024/11/photo_5285255788476097616_y.jpg",
+    "thumbnail": "https://domokup.ru/wp-content/uploads/2024/11/photo_5285255788476097616_y-300x300.jpg",
+    "alt": "Кошачий наполнитель комкующийся Ever Dream 9 кг со слабым запахом свежести"
+   },
+   "permalink": "https://domokup.ru/product/koshachij-napolnitel-komkujushhijsja-10-l-so/"
+  },
+  {
+   "id": 5310,
+   "name": "Крышка для миски из платинового силикона Moonball 400 мл",
+   "slug": "kryshka-dlja-miski-iz-platinovogo-silik-5",
+   "sku": "881415",
+   "priceMinor": 156188,
+   "regularPriceMinor": 156188,
+   "currencyMinorUnit": 2,
+   "inStock": true,
+   "purchasable": true,
+   "reviewCount": 0,
+   "averageRating": "0",
+   "categories": [
+    {
+     "id": 162,
+     "name": "Миски для собак и кошек",
+     "slug": "miski-dlja-sobak-i-koshek"
+    },
+    {
+     "id": 163,
+     "name": "Миски для собак и кошек",
+     "slug": "miski-dlja-sobak-i-koshek-cat-products"
+    }
+   ],
+   "derived": {
+    "weightKg": null,
+    "weightSource": null,
+    "species": null,
+    "form": null
+   },
+   "image": {
+    "src": "https://domokup.ru/wp-content/uploads/2025/02/1000049274.jpg",
+    "thumbnail": "https://domokup.ru/wp-content/uploads/2025/02/1000049274-300x300.jpg",
+    "alt": "Крышка для миски из платинового силикона Moonball 400 мл"
+   },
+   "permalink": "https://domokup.ru/product/kryshka-dlja-miski-iz-platinovogo-silik-5/"
+  },
+  {
+   "id": 5309,
+   "name": "Крышка для миски из платинового силикона Moonball 400 мл",
+   "slug": "kryshka-dlja-miski-iz-platinovogo-silik-4",
+   "sku": "881419",
+   "priceMinor": 134442,
+   "regularPriceMinor": 134442,
+   "currencyMinorUnit": 2,
+   "inStock": false,
+   "purchasable": true,
+   "reviewCount": 0,
+   "averageRating": "0",
+   "categories": [
+    {
+     "id": 162,
+     "name": "Миски для собак и кошек",
+     "slug": "miski-dlja-sobak-i-koshek"
+    },
+    {
+     "id": 163,
+     "name": "Миски для собак и кошек",
+     "slug": "miski-dlja-sobak-i-koshek-cat-products"
+    }
+   ],
+   "derived": {
+    "weightKg": null,
+    "weightSource": null,
+    "species": null,
+    "form": null
+   },
+   "image": {
+    "src": "https://domokup.ru/wp-content/uploads/2025/02/1000049281.jpg",
+    "thumbnail": "https://domokup.ru/wp-content/uploads/2025/02/1000049281-300x300.jpg",
+    "alt": "Крышка для миски из платинового силикона Moonball 400 мл"
+   },
+   "permalink": "https://domokup.ru/product/kryshka-dlja-miski-iz-platinovogo-silik-4/"
+  },
+  {
+   "id": 5308,
+   "name": "Крышка для миски из платинового силикона Moonball 400 мл",
+   "slug": "kryshka-dlja-miski-iz-platinovogo-silik-3",
+   "sku": "881416",
+   "priceMinor": 156188,
+   "regularPriceMinor": 156188,
+   "currencyMinorUnit": 2,
+   "inStock": true,
+   "purchasable": true,
+   "reviewCount": 0,
+   "averageRating": "0",
+   "categories": [
+    {
+     "id": 162,
+     "name": "Миски для собак и кошек",
+     "slug": "miski-dlja-sobak-i-koshek"
+    },
+    {
+     "id": 163,
+     "name": "Миски для собак и кошек",
+     "slug": "miski-dlja-sobak-i-koshek-cat-products"
+    }
+   ],
+   "derived": {
+    "weightKg": null,
+    "weightSource": null,
+    "species": null,
+    "form": null
+   },
+   "image": {
+    "src": "https://domokup.ru/wp-content/uploads/2025/02/1000049264.jpg",
+    "thumbnail": "https://domokup.ru/wp-content/uploads/2025/02/1000049264-300x300.jpg",
+    "alt": "Крышка для миски из платинового силикона Moonball 400 мл"
+   },
+   "permalink": "https://domokup.ru/product/kryshka-dlja-miski-iz-platinovogo-silik-3/"
+  },
+  {
+   "id": 5307,
+   "name": "Крышка для миски из платинового силикона Moonball 400 мл",
+   "slug": "kryshka-dlja-miski-iz-platinovogo-silik-2",
+   "sku": "881418",
+   "priceMinor": 134442,
+   "regularPriceMinor": 134442,
+   "currencyMinorUnit": 2,
+   "inStock": false,
+   "purchasable": true,
+   "reviewCount": 0,
+   "averageRating": "0",
+   "categories": [
+    {
+     "id": 162,
+     "name": "Миски для собак и кошек",
+     "slug": "miski-dlja-sobak-i-koshek"
+    },
+    {
+     "id": 163,
+     "name": "Миски для собак и кошек",
+     "slug": "miski-dlja-sobak-i-koshek-cat-products"
+    }
+   ],
+   "derived": {
+    "weightKg": null,
+    "weightSource": null,
+    "species": null,
+    "form": null
+   },
+   "image": {
+    "src": "https://domokup.ru/wp-content/uploads/2025/02/1000049275.jpg",
+    "thumbnail": "https://domokup.ru/wp-content/uploads/2025/02/1000049275-300x300.jpg",
+    "alt": "Крышка для миски из платинового силикона Moonball 400 мл"
+   },
+   "permalink": "https://domokup.ru/product/kryshka-dlja-miski-iz-platinovogo-silik-2/"
+  },
+  {
+   "id": 5295,
+   "name": "Крышка для миски из платинового силикона Moonball 400 мл",
+   "slug": "kryshka-dlja-miski-iz-platinovogo-silik",
+   "sku": "881417",
+   "priceMinor": 134442,
+   "regularPriceMinor": 134442,
+   "currencyMinorUnit": 2,
+   "inStock": false,
+   "purchasable": true,
+   "reviewCount": 0,
+   "averageRating": "0",
+   "categories": [
+    {
+     "id": 162,
+     "name": "Миски для собак и кошек",
+     "slug": "miski-dlja-sobak-i-koshek"
+    },
+    {
+     "id": 163,
+     "name": "Миски для собак и кошек",
+     "slug": "miski-dlja-sobak-i-koshek-cat-products"
+    }
+   ],
+   "derived": {
+    "weightKg": null,
+    "weightSource": null,
+    "species": null,
+    "form": null
+   },
+   "image": {
+    "src": "https://domokup.ru/wp-content/uploads/2025/02/1000049266.jpg",
+    "thumbnail": "https://domokup.ru/wp-content/uploads/2025/02/1000049266-300x300.jpg",
+    "alt": "Крышка для миски из платинового силикона Moonball 400 мл"
+   },
+   "permalink": "https://domokup.ru/product/kryshka-dlja-miski-iz-platinovogo-silik/"
+  },
+  {
+   "id": 6269,
+   "name": "Летающий диск для собак диаметр 23 см",
+   "slug": "letajushhij-disk-dlja-sobak-diametr-23-sm",
+   "sku": "7107",
+   "priceMinor": 168000,
+   "regularPriceMinor": 168000,
+   "currencyMinorUnit": 2,
+   "inStock": true,
+   "purchasable": true,
+   "reviewCount": 0,
+   "averageRating": "0",
+   "categories": [
+    {
+     "id": 167,
+     "name": "Игрушки для собак",
+     "slug": "igrushki-dlja-sobak"
+    }
+   ],
+   "derived": {
+    "weightKg": null,
+    "weightSource": null,
+    "species": "dog",
+    "form": null
+   },
+   "image": {
+    "src": "https://domokup.ru/wp-content/uploads/2026/04/7107_001.jpg",
+    "thumbnail": "https://domokup.ru/wp-content/uploads/2026/04/7107_001-300x300.jpg",
+    "alt": "Летающий диск для собак диаметр 23 см"
+   },
+   "permalink": "https://domokup.ru/product/letajushhij-disk-dlja-sobak-diametr-23-sm/"
+  },
+  {
+   "id": 5278,
+   "name": "Миска для животных из платинового силикона Egg Bowl 200 мл",
+   "slug": "miska-dlja-zhivotnyh-iz-platinovogo-sil-14",
+   "sku": "881402",
+   "priceMinor": 179256,
+   "regularPriceMinor": 179256,
+   "currencyMinorUnit": 2,
+   "inStock": true,
+   "purchasable": true,
+   "reviewCount": 0,
+   "averageRating": "0",
+   "categories": [
+    {
+     "id": 162,
+     "name": "Миски для собак и кошек",
+     "slug": "miski-dlja-sobak-i-koshek"
+    },
+    {
+     "id": 163,
+     "name": "Миски для собак и кошек",
+     "slug": "miski-dlja-sobak-i-koshek-cat-products"
+    }
+   ],
+   "derived": {
+    "weightKg": null,
+    "weightSource": null,
+    "species": null,
+    "form": null
+   },
+   "image": {
+    "src": "https://domokup.ru/wp-content/uploads/2025/02/알라딘양탄자.png",
+    "thumbnail": "https://domokup.ru/wp-content/uploads/2025/02/알라딘양탄자-300x300.png",
+    "alt": "Миска для животных из платинового силикона Egg Bowl 200 мл"
+   },
+   "permalink": "https://domokup.ru/product/miska-dlja-zhivotnyh-iz-platinovogo-sil-14/"
+  },
+  {
+   "id": 5277,
+   "name": "Миска для животных из платинового силикона Egg Bowl 200 мл",
+   "slug": "miska-dlja-zhivotnyh-iz-platinovogo-sil-13",
+   "sku": "881401",
+   "priceMinor": 179256,
+   "regularPriceMinor": 179256,
+   "currencyMinorUnit": 2,
+   "inStock": true,
+   "purchasable": true,
+   "reviewCount": 0,
+   "averageRating": "0",
+   "categories": [
+    {
+     "id": 162,
+     "name": "Миски для собак и кошек",
+     "slug": "miski-dlja-sobak-i-koshek"
+    },
+    {
+     "id": 163,
+     "name": "Миски для собак и кошек",
+     "slug": "miski-dlja-sobak-i-koshek-cat-products"
+    }
+   ],
+   "derived": {
+    "weightKg": null,
+    "weightSource": null,
+    "species": null,
+    "form": null
+   },
+   "image": {
+    "src": "https://domokup.ru/wp-content/uploads/2025/02/피치핑.png",
+    "thumbnail": "https://domokup.ru/wp-content/uploads/2025/02/피치핑-300x300.png",
+    "alt": "Миска для животных из платинового силикона Egg Bowl 200 мл"
+   },
+   "permalink": "https://domokup.ru/product/miska-dlja-zhivotnyh-iz-platinovogo-sil-13/"
+  },
+  {
+   "id": 5276,
+   "name": "Миска для животных из платинового силикона Egg Bowl 200 мл",
+   "slug": "miska-dlja-zhivotnyh-iz-platinovogo-sil-12",
+   "sku": "881421",
+   "priceMinor": 179256,
+   "regularPriceMinor": 179256,
+   "currencyMinorUnit": 2,
+   "inStock": true,
+   "purchasable": true,
+   "reviewCount": 0,
+   "averageRating": "0",
+   "categories": [
+    {
+     "id": 162,
+     "name": "Миски для собак и кошек",
+     "slug": "miski-dlja-sobak-i-koshek"
+    },
+    {
+     "id": 163,
+     "name": "Миски для собак и кошек",
+     "slug": "miski-dlja-sobak-i-koshek-cat-products"
+    }
+   ],
+   "derived": {
+    "weightKg": null,
+    "weightSource": null,
+    "species": null,
+    "form": null
+   },
+   "image": {
+    "src": "https://domokup.ru/wp-content/uploads/2025/02/오아시스.png",
+    "thumbnail": "https://domokup.ru/wp-content/uploads/2025/02/오아시스-300x300.png",
+    "alt": "Миска для животных из платинового силикона Egg Bowl 200 мл"
+   },
+   "permalink": "https://domokup.ru/product/miska-dlja-zhivotnyh-iz-platinovogo-sil-12/"
+  },
+  {
+   "id": 5275,
+   "name": "Миска для животных из платинового силикона Egg Bowl 200 мл",
+   "slug": "miska-dlja-zhivotnyh-iz-platinovogo-sil-11",
+   "sku": "881405",
+   "priceMinor": 179256,
+   "regularPriceMinor": 179256,
+   "currencyMinorUnit": 2,
+   "inStock": true,
+   "purchasable": true,
+   "reviewCount": 0,
+   "averageRating": "0",
+   "categories": [
+    {
+     "id": 162,
+     "name": "Миски для собак и кошек",
+     "slug": "miski-dlja-sobak-i-koshek"
+    },
+    {
+     "id": 163,
+     "name": "Миски для собак и кошек",
+     "slug": "miski-dlja-sobak-i-koshek-cat-products"
+    }
+   ],
+   "derived": {
+    "weightKg": null,
+    "weightSource": null,
+    "species": null,
+    "form": null
+   },
+   "image": {
+    "src": "https://domokup.ru/wp-content/uploads/2025/02/러블리피치.png",
+    "thumbnail": "https://domokup.ru/wp-content/uploads/2025/02/러블리피치-300x300.png",
+    "alt": "Миска для животных из платинового силикона Egg Bowl 200 мл"
+   },
+   "permalink": "https://domokup.ru/product/miska-dlja-zhivotnyh-iz-platinovogo-sil-11/"
+  },
+  {
+   "id": 5274,
+   "name": "Миска для животных из платинового силикона Egg Bowl 200 мл",
+   "slug": "miska-dlja-zhivotnyh-iz-platinovogo-sil-10",
+   "sku": "881404",
+   "priceMinor": 179256,
+   "regularPriceMinor": 179256,
+   "currencyMinorUnit": 2,
+   "inStock": true,
+   "purchasable": true,
+   "reviewCount": 0,
+   "averageRating": "0",
+   "categories": [
+    {
+     "id": 162,
+     "name": "Миски для собак и кошек",
+     "slug": "miski-dlja-sobak-i-koshek"
+    },
+    {
+     "id": 163,
+     "name": "Миски для собак и кошек",
+     "slug": "miski-dlja-sobak-i-koshek-cat-products"
+    }
+   ],
+   "derived": {
+    "weightKg": null,
+    "weightSource": null,
+    "species": null,
+    "form": null
+   },
+   "image": {
+    "src": "https://domokup.ru/wp-content/uploads/2025/02/솜사탕.png",
+    "thumbnail": "https://domokup.ru/wp-content/uploads/2025/02/솜사탕-300x300.png",
+    "alt": "Миска для животных из платинового силикона Egg Bowl 200 мл"
+   },
+   "permalink": "https://domokup.ru/product/miska-dlja-zhivotnyh-iz-platinovogo-sil-10/"
+  },
+  {
+   "id": 5272,
+   "name": "Миска для животных из платинового силикона Egg Bowl 200 мл",
+   "slug": "miska-dlja-zhivotnyh-iz-platinovogo-sil-9",
+   "sku": "881422",
+   "priceMinor": 179256,
+   "regularPriceMinor": 179256,
+   "currencyMinorUnit": 2,
+   "inStock": true,
+   "purchasable": true,
+   "reviewCount": 0,
+   "averageRating": "0",
+   "categories": [
+    {
+     "id": 162,
+     "name": "Миски для собак и кошек",
+     "slug": "miski-dlja-sobak-i-koshek"
+    },
+    {
+     "id": 163,
+     "name": "Миски для собак и кошек",
+     "slug": "miski-dlja-sobak-i-koshek-cat-products"
+    }
+   ],
+   "derived": {
+    "weightKg": null,
+    "weightSource": null,
+    "species": null,
+    "form": null
+   },
+   "image": {
+    "src": "https://domokup.ru/wp-content/uploads/2025/02/파스텔무지개.png",
+    "thumbnail": "https://domokup.ru/wp-content/uploads/2025/02/파스텔무지개-300x300.png",
+    "alt": "Миска для животных из платинового силикона Egg Bowl 200 мл"
+   },
+   "permalink": "https://domokup.ru/product/miska-dlja-zhivotnyh-iz-platinovogo-sil-9/"
+  },
+  {
+   "id": 5271,
+   "name": "Миска для животных из платинового силикона Egg Bowl 200 мл",
+   "slug": "miska-dlja-zhivotnyh-iz-platinovogo-sil-8",
+   "sku": "881403",
+   "priceMinor": 179256,
+   "regularPriceMinor": 179256,
+   "currencyMinorUnit": 2,
+   "inStock": true,
+   "purchasable": true,
+   "reviewCount": 0,
+   "averageRating": "0",
+   "categories": [
+    {
+     "id": 162,
+     "name": "Миски для собак и кошек",
+     "slug": "miski-dlja-sobak-i-koshek"
+    },
+    {
+     "id": 163,
+     "name": "Миски для собак и кошек",
+     "slug": "miski-dlja-sobak-i-koshek-cat-products"
+    }
+   ],
+   "derived": {
+    "weightKg": null,
+    "weightSource": null,
+    "species": null,
+    "form": null
+   },
+   "image": {
+    "src": "https://domokup.ru/wp-content/uploads/2025/02/레몬비치.png",
+    "thumbnail": "https://domokup.ru/wp-content/uploads/2025/02/레몬비치-300x300.png",
+    "alt": "Миска для животных из платинового силикона Egg Bowl 200 мл"
+   },
+   "permalink": "https://domokup.ru/product/miska-dlja-zhivotnyh-iz-platinovogo-sil-8/"
+  },
+  {
+   "id": 5230,
+   "name": "Миска для животных из платинового силикона Egg Bowl 200 мл",
+   "slug": "miska-dlja-zhivotnyh-iz-platinovogo-sil-7",
+   "sku": "881420",
+   "priceMinor": 179256,
+   "regularPriceMinor": 179256,
+   "currencyMinorUnit": 2,
+   "inStock": true,
+   "purchasable": true,
+   "reviewCount": 0,
+   "averageRating": "0",
+   "categories": [
+    {
+     "id": 162,
+     "name": "Миски для собак и кошек",
+     "slug": "miski-dlja-sobak-i-koshek"
+    },
+    {
+     "id": 163,
+     "name": "Миски для собак и кошек",
+     "slug": "miski-dlja-sobak-i-koshek-cat-products"
+    }
+   ],
+   "derived": {
+    "weightKg": null,
+    "weightSource": null,
+    "species": null,
+    "form": null
+   },
+   "image": {
+    "src": "https://domokup.ru/wp-content/uploads/2025/02/푸른산호초.png",
+    "thumbnail": "https://domokup.ru/wp-content/uploads/2025/02/푸른산호초-300x300.png",
+    "alt": "Миска для животных из платинового силикона Egg Bowl 200 мл"
+   },
+   "permalink": "https://domokup.ru/product/miska-dlja-zhivotnyh-iz-platinovogo-sil-7/"
+  },
+  {
+   "id": 5294,
+   "name": "Миска для животных из платинового силикона Moonball 400 мл",
+   "slug": "miska-dlja-zhivotnyh-iz-platinovogo-sil-17",
+   "sku": "881414",
+   "priceMinor": 325763,
+   "regularPriceMinor": 325763,
+   "currencyMinorUnit": 2,
+   "inStock": true,
+   "purchasable": true,
+   "reviewCount": 0,
+   "averageRating": "0",
+   "categories": [
+    {
+     "id": 162,
+     "name": "Миски для собак и кошек",
+     "slug": "miski-dlja-sobak-i-koshek"
+    },
+    {
+     "id": 163,
+     "name": "Миски для собак и кошек",
+     "slug": "miski-dlja-sobak-i-koshek-cat-products"
+    }
+   ],
+   "derived": {
+    "weightKg": null,
+    "weightSource": null,
+    "species": null,
+    "form": null
+   },
+   "image": {
+    "src": "https://domokup.ru/wp-content/uploads/2025/02/스트로베리문.png",
+    "thumbnail": "https://domokup.ru/wp-content/uploads/2025/02/스트로베리문-300x300.png",
+    "alt": "Миска для животных из платинового силикона Moonball 400 мл"
+   },
+   "permalink": "https://domokup.ru/product/miska-dlja-zhivotnyh-iz-platinovogo-sil-17/"
+  },
+  {
+   "id": 5293,
+   "name": "Миска для животных из платинового силикона Moonball 400 мл",
+   "slug": "miska-dlja-zhivotnyh-iz-platinovogo-sil-16",
+   "sku": "881412",
+   "priceMinor": 325763,
+   "regularPriceMinor": 325763,
+   "currencyMinorUnit": 2,
+   "inStock": true,
+   "purchasable": true,
+   "reviewCount": 0,
+   "averageRating": "0",
+   "categories": [
+    {
+     "id": 162,
+     "name": "Миски для собак и кошек",
+     "slug": "miski-dlja-sobak-i-koshek"
+    },
+    {
+     "id": 163,
+     "name": "Миски для собак и кошек",
+     "slug": "miski-dlja-sobak-i-koshek-cat-products"
+    }
+   ],
+   "derived": {
+    "weightKg": null,
+    "weightSource": null,
+    "species": null,
+    "form": null
+   },
+   "image": {
+    "src": "https://domokup.ru/wp-content/uploads/2025/02/1000049279.jpg",
+    "thumbnail": "https://domokup.ru/wp-content/uploads/2025/02/1000049279-300x300.jpg",
+    "alt": "Миска для животных из платинового силикона Moonball 400 мл"
+   },
+   "permalink": "https://domokup.ru/product/miska-dlja-zhivotnyh-iz-platinovogo-sil-16/"
+  },
+  {
+   "id": 5279,
+   "name": "Миска для животных из платинового силикона Moonball 400 мл",
+   "slug": "miska-dlja-zhivotnyh-iz-platinovogo-sil-15",
+   "sku": "881413",
+   "priceMinor": 325763,
+   "regularPriceMinor": 325763,
+   "currencyMinorUnit": 2,
+   "inStock": true,
+   "purchasable": true,
+   "reviewCount": 0,
+   "averageRating": "0",
+   "categories": [
+    {
+     "id": 162,
+     "name": "Миски для собак и кошек",
+     "slug": "miski-dlja-sobak-i-koshek"
+    },
+    {
+     "id": 163,
+     "name": "Миски для собак и кошек",
+     "slug": "miski-dlja-sobak-i-koshek-cat-products"
+    }
+   ],
+   "derived": {
+    "weightKg": null,
+    "weightSource": null,
+    "species": null,
+    "form": null
+   },
+   "image": {
+    "src": "https://domokup.ru/wp-content/uploads/2025/02/옐로우풀문.png",
+    "thumbnail": "https://domokup.ru/wp-content/uploads/2025/02/옐로우풀문-300x300.png",
+    "alt": "Миска для животных из платинового силикона Moonball 400 мл"
+   },
+   "permalink": "https://domokup.ru/product/miska-dlja-zhivotnyh-iz-platinovogo-sil-15/"
+  },
+  {
+   "id": 5225,
+   "name": "Миска для животных из платинового силикона Sun Bowl 250 мл",
+   "slug": "miska-dlja-zhivotnyh-iz-platinovogo-sil-6",
+   "sku": "881408",
+   "priceMinor": 197182,
+   "regularPriceMinor": 197182,
+   "currencyMinorUnit": 2,
+   "inStock": true,
+   "purchasable": true,
+   "reviewCount": 0,
+   "averageRating": "0",
+   "categories": [
+    {
+     "id": 162,
+     "name": "Миски для собак и кошек",
+     "slug": "miski-dlja-sobak-i-koshek"
+    },
+    {
+     "id": 163,
+     "name": "Миски для собак и кошек",
+     "slug": "miski-dlja-sobak-i-koshek-cat-products"
+    }
+   ],
+   "derived": {
+    "weightKg": null,
+    "weightSource": null,
+    "species": null,
+    "form": null
+   },
+   "image": {
+    "src": "https://domokup.ru/wp-content/uploads/2025/02/002.png",
+    "thumbnail": "https://domokup.ru/wp-content/uploads/2025/02/002-300x300.png",
+    "alt": "Миска для животных из платинового силикона Sun Bowl 250 мл"
+   },
+   "permalink": "https://domokup.ru/product/miska-dlja-zhivotnyh-iz-platinovogo-sil-6/"
+  },
+  {
+   "id": 5220,
+   "name": "Миска для животных из платинового силикона Sun Bowl 250 мл",
+   "slug": "miska-dlja-zhivotnyh-iz-platinovogo-sil-5",
+   "sku": "881406",
+   "priceMinor": 197182,
+   "regularPriceMinor": 197182,
+   "currencyMinorUnit": 2,
+   "inStock": true,
+   "purchasable": true,
+   "reviewCount": 0,
+   "averageRating": "0",
+   "categories": [
+    {
+     "id": 162,
+     "name": "Миски для собак и кошек",
+     "slug": "miski-dlja-sobak-i-koshek"
+    },
+    {
+     "id": 163,
+     "name": "Миски для собак и кошек",
+     "slug": "miski-dlja-sobak-i-koshek-cat-products"
+    }
+   ],
+   "derived": {
+    "weightKg": null,
+    "weightSource": null,
+    "species": null,
+    "form": null
+   },
+   "image": {
+    "src": "https://domokup.ru/wp-content/uploads/2025/02/006.png",
+    "thumbnail": "https://domokup.ru/wp-content/uploads/2025/02/006-300x300.png",
+    "alt": "Миска для животных из платинового силикона Sun Bowl 250 мл"
+   },
+   "permalink": "https://domokup.ru/product/miska-dlja-zhivotnyh-iz-platinovogo-sil-5/"
+  },
+  {
+   "id": 5215,
+   "name": "Миска для животных из платинового силикона Sun Bowl 250 мл",
+   "slug": "miska-dlja-zhivotnyh-iz-platinovogo-sil-4",
+   "sku": "881410",
+   "priceMinor": 197182,
+   "regularPriceMinor": 197182,
+   "currencyMinorUnit": 2,
+   "inStock": false,
+   "purchasable": true,
+   "reviewCount": 0,
+   "averageRating": "0",
+   "categories": [
+    {
+     "id": 162,
+     "name": "Миски для собак и кошек",
+     "slug": "miski-dlja-sobak-i-koshek"
+    },
+    {
+     "id": 163,
+     "name": "Миски для собак и кошек",
+     "slug": "miski-dlja-sobak-i-koshek-cat-products"
+    }
+   ],
+   "derived": {
+    "weightKg": null,
+    "weightSource": null,
+    "species": null,
+    "form": null
+   },
+   "image": {
+    "src": "https://domokup.ru/wp-content/uploads/2025/02/004.png",
+    "thumbnail": "https://domokup.ru/wp-content/uploads/2025/02/004-300x300.png",
+    "alt": "Миска для животных из платинового силикона Sun Bowl 250 мл"
+   },
+   "permalink": "https://domokup.ru/product/miska-dlja-zhivotnyh-iz-platinovogo-sil-4/"
+  },
+  {
+   "id": 5209,
+   "name": "Миска для животных из платинового силикона Sun Bowl 250 мл",
+   "slug": "miska-dlja-zhivotnyh-iz-platinovogo-sil-3",
+   "sku": "881409",
+   "priceMinor": 197182,
+   "regularPriceMinor": 197182,
+   "currencyMinorUnit": 2,
+   "inStock": true,
+   "purchasable": true,
+   "reviewCount": 0,
+   "averageRating": "0",
+   "categories": [
+    {
+     "id": 162,
+     "name": "Миски для собак и кошек",
+     "slug": "miski-dlja-sobak-i-koshek"
+    },
+    {
+     "id": 163,
+     "name": "Миски для собак и кошек",
+     "slug": "miski-dlja-sobak-i-koshek-cat-products"
+    }
+   ],
+   "derived": {
+    "weightKg": null,
+    "weightSource": null,
+    "species": null,
+    "form": null
+   },
+   "image": {
+    "src": "https://domokup.ru/wp-content/uploads/2025/02/005.png",
+    "thumbnail": "https://domokup.ru/wp-content/uploads/2025/02/005-300x300.png",
+    "alt": "Миска для животных из платинового силикона Sun Bowl 250 мл"
+   },
+   "permalink": "https://domokup.ru/product/miska-dlja-zhivotnyh-iz-platinovogo-sil-3/"
+  },
+  {
+   "id": 5204,
+   "name": "Миска для животных из платинового силикона Sun Bowl 250 мл",
+   "slug": "miska-dlja-zhivotnyh-iz-platinovogo-sil-2",
+   "sku": "881407",
+   "priceMinor": 197182,
+   "regularPriceMinor": 197182,
+   "currencyMinorUnit": 2,
+   "inStock": true,
+   "purchasable": true,
+   "reviewCount": 0,
+   "averageRating": "0",
+   "categories": [
+    {
+     "id": 162,
+     "name": "Миски для собак и кошек",
+     "slug": "miski-dlja-sobak-i-koshek"
+    },
+    {
+     "id": 163,
+     "name": "Миски для собак и кошек",
+     "slug": "miski-dlja-sobak-i-koshek-cat-products"
+    }
+   ],
+   "derived": {
+    "weightKg": null,
+    "weightSource": null,
+    "species": null,
+    "form": null
+   },
+   "image": {
+    "src": "https://domokup.ru/wp-content/uploads/2025/02/001.png",
+    "thumbnail": "https://domokup.ru/wp-content/uploads/2025/02/001-300x300.png",
+    "alt": "Миска для животных из платинового силикона Sun Bowl 250 мл"
+   },
+   "permalink": "https://domokup.ru/product/miska-dlja-zhivotnyh-iz-platinovogo-sil-2/"
+  },
+  {
+   "id": 5194,
+   "name": "Миска для животных из платинового силикона Sun Bowl 250 мл",
+   "slug": "miska-dlja-zhivotnyh-iz-platinovogo-sil",
+   "sku": "881411",
+   "priceMinor": 197182,
+   "regularPriceMinor": 197182,
+   "currencyMinorUnit": 2,
+   "inStock": false,
+   "purchasable": true,
+   "reviewCount": 0,
+   "averageRating": "0",
+   "categories": [
+    {
+     "id": 162,
+     "name": "Миски для собак и кошек",
+     "slug": "miski-dlja-sobak-i-koshek"
+    },
+    {
+     "id": 163,
+     "name": "Миски для собак и кошек",
+     "slug": "miski-dlja-sobak-i-koshek-cat-products"
+    }
+   ],
+   "derived": {
+    "weightKg": null,
+    "weightSource": null,
+    "species": null,
+    "form": null
+   },
+   "image": {
+    "src": "https://domokup.ru/wp-content/uploads/2025/02/003.png",
+    "thumbnail": "https://domokup.ru/wp-content/uploads/2025/02/003-300x300.png",
+    "alt": "Миска для животных из платинового силикона Sun Bowl 250 мл"
+   },
+   "permalink": "https://domokup.ru/product/miska-dlja-zhivotnyh-iz-platinovogo-sil/"
+  },
+  {
+   "id": 6255,
+   "name": "Мяч для собак (термопластичный полиуретан) 15 см",
+   "slug": "mjachi-dlja-sobak-termoplastichnyj-poliuretan-15-sm",
+   "sku": "7166",
+   "priceMinor": 70400,
+   "regularPriceMinor": 70400,
+   "currencyMinorUnit": 2,
+   "inStock": true,
+   "purchasable": true,
+   "reviewCount": 0,
+   "averageRating": "0",
+   "categories": [
+    {
+     "id": 167,
+     "name": "Игрушки для собак",
+     "slug": "igrushki-dlja-sobak"
+    }
+   ],
+   "derived": {
+    "weightKg": null,
+    "weightSource": null,
+    "species": "dog",
+    "form": null
+   },
+   "image": {
+    "src": "https://domokup.ru/wp-content/uploads/2026/04/002-1.jpg",
+    "thumbnail": "https://domokup.ru/wp-content/uploads/2026/04/002-1-300x300.jpg",
+    "alt": "Мяч для собак (термопластичный полиуретан) 15 см"
+   },
+   "permalink": "https://domokup.ru/product/mjachi-dlja-sobak-termoplastichnyj-poliuretan-15-sm/"
+  },
+  {
+   "id": 6244,
+   "name": "Мяч для собак (термопластичный полиуретан) 15 см",
+   "slug": "mjachi-dlja-sobak-2-sht-termoplastichnyj-poliuretan-6-3-sm",
+   "sku": "7069",
+   "priceMinor": 70400,
+   "regularPriceMinor": 70400,
+   "currencyMinorUnit": 2,
+   "inStock": true,
+   "purchasable": true,
+   "reviewCount": 0,
+   "averageRating": "0",
+   "categories": [
+    {
+     "id": 167,
+     "name": "Игрушки для собак",
+     "slug": "igrushki-dlja-sobak"
+    }
+   ],
+   "derived": {
+    "weightKg": null,
+    "weightSource": null,
+    "species": "dog",
+    "form": null
+   },
+   "image": {
+    "src": "https://domokup.ru/wp-content/uploads/2026/04/01-23.jpg",
+    "thumbnail": "https://domokup.ru/wp-content/uploads/2026/04/01-23-300x300.jpg",
+    "alt": "Мяч для собак (термопластичный полиуретан) 15 см"
+   },
+   "permalink": "https://domokup.ru/product/mjachi-dlja-sobak-2-sht-termoplastichnyj-poliuretan-6-3-sm/"
+  },
+  {
+   "id": 6238,
+   "name": "Мяч для собак (термопластичный полиуретан) диаметр 6,3 см",
+   "slug": "mjach-dlja-sobak-termoplastichnyj-poliuretan-diametr-6-3-sm",
+   "sku": "7001",
+   "priceMinor": 41600,
+   "regularPriceMinor": 41600,
+   "currencyMinorUnit": 2,
+   "inStock": true,
+   "purchasable": true,
+   "reviewCount": 0,
+   "averageRating": "0",
+   "categories": [
+    {
+     "id": 167,
+     "name": "Игрушки для собак",
+     "slug": "igrushki-dlja-sobak"
+    }
+   ],
+   "derived": {
+    "weightKg": null,
+    "weightSource": null,
+    "species": "dog",
+    "form": null
+   },
+   "image": {
+    "src": "https://domokup.ru/wp-content/uploads/2026/04/jsr__site__v871__dog__screen_03__active__ball__f1_n.png",
+    "thumbnail": "https://domokup.ru/wp-content/uploads/2026/04/jsr__site__v871__dog__screen_03__active__ball__f1_n-300x300.png",
+    "alt": "Мяч для собак (термопластичный полиуретан) диаметр 6,3 см"
+   },
+   "permalink": "https://domokup.ru/product/mjach-dlja-sobak-termoplastichnyj-poliuretan-diametr-6-3-sm/"
+  },
+  {
+   "id": 6265,
+   "name": "Мяч для собак двойной (термопластичный полиуретан) 12 см",
+   "slug": "mjach-dlja-sobak-dvojnoj-termoplastichnyj-poliuretan-12-sm-2",
+   "sku": "7167",
+   "priceMinor": 70400,
+   "regularPriceMinor": 70400,
+   "currencyMinorUnit": 2,
+   "inStock": true,
+   "purchasable": true,
+   "reviewCount": 0,
+   "averageRating": "0",
+   "categories": [
+    {
+     "id": 167,
+     "name": "Игрушки для собак",
+     "slug": "igrushki-dlja-sobak"
+    }
+   ],
+   "derived": {
+    "weightKg": null,
+    "weightSource": null,
+    "species": "dog",
+    "form": null
+   },
+   "image": {
+    "src": "https://domokup.ru/wp-content/uploads/2026/04/002-2.jpg",
+    "thumbnail": "https://domokup.ru/wp-content/uploads/2026/04/002-2-300x300.jpg",
+    "alt": "Мяч для собак двойной (термопластичный полиуретан) 12 см"
+   },
+   "permalink": "https://domokup.ru/product/mjach-dlja-sobak-dvojnoj-termoplastichnyj-poliuretan-12-sm-2/"
+  },
+  {
+   "id": 6259,
+   "name": "Мяч для собак двойной (термопластичный полиуретан) 12 см",
+   "slug": "mjach-dlja-sobak-dvojnoj-termoplastichnyj-poliuretan-12-sm",
+   "sku": "7070",
+   "priceMinor": 70400,
+   "regularPriceMinor": 70400,
+   "currencyMinorUnit": 2,
+   "inStock": true,
+   "purchasable": true,
+   "reviewCount": 0,
+   "averageRating": "0",
+   "categories": [
+    {
+     "id": 167,
+     "name": "Игрушки для собак",
+     "slug": "igrushki-dlja-sobak"
+    }
+   ],
+   "derived": {
+    "weightKg": null,
+    "weightSource": null,
+    "species": "dog",
+    "form": null
+   },
+   "image": {
+    "src": "https://domokup.ru/wp-content/uploads/2026/04/01-24.jpg",
+    "thumbnail": "https://domokup.ru/wp-content/uploads/2026/04/01-24-300x300.jpg",
+    "alt": "Мяч для собак двойной (термопластичный полиуретан) 12 см"
+   },
+   "permalink": "https://domokup.ru/product/mjach-dlja-sobak-dvojnoj-termoplastichnyj-poliuretan-12-sm/"
+  },
+  {
+   "id": 6440,
+   "name": "Наклейки HATE ME для защиты от насекомых для собак 24 шт.",
+   "slug": "naklejki-hate-me-dlja-zashhity-ot-nasekomyh-dlja-sobak-24-sht",
+   "sku": "881504",
+   "priceMinor": 80000,
+   "regularPriceMinor": 80000,
+   "currencyMinorUnit": 2,
+   "inStock": true,
+   "purchasable": true,
+   "reviewCount": 0,
+   "averageRating": "0",
+   "categories": [
+    {
+     "id": 169,
+     "name": "Средства от блох и клещей",
+     "slug": "sredstva-ot-bloh-i-kleshhej"
+    },
+    {
+     "id": 170,
+     "name": "Средства от блох и клещей",
+     "slug": "sredstva-ot-bloh-i-kleshhej-cat-products"
+    }
+   ],
+   "derived": {
+    "weightKg": null,
+    "weightSource": null,
+    "species": null,
+    "form": null
+   },
+   "image": {
+    "src": "https://domokup.ru/wp-content/uploads/2026/05/foto-1.jpg",
+    "thumbnail": "https://domokup.ru/wp-content/uploads/2026/05/foto-1-300x300.jpg",
+    "alt": "Наклейки HATE ME для защиты от насекомых для собак 24 шт."
+   },
+   "permalink": "https://domokup.ru/product/naklejki-hate-me-dlja-zashhity-ot-nasekomyh-dlja-sobak-24-sht/"
+  },
+  {
+   "id": 4301,
+   "name": "Наполнитель для кошачьего туалета Even Dream комкующийся Exclusive multicat 9 кг",
+   "slug": "napolnitel-dlja-koshachego-tualeta-even-dream",
+   "sku": "88302",
+   "priceMinor": 295000,
+   "regularPriceMinor": 295000,
+   "currencyMinorUnit": 2,
+   "inStock": true,
+   "purchasable": true,
+   "reviewCount": 0,
+   "averageRating": "0",
+   "categories": [
+    {
+     "id": 142,
+     "name": "Наполнители Ever Dream",
+     "slug": "ever-dream"
+    }
+   ],
+   "derived": {
+    "weightKg": 9,
+    "weightSource": "name",
+    "species": "cat",
+    "form": null
+   },
+   "image": {
+    "src": "https://domokup.ru/wp-content/uploads/2024/10/photo_5285255788476097619_y.jpg",
+    "thumbnail": "https://domokup.ru/wp-content/uploads/2024/10/photo_5285255788476097619_y-300x300.jpg",
+    "alt": "Наполнитель для кошачьего туалета Even Dream комкующийся Exclusive multicat 9 кг"
+   },
+   "permalink": "https://domokup.ru/product/napolnitel-dlja-koshachego-tualeta-even-dream/"
+  },
+  {
+   "id": 6351,
+   "name": "Патчи для шлейки и поводка (5*5 см)",
+   "slug": "patchi-dlja-shlejki-i-povodka-5-5-sm-3",
+   "sku": "8045",
+   "priceMinor": 32000,
+   "regularPriceMinor": 32000,
+   "currencyMinorUnit": 2,
+   "inStock": true,
+   "purchasable": true,
+   "reviewCount": 0,
+   "averageRating": "0",
+   "categories": [
+    {
+     "id": 168,
+     "name": "Амуниция для собак",
+     "slug": "amunicija-dlja-sobak"
+    }
+   ],
+   "derived": {
+    "weightKg": null,
+    "weightSource": null,
+    "species": "dog",
+    "form": null
+   },
+   "image": {
+    "src": "https://domokup.ru/wp-content/uploads/2026/04/jsr__site__v871__dog__screen_02__walk__emb_patches__f3.png",
+    "thumbnail": "https://domokup.ru/wp-content/uploads/2026/04/jsr__site__v871__dog__screen_02__walk__emb_patches__f3-300x300.png",
+    "alt": "Патчи для шлейки и поводка (5*5 см)"
+   },
+   "permalink": "https://domokup.ru/product/patchi-dlja-shlejki-i-povodka-5-5-sm-3/"
+  },
+  {
+   "id": 6349,
+   "name": "Патчи для шлейки и поводка (5*5 см)",
+   "slug": "patchi-dlja-shlejki-i-povodka-5-5-sm-2",
+   "sku": "8044",
+   "priceMinor": 32000,
+   "regularPriceMinor": 32000,
+   "currencyMinorUnit": 2,
+   "inStock": true,
+   "purchasable": true,
+   "reviewCount": 0,
+   "averageRating": "0",
+   "categories": [
+    {
+     "id": 168,
+     "name": "Амуниция для собак",
+     "slug": "amunicija-dlja-sobak"
+    }
+   ],
+   "derived": {
+    "weightKg": null,
+    "weightSource": null,
+    "species": "dog",
+    "form": null
+   },
+   "image": {
+    "src": "https://domokup.ru/wp-content/uploads/2026/04/jsr__site__v871__dog__screen_02__walk__emb_patches__f2_n.png",
+    "thumbnail": "https://domokup.ru/wp-content/uploads/2026/04/jsr__site__v871__dog__screen_02__walk__emb_patches__f2_n-300x300.png",
+    "alt": "Патчи для шлейки и поводка (5*5 см)"
+   },
+   "permalink": "https://domokup.ru/product/patchi-dlja-shlejki-i-povodka-5-5-sm-2/"
+  },
+  {
+   "id": 6342,
+   "name": "Патчи для шлейки и поводка (5*5 см)",
+   "slug": "patchi-dlja-shlejki-i-povodka-5-5-sm",
+   "sku": "8043",
+   "priceMinor": 32000,
+   "regularPriceMinor": 32000,
+   "currencyMinorUnit": 2,
+   "inStock": true,
+   "purchasable": true,
+   "reviewCount": 0,
+   "averageRating": "0",
+   "categories": [
+    {
+     "id": 168,
+     "name": "Амуниция для собак",
+     "slug": "amunicija-dlja-sobak"
+    }
+   ],
+   "derived": {
+    "weightKg": null,
+    "weightSource": null,
+    "species": "dog",
+    "form": null
+   },
+   "image": {
+    "src": "https://domokup.ru/wp-content/uploads/2026/04/jsr__site__v871__dog__screen_02__walk__emb_patches__f1_fix.png",
+    "thumbnail": "https://domokup.ru/wp-content/uploads/2026/04/jsr__site__v871__dog__screen_02__walk__emb_patches__f1_fix-300x300.png",
+    "alt": "Патчи для шлейки и поводка (5*5 см)"
+   },
+   "permalink": "https://domokup.ru/product/patchi-dlja-shlejki-i-povodka-5-5-sm/"
+  },
+  {
+   "id": 6391,
+   "name": "Поводок размер L (Длина 180 см, ширина 2 см, вес 119 гр) c дополнительной ручкой",
+   "slug": "povodok-razmer-l-dlina-180-sm-shirina-2-sm-ves-119-gr-c-dopolnitelnoj-ruchkoj",
+   "sku": "8011",
+   "priceMinor": 101600,
+   "regularPriceMinor": 101600,
+   "currencyMinorUnit": 2,
+   "inStock": true,
+   "purchasable": true,
+   "reviewCount": 0,
+   "averageRating": "0",
+   "categories": [
+    {
+     "id": 168,
+     "name": "Амуниция для собак",
+     "slug": "amunicija-dlja-sobak"
+    }
+   ],
+   "derived": {
+    "weightKg": null,
+    "weightSource": null,
+    "species": "dog",
+    "form": null
+   },
+   "image": {
+    "src": "https://domokup.ru/wp-content/uploads/2026/04/jsr__site__v871__dog__screen_03__walk__baseleash_l_v1__f1.png",
+    "thumbnail": "https://domokup.ru/wp-content/uploads/2026/04/jsr__site__v871__dog__screen_03__walk__baseleash_l_v1__f1-300x300.png",
+    "alt": "Поводок размер L (Длина 180 см, ширина 2 см, вес 119 гр) c дополнительной ручкой"
+   },
+   "permalink": "https://domokup.ru/product/povodok-razmer-l-dlina-180-sm-shirina-2-sm-ves-119-gr-c-dopolnitelnoj-ruchkoj/"
+  },
+  {
+   "id": 6387,
+   "name": "Поводок размер M (Длина 180 см, ширина 1,5 см, вес 92 гр) c дополнительной ручкой",
+   "slug": "povodok-razmer-m-dlina-180-sm-shirina-1-5-sm-ves-92-gr-c-dopolnitelnoj-ruchkoj",
+   "sku": "8010",
+   "priceMinor": 92800,
+   "regularPriceMinor": 92800,
+   "currencyMinorUnit": 2,
+   "inStock": true,
+   "purchasable": true,
+   "reviewCount": 0,
+   "averageRating": "0",
+   "categories": [
+    {
+     "id": 168,
+     "name": "Амуниция для собак",
+     "slug": "amunicija-dlja-sobak"
+    }
+   ],
+   "derived": {
+    "weightKg": null,
+    "weightSource": null,
+    "species": "dog",
+    "form": null
+   },
+   "image": {
+    "src": "https://domokup.ru/wp-content/uploads/2026/04/jsr__site__v871__dog__screen_03__walk__baseleash_m_v1__f1.png",
+    "thumbnail": "https://domokup.ru/wp-content/uploads/2026/04/jsr__site__v871__dog__screen_03__walk__baseleash_m_v1__f1-300x300.png",
+    "alt": "Поводок размер M (Длина 180 см, ширина 1,5 см, вес 92 гр) c дополнительной ручкой"
+   },
+   "permalink": "https://domokup.ru/product/povodok-razmer-m-dlina-180-sm-shirina-1-5-sm-ves-92-gr-c-dopolnitelnoj-ruchkoj/"
+  },
+  {
+   "id": 6381,
+   "name": "Поводок размер S (Длина 180 см, ширина 1,2 см, вес 62 гр) без дополнительной ручки",
+   "slug": "povodok-razmer-s-dlina-180-sm-shirina-1-2-sm-ves-62-gr-bez-dopolnitelnoj-ruchki",
+   "sku": "8009",
+   "priceMinor": 84000,
+   "regularPriceMinor": 84000,
+   "currencyMinorUnit": 2,
+   "inStock": true,
+   "purchasable": true,
+   "reviewCount": 0,
+   "averageRating": "0",
+   "categories": [
+    {
+     "id": 168,
+     "name": "Амуниция для собак",
+     "slug": "amunicija-dlja-sobak"
+    }
+   ],
+   "derived": {
+    "weightKg": null,
+    "weightSource": null,
+    "species": "dog",
+    "form": null
+   },
+   "image": {
+    "src": "https://domokup.ru/wp-content/uploads/2026/04/s-pink-no-addtional-handdel.jpg",
+    "thumbnail": "https://domokup.ru/wp-content/uploads/2026/04/s-pink-no-addtional-handdel-300x300.jpg",
+    "alt": "Поводок размер S (Длина 180 см, ширина 1,2 см, вес 62 гр) без дополнительной ручки"
+   },
+   "permalink": "https://domokup.ru/product/povodok-razmer-s-dlina-180-sm-shirina-1-2-sm-ves-62-gr-bez-dopolnitelnoj-ruchki/"
+  },
+  {
+   "id": 6383,
+   "name": "Поводок размер XL (Длина 180 см, ширина 2,5 см, вес 140 гр) c дополнительной ручкой",
+   "slug": "povodok-razmer-xl-dlina-180-sm-shirina-2-5-sm-ves-140-gr-c-dopolnitelnoj-ruchkoj",
+   "sku": "8012",
+   "priceMinor": 109600,
+   "regularPriceMinor": 109600,
+   "currencyMinorUnit": 2,
+   "inStock": true,
+   "purchasable": true,
+   "reviewCount": 0,
+   "averageRating": "0",
+   "categories": [
+    {
+     "id": 168,
+     "name": "Амуниция для собак",
+     "slug": "amunicija-dlja-sobak"
+    }
+   ],
+   "derived": {
+    "weightKg": null,
+    "weightSource": null,
+    "species": "dog",
+    "form": null
+   },
+   "image": {
+    "src": "https://domokup.ru/wp-content/uploads/2026/04/jsr__site__v871__dog__screen_03__walk__baseleash_xl_v1__f1.png",
+    "thumbnail": "https://domokup.ru/wp-content/uploads/2026/04/jsr__site__v871__dog__screen_03__walk__baseleash_xl_v1__f1-300x300.png",
+    "alt": "Поводок размер XL (Длина 180 см, ширина 2,5 см, вес 140 гр) c дополнительной ручкой"
+   },
+   "permalink": "https://domokup.ru/product/povodok-razmer-xl-dlina-180-sm-shirina-2-5-sm-ves-140-gr-c-dopolnitelnoj-ruchkoj/"
+  },
+  {
+   "id": 6372,
+   "name": "Сменная накладка для Шлейки для собак Размер L",
+   "slug": "smennaja-nakladka-dlja-shlejki-dlja-sobak-razmer-l-2",
+   "sku": "8034",
+   "priceMinor": 24000,
+   "regularPriceMinor": 24000,
+   "currencyMinorUnit": 2,
+   "inStock": true,
+   "purchasable": true,
+   "reviewCount": 0,
+   "averageRating": "0",
+   "categories": [
+    {
+     "id": 168,
+     "name": "Амуниция для собак",
+     "slug": "amunicija-dlja-sobak"
+    }
+   ],
+   "derived": {
+    "weightKg": null,
+    "weightSource": null,
+    "species": "dog",
+    "form": null
+   },
+   "image": {
+    "src": "https://domokup.ru/wp-content/uploads/2026/04/001-7.jpg",
+    "thumbnail": "https://domokup.ru/wp-content/uploads/2026/04/001-7-300x300.jpg",
+    "alt": "Сменная накладка для Шлейки для собак Размер L"
+   },
+   "permalink": "https://domokup.ru/product/smennaja-nakladka-dlja-shlejki-dlja-sobak-razmer-l-2/"
+  },
+  {
+   "id": 6369,
+   "name": "Сменная накладка для Шлейки для собак Размер L",
+   "slug": "smennaja-nakladka-dlja-shlejki-dlja-sobak-razmer-l",
+   "sku": "8033",
+   "priceMinor": 24000,
+   "regularPriceMinor": 24000,
+   "currencyMinorUnit": 2,
+   "inStock": true,
+   "purchasable": true,
+   "reviewCount": 0,
+   "averageRating": "0",
+   "categories": [
+    {
+     "id": 168,
+     "name": "Амуниция для собак",
+     "slug": "amunicija-dlja-sobak"
+    }
+   ],
+   "derived": {
+    "weightKg": null,
+    "weightSource": null,
+    "species": "dog",
+    "form": null
+   },
+   "image": {
+    "src": "https://domokup.ru/wp-content/uploads/2026/04/001-6.jpg",
+    "thumbnail": "https://domokup.ru/wp-content/uploads/2026/04/001-6-300x300.jpg",
+    "alt": "Сменная накладка для Шлейки для собак Размер L"
+   },
+   "permalink": "https://domokup.ru/product/smennaja-nakladka-dlja-shlejki-dlja-sobak-razmer-l/"
+  },
+  {
+   "id": 6365,
+   "name": "Сменная накладка для Шлейки для собак Размер M",
+   "slug": "smennaja-nakladka-dlja-shlejki-dlja-sobak-razmer-m-2",
+   "sku": "8032",
+   "priceMinor": 24000,
+   "regularPriceMinor": 24000,
+   "currencyMinorUnit": 2,
+   "inStock": true,
+   "purchasable": true,
+   "reviewCount": 0,
+   "averageRating": "0",
+   "categories": [
+    {
+     "id": 168,
+     "name": "Амуниция для собак",
+     "slug": "amunicija-dlja-sobak"
+    }
+   ],
+   "derived": {
+    "weightKg": null,
+    "weightSource": null,
+    "species": "dog",
+    "form": null
+   },
+   "image": {
+    "src": "https://domokup.ru/wp-content/uploads/2026/04/002-2.png",
+    "thumbnail": "https://domokup.ru/wp-content/uploads/2026/04/002-2-300x300.png",
+    "alt": "Сменная накладка для Шлейки для собак Размер M"
+   },
+   "permalink": "https://domokup.ru/product/smennaja-nakladka-dlja-shlejki-dlja-sobak-razmer-m-2/"
+  },
+  {
+   "id": 6361,
+   "name": "Сменная накладка для Шлейки для собак Размер M",
+   "slug": "smennaja-nakladka-dlja-shlejki-dlja-sobak-razmer-m",
+   "sku": "8031",
+   "priceMinor": 24000,
+   "regularPriceMinor": 24000,
+   "currencyMinorUnit": 2,
+   "inStock": true,
+   "purchasable": true,
+   "reviewCount": 0,
+   "averageRating": "0",
+   "categories": [
+    {
+     "id": 168,
+     "name": "Амуниция для собак",
+     "slug": "amunicija-dlja-sobak"
+    }
+   ],
+   "derived": {
+    "weightKg": null,
+    "weightSource": null,
+    "species": "dog",
+    "form": null
+   },
+   "image": {
+    "src": "https://domokup.ru/wp-content/uploads/2026/04/002-1.png",
+    "thumbnail": "https://domokup.ru/wp-content/uploads/2026/04/002-1-300x300.png",
+    "alt": "Сменная накладка для Шлейки для собак Размер M"
+   },
+   "permalink": "https://domokup.ru/product/smennaja-nakladka-dlja-shlejki-dlja-sobak-razmer-m/"
+  },
+  {
+   "id": 6357,
+   "name": "Сменная накладка для Шлейки для собак Размер S",
+   "slug": "smennaja-nakladka-dlja-shlejki-dlja-sobak-razmer-s-2",
+   "sku": "8030",
+   "priceMinor": 18400,
+   "regularPriceMinor": 18400,
+   "currencyMinorUnit": 2,
+   "inStock": true,
+   "purchasable": true,
+   "reviewCount": 0,
+   "averageRating": "0",
+   "categories": [
+    {
+     "id": 168,
+     "name": "Амуниция для собак",
+     "slug": "amunicija-dlja-sobak"
+    }
+   ],
+   "derived": {
+    "weightKg": null,
+    "weightSource": null,
+    "species": "dog",
+    "form": null
+   },
+   "image": {
+    "src": "https://domokup.ru/wp-content/uploads/2026/04/002.png",
+    "thumbnail": "https://domokup.ru/wp-content/uploads/2026/04/002-300x300.png",
+    "alt": "Сменная накладка для Шлейки для собак Размер S"
+   },
+   "permalink": "https://domokup.ru/product/smennaja-nakladka-dlja-shlejki-dlja-sobak-razmer-s-2/"
+  },
+  {
+   "id": 6353,
+   "name": "Сменная накладка для Шлейки для собак Размер S",
+   "slug": "smennaja-nakladka-dlja-shlejki-dlja-sobak-razmer-s",
+   "sku": "8029",
+   "priceMinor": 18400,
+   "regularPriceMinor": 18400,
+   "currencyMinorUnit": 2,
+   "inStock": true,
+   "purchasable": true,
+   "reviewCount": 0,
+   "averageRating": "0",
+   "categories": [
+    {
+     "id": 168,
+     "name": "Амуниция для собак",
+     "slug": "amunicija-dlja-sobak"
+    }
+   ],
+   "derived": {
+    "weightKg": null,
+    "weightSource": null,
+    "species": "dog",
+    "form": null
+   },
+   "image": {
+    "src": "https://domokup.ru/wp-content/uploads/2026/04/002-3.jpg",
+    "thumbnail": "https://domokup.ru/wp-content/uploads/2026/04/002-3-300x300.jpg",
+    "alt": "Сменная накладка для Шлейки для собак Размер S"
+   },
+   "permalink": "https://domokup.ru/product/smennaja-nakladka-dlja-shlejki-dlja-sobak-razmer-s/"
+  },
+  {
+   "id": 6378,
+   "name": "Сменная накладка для Шлейки для собак Размер XL",
+   "slug": "smennaja-nakladka-dlja-shlejki-dlja-sobak-razmer-xl-2",
+   "sku": "8036",
+   "priceMinor": 28800,
+   "regularPriceMinor": 28800,
+   "currencyMinorUnit": 2,
+   "inStock": true,
+   "purchasable": true,
+   "reviewCount": 0,
+   "averageRating": "0",
+   "categories": [
+    {
+     "id": 168,
+     "name": "Амуниция для собак",
+     "slug": "amunicija-dlja-sobak"
+    }
+   ],
+   "derived": {
+    "weightKg": null,
+    "weightSource": null,
+    "species": "dog",
+    "form": null
+   },
+   "image": {
+    "src": "https://domokup.ru/wp-content/uploads/2026/04/001-9.jpg",
+    "thumbnail": "https://domokup.ru/wp-content/uploads/2026/04/001-9-300x300.jpg",
+    "alt": "Сменная накладка для Шлейки для собак Размер XL"
+   },
+   "permalink": "https://domokup.ru/product/smennaja-nakladka-dlja-shlejki-dlja-sobak-razmer-xl-2/"
+  },
+  {
+   "id": 6375,
+   "name": "Сменная накладка для Шлейки для собак Размер XL",
+   "slug": "smennaja-nakladka-dlja-shlejki-dlja-sobak-razmer-xl",
+   "sku": "8035",
+   "priceMinor": 28800,
+   "regularPriceMinor": 28800,
+   "currencyMinorUnit": 2,
+   "inStock": true,
+   "purchasable": true,
+   "reviewCount": 0,
+   "averageRating": "0",
+   "categories": [
+    {
+     "id": 168,
+     "name": "Амуниция для собак",
+     "slug": "amunicija-dlja-sobak"
+    }
+   ],
+   "derived": {
+    "weightKg": null,
+    "weightSource": null,
+    "species": "dog",
+    "form": null
+   },
+   "image": {
+    "src": "https://domokup.ru/wp-content/uploads/2026/04/001-8.jpg",
+    "thumbnail": "https://domokup.ru/wp-content/uploads/2026/04/001-8-300x300.jpg",
+    "alt": "Сменная накладка для Шлейки для собак Размер XL"
+   },
+   "permalink": "https://domokup.ru/product/smennaja-nakladka-dlja-shlejki-dlja-sobak-razmer-xl/"
+  },
+  {
+   "id": 6093,
+   "name": "Сменная насадка для удочки-дразнилки для кошек",
+   "slug": "smennaja-nasadka-dlja-udochki-draznilki-dlja-koshek-3",
+   "sku": "7064",
+   "priceMinor": 19200,
+   "regularPriceMinor": 19200,
+   "currencyMinorUnit": 2,
+   "inStock": true,
+   "purchasable": true,
+   "reviewCount": 0,
+   "averageRating": "0",
+   "categories": [
+    {
+     "id": 166,
+     "name": "Игрушки для кошек",
+     "slug": "igrushki-dlja-koshek"
+    }
+   ],
+   "derived": {
+    "weightKg": null,
+    "weightSource": null,
+    "species": "cat",
+    "form": null
+   },
+   "image": {
+    "src": "https://domokup.ru/wp-content/uploads/2026/04/01-9.jpg",
+    "thumbnail": "https://domokup.ru/wp-content/uploads/2026/04/01-9-300x300.jpg",
+    "alt": "Сменная насадка для удочки-дразнилки для кошек"
+   },
+   "permalink": "https://domokup.ru/product/smennaja-nasadka-dlja-udochki-draznilki-dlja-koshek-3/"
+  },
+  {
+   "id": 6087,
+   "name": "Сменная насадка для удочки-дразнилки для кошек",
+   "slug": "smennaja-nasadka-dlja-udochki-draznilki-dlja-koshek-2",
+   "sku": "7190",
+   "priceMinor": 34400,
+   "regularPriceMinor": 34400,
+   "currencyMinorUnit": 2,
+   "inStock": true,
+   "purchasable": true,
+   "reviewCount": 0,
+   "averageRating": "0",
+   "categories": [
+    {
+     "id": 166,
+     "name": "Игрушки для кошек",
+     "slug": "igrushki-dlja-koshek"
+    }
+   ],
+   "derived": {
+    "weightKg": null,
+    "weightSource": null,
+    "species": "cat",
+    "form": null
+   },
+   "image": {
+    "src": "https://domokup.ru/wp-content/uploads/2026/04/001.jpg",
+    "thumbnail": "https://domokup.ru/wp-content/uploads/2026/04/001-300x300.jpg",
+    "alt": "Сменная насадка для удочки-дразнилки для кошек"
+   },
+   "permalink": "https://domokup.ru/product/smennaja-nasadka-dlja-udochki-draznilki-dlja-koshek-2/"
+  },
+  {
+   "id": 6084,
+   "name": "Сменная насадка для удочки-дразнилки для кошек",
+   "slug": "smennaja-nasadka-dlja-udochki-draznilki-dlja-koshek",
+   "sku": "7094",
+   "priceMinor": 19200,
+   "regularPriceMinor": 19200,
+   "currencyMinorUnit": 2,
+   "inStock": true,
+   "purchasable": true,
+   "reviewCount": 0,
+   "averageRating": "0",
+   "categories": [
+    {
+     "id": 166,
+     "name": "Игрушки для кошек",
+     "slug": "igrushki-dlja-koshek"
+    }
+   ],
+   "derived": {
+    "weightKg": null,
+    "weightSource": null,
+    "species": "cat",
+    "form": null
+   },
+   "image": {
+    "src": "https://domokup.ru/wp-content/uploads/2026/04/01-8.jpg",
+    "thumbnail": "https://domokup.ru/wp-content/uploads/2026/04/01-8-300x300.jpg",
+    "alt": "Сменная насадка для удочки-дразнилки для кошек"
+   },
+   "permalink": "https://domokup.ru/product/smennaja-nasadka-dlja-udochki-draznilki-dlja-koshek/"
+  },
+  {
+   "id": 6395,
+   "name": "Страховочный короткий поводок Joywalk Leash с ручкой Safegrip размер XL (Длина 120 см, ширина 2,5 см, вес 220 гр).",
+   "slug": "strahovochnyj-korotkij-povodok-joywalk-leash-s-ruchkoj-safegrip-razmer-xl-dlina-120-sm-shirina-2-5-sm-ves-220-gr",
+   "sku": "8042",
+   "priceMinor": 123400,
+   "regularPriceMinor": 123400,
+   "currencyMinorUnit": 2,
+   "inStock": true,
+   "purchasable": true,
+   "reviewCount": 0,
+   "averageRating": "0",
+   "categories": [
+    {
+     "id": 168,
+     "name": "Амуниция для собак",
+     "slug": "amunicija-dlja-sobak"
+    }
+   ],
+   "derived": {
+    "weightKg": null,
+    "weightSource": null,
+    "species": "dog",
+    "form": null
+   },
+   "image": {
+    "src": "https://domokup.ru/wp-content/uploads/2026/04/safegrip_navy.jpg",
+    "thumbnail": "https://domokup.ru/wp-content/uploads/2026/04/safegrip_navy-300x300.jpg",
+    "alt": "Страховочный короткий поводок Joywalk Leash с ручкой Safegrip размер XL (Длина 120 см, ширина 2,5 см, вес 220 гр)."
+   },
+   "permalink": "https://domokup.ru/product/strahovochnyj-korotkij-povodok-joywalk-leash-s-ruchkoj-safegrip-razmer-xl-dlina-120-sm-shirina-2-5-sm-ves-220-gr/"
+  },
+  {
+   "id": 6074,
+   "name": "Удочка-дразнилка для кошек",
+   "slug": "udochka-draznilka-dlja-koshek-2",
+   "sku": "7063",
+   "priceMinor": 60000,
+   "regularPriceMinor": 60000,
+   "currencyMinorUnit": 2,
+   "inStock": true,
+   "purchasable": true,
+   "reviewCount": 0,
+   "averageRating": "0",
+   "categories": [
+    {
+     "id": 166,
+     "name": "Игрушки для кошек",
+     "slug": "igrushki-dlja-koshek"
+    }
+   ],
+   "derived": {
+    "weightKg": null,
+    "weightSource": null,
+    "species": "cat",
+    "form": null
+   },
+   "image": {
+    "src": "https://domokup.ru/wp-content/uploads/2026/04/07.png",
+    "thumbnail": "https://domokup.ru/wp-content/uploads/2026/04/07-300x300.png",
+    "alt": "Удочка-дразнилка для кошек"
+   },
+   "permalink": "https://domokup.ru/product/udochka-draznilka-dlja-koshek-2/"
+  },
+  {
+   "id": 6064,
+   "name": "Удочка-дразнилка для кошек",
+   "slug": "udochka-draznilka-dlja-koshek-5",
+   "sku": "7061",
+   "priceMinor": 44000,
+   "regularPriceMinor": 44000,
+   "currencyMinorUnit": 2,
+   "inStock": true,
+   "purchasable": true,
+   "reviewCount": 0,
+   "averageRating": "0",
+   "categories": [
+    {
+     "id": 166,
+     "name": "Игрушки для кошек",
+     "slug": "igrushki-dlja-koshek"
+    }
+   ],
+   "derived": {
+    "weightKg": null,
+    "weightSource": null,
+    "species": "cat",
+    "form": null
+   },
+   "image": {
+    "src": "https://domokup.ru/wp-content/uploads/2026/04/7061_001.jpg",
+    "thumbnail": "https://domokup.ru/wp-content/uploads/2026/04/7061_001-300x300.jpg",
+    "alt": "Удочка-дразнилка для кошек"
+   },
+   "permalink": "https://domokup.ru/product/udochka-draznilka-dlja-koshek-5/"
+  },
+  {
+   "id": 6059,
+   "name": "Удочка-дразнилка для кошек",
+   "slug": "udochka-draznilka-dlja-koshek-4",
+   "sku": "7060",
+   "priceMinor": 44000,
+   "regularPriceMinor": 44000,
+   "currencyMinorUnit": 2,
+   "inStock": true,
+   "purchasable": true,
+   "reviewCount": 0,
+   "averageRating": "0",
+   "categories": [
+    {
+     "id": 166,
+     "name": "Игрушки для кошек",
+     "slug": "igrushki-dlja-koshek"
+    }
+   ],
+   "derived": {
+    "weightKg": null,
+    "weightSource": null,
+    "species": "cat",
+    "form": null
+   },
+   "image": {
+    "src": "https://domokup.ru/wp-content/uploads/2026/04/01-6.jpg",
+    "thumbnail": "https://domokup.ru/wp-content/uploads/2026/04/01-6-300x300.jpg",
+    "alt": "Удочка-дразнилка для кошек"
+   },
+   "permalink": "https://domokup.ru/product/udochka-draznilka-dlja-koshek-4/"
+  },
+  {
+   "id": 6052,
+   "name": "Удочка-дразнилка для кошек",
+   "slug": "udochka-draznilka-dlja-koshek-3",
+   "sku": "7058",
+   "priceMinor": 44000,
+   "regularPriceMinor": 44000,
+   "currencyMinorUnit": 2,
+   "inStock": true,
+   "purchasable": true,
+   "reviewCount": 0,
+   "averageRating": "0",
+   "categories": [
+    {
+     "id": 166,
+     "name": "Игрушки для кошек",
+     "slug": "igrushki-dlja-koshek"
+    }
+   ],
+   "derived": {
+    "weightKg": null,
+    "weightSource": null,
+    "species": "cat",
+    "form": null
+   },
+   "image": {
+    "src": "https://domokup.ru/wp-content/uploads/2026/04/01-5.jpg",
+    "thumbnail": "https://domokup.ru/wp-content/uploads/2026/04/01-5-300x300.jpg",
+    "alt": "Удочка-дразнилка для кошек"
+   },
+   "permalink": "https://domokup.ru/product/udochka-draznilka-dlja-koshek-3/"
+  },
+  {
+   "id": 6047,
+   "name": "Удочка-дразнилка для кошек",
+   "slug": "udochka-draznilka-dlja-koshek",
+   "sku": "7059",
+   "priceMinor": 44000,
+   "regularPriceMinor": 44000,
+   "currencyMinorUnit": 2,
+   "inStock": true,
+   "purchasable": true,
+   "reviewCount": 0,
+   "averageRating": "0",
+   "categories": [
+    {
+     "id": 166,
+     "name": "Игрушки для кошек",
+     "slug": "igrushki-dlja-koshek"
+    }
+   ],
+   "derived": {
+    "weightKg": null,
+    "weightSource": null,
+    "species": "cat",
+    "form": null
+   },
+   "image": {
+    "src": "https://domokup.ru/wp-content/uploads/2026/04/01-4.jpg",
+    "thumbnail": "https://domokup.ru/wp-content/uploads/2026/04/01-4-300x300.jpg",
+    "alt": "Удочка-дразнилка для кошек"
+   },
+   "permalink": "https://domokup.ru/product/udochka-draznilka-dlja-koshek/"
+  },
+  {
+   "id": 6334,
+   "name": "Шлейка для собак c ручкой JOYSER Soft Harness with Handle размер L",
+   "slug": "shlejka-dlja-sobak-c-ruchkoj-joyser-soft-harness-with-handle-razmer-l",
+   "sku": "8039",
+   "priceMinor": 176000,
+   "regularPriceMinor": 176000,
+   "currencyMinorUnit": 2,
+   "inStock": true,
+   "purchasable": true,
+   "reviewCount": 0,
+   "averageRating": "0",
+   "categories": [
+    {
+     "id": 168,
+     "name": "Амуниция для собак",
+     "slug": "amunicija-dlja-sobak"
+    }
+   ],
+   "derived": {
+    "weightKg": null,
+    "weightSource": null,
+    "species": "dog",
+    "form": null
+   },
+   "image": {
+    "src": "https://domokup.ru/wp-content/uploads/2026/04/jsr__site__v871__dog__screen_03__walk__softharness_l__f1.png",
+    "thumbnail": "https://domokup.ru/wp-content/uploads/2026/04/jsr__site__v871__dog__screen_03__walk__softharness_l__f1-300x300.png",
+    "alt": "Шлейка для собак c ручкой JOYSER Soft Harness with Handle размер L"
+   },
+   "permalink": "https://domokup.ru/product/shlejka-dlja-sobak-c-ruchkoj-joyser-soft-harness-with-handle-razmer-l/"
+  },
+  {
+   "id": 6330,
+   "name": "Шлейка для собак c ручкой JOYSER Soft Harness with Handle размер M",
+   "slug": "shlejka-dlja-sobak-c-ruchkoj-joyser-soft-harness-with-handle-razmer-m",
+   "sku": "8038",
+   "priceMinor": 159200,
+   "regularPriceMinor": 159200,
+   "currencyMinorUnit": 2,
+   "inStock": true,
+   "purchasable": true,
+   "reviewCount": 0,
+   "averageRating": "0",
+   "categories": [
+    {
+     "id": 168,
+     "name": "Амуниция для собак",
+     "slug": "amunicija-dlja-sobak"
+    }
+   ],
+   "derived": {
+    "weightKg": null,
+    "weightSource": null,
+    "species": "dog",
+    "form": null
+   },
+   "image": {
+    "src": "https://domokup.ru/wp-content/uploads/2026/04/jsr__site__v871__dog__screen_03__walk__softharness_m__f1.png",
+    "thumbnail": "https://domokup.ru/wp-content/uploads/2026/04/jsr__site__v871__dog__screen_03__walk__softharness_m__f1-300x300.png",
+    "alt": "Шлейка для собак c ручкой JOYSER Soft Harness with Handle размер M"
+   },
+   "permalink": "https://domokup.ru/product/shlejka-dlja-sobak-c-ruchkoj-joyser-soft-harness-with-handle-razmer-m/"
+  },
+  {
+   "id": 6326,
+   "name": "Шлейка для собак c ручкой JOYSER Soft Harness with Handle размер S",
+   "slug": "shlejka-dlja-sobak-c-ruchkoj-joyser-soft-harness-with-handle-razmer-s",
+   "sku": "8037",
+   "priceMinor": 143200,
+   "regularPriceMinor": 143200,
+   "currencyMinorUnit": 2,
+   "inStock": true,
+   "purchasable": true,
+   "reviewCount": 0,
+   "averageRating": "0",
+   "categories": [
+    {
+     "id": 168,
+     "name": "Амуниция для собак",
+     "slug": "amunicija-dlja-sobak"
+    }
+   ],
+   "derived": {
+    "weightKg": null,
+    "weightSource": null,
+    "species": "dog",
+    "form": null
+   },
+   "image": {
+    "src": "https://domokup.ru/wp-content/uploads/2026/04/jsr__site__v871__dog__screen_03__walk__softharness_s__f1.png",
+    "thumbnail": "https://domokup.ru/wp-content/uploads/2026/04/jsr__site__v871__dog__screen_03__walk__softharness_s__f1-300x300.png",
+    "alt": "Шлейка для собак c ручкой JOYSER Soft Harness with Handle размер S"
+   },
+   "permalink": "https://domokup.ru/product/shlejka-dlja-sobak-c-ruchkoj-joyser-soft-harness-with-handle-razmer-s/"
+  },
+  {
+   "id": 6338,
+   "name": "Шлейка для собак c ручкой JOYSER Soft Harness with Handle размер XL",
+   "slug": "shlejka-dlja-sobak-c-ruchkoj-joyser-soft-harness-with-handle-razmer-xl",
+   "sku": "8040",
+   "priceMinor": 180000,
+   "regularPriceMinor": 180000,
+   "currencyMinorUnit": 2,
+   "inStock": true,
+   "purchasable": true,
+   "reviewCount": 0,
+   "averageRating": "0",
+   "categories": [
+    {
+     "id": 168,
+     "name": "Амуниция для собак",
+     "slug": "amunicija-dlja-sobak"
+    }
+   ],
+   "derived": {
+    "weightKg": null,
+    "weightSource": null,
+    "species": "dog",
+    "form": null
+   },
+   "image": {
+    "src": "https://domokup.ru/wp-content/uploads/2026/04/jsr__site__v871__dog__screen_03__walk__softharness_xl__f1.png",
+    "thumbnail": "https://domokup.ru/wp-content/uploads/2026/04/jsr__site__v871__dog__screen_03__walk__softharness_xl__f1-300x300.png",
+    "alt": "Шлейка для собак c ручкой JOYSER Soft Harness with Handle размер XL"
+   },
+   "permalink": "https://domokup.ru/product/shlejka-dlja-sobak-c-ruchkoj-joyser-soft-harness-with-handle-razmer-xl/"
+  },
+  {
+   "id": 6307,
+   "name": "Шлейка для собак JOYSER Mood Harness размер L",
+   "slug": "shlejka-dlja-sobak-joyser-mood-harness-razmer-l-2",
+   "sku": "8026",
+   "priceMinor": 148800,
+   "regularPriceMinor": 148800,
+   "currencyMinorUnit": 2,
+   "inStock": true,
+   "purchasable": true,
+   "reviewCount": 0,
+   "averageRating": "0",
+   "categories": [
+    {
+     "id": 168,
+     "name": "Амуниция для собак",
+     "slug": "amunicija-dlja-sobak"
+    }
+   ],
+   "derived": {
+    "weightKg": null,
+    "weightSource": null,
+    "species": "dog",
+    "form": null
+   },
+   "image": {
+    "src": "https://domokup.ru/wp-content/uploads/2026/04/jsr__site__v871__dog__screen_03__walk__moodharness_l_v2__f1.png",
+    "thumbnail": "https://domokup.ru/wp-content/uploads/2026/04/jsr__site__v871__dog__screen_03__walk__moodharness_l_v2__f1-300x300.png",
+    "alt": "Шлейка для собак JOYSER Mood Harness размер L"
+   },
+   "permalink": "https://domokup.ru/product/shlejka-dlja-sobak-joyser-mood-harness-razmer-l-2/"
+  },
+  {
+   "id": 6300,
+   "name": "Шлейка для собак JOYSER Mood Harness размер L",
+   "slug": "shlejka-dlja-sobak-joyser-mood-harness-razmer-l",
+   "sku": "8025",
+   "priceMinor": 148800,
+   "regularPriceMinor": 148800,
+   "currencyMinorUnit": 2,
+   "inStock": true,
+   "purchasable": true,
+   "reviewCount": 0,
+   "averageRating": "0",
+   "categories": [
+    {
+     "id": 168,
+     "name": "Амуниция для собак",
+     "slug": "amunicija-dlja-sobak"
+    }
+   ],
+   "derived": {
+    "weightKg": null,
+    "weightSource": null,
+    "species": "dog",
+    "form": null
+   },
+   "image": {
+    "src": "https://domokup.ru/wp-content/uploads/2026/04/jsr__site__v871__dog__screen_03__walk__moodharness_l_v1__f1.png",
+    "thumbnail": "https://domokup.ru/wp-content/uploads/2026/04/jsr__site__v871__dog__screen_03__walk__moodharness_l_v1__f1-300x300.png",
+    "alt": "Шлейка для собак JOYSER Mood Harness размер L"
+   },
+   "permalink": "https://domokup.ru/product/shlejka-dlja-sobak-joyser-mood-harness-razmer-l/"
+  },
+  {
+   "id": 6293,
+   "name": "Шлейка для собак JOYSER Mood Harness размер M",
+   "slug": "shlejka-dlja-sobak-joyser-mood-harness-razmer-m-2",
+   "sku": "8024",
+   "priceMinor": 134400,
+   "regularPriceMinor": 134400,
+   "currencyMinorUnit": 2,
+   "inStock": true,
+   "purchasable": true,
+   "reviewCount": 0,
+   "averageRating": "0",
+   "categories": [
+    {
+     "id": 168,
+     "name": "Амуниция для собак",
+     "slug": "amunicija-dlja-sobak"
+    }
+   ],
+   "derived": {
+    "weightKg": null,
+    "weightSource": null,
+    "species": "dog",
+    "form": null
+   },
+   "image": {
+    "src": "https://domokup.ru/wp-content/uploads/2026/04/jsr__site__v871__dog__screen_03__walk__moodharness_m_v2__f1.png",
+    "thumbnail": "https://domokup.ru/wp-content/uploads/2026/04/jsr__site__v871__dog__screen_03__walk__moodharness_m_v2__f1-300x300.png",
+    "alt": "Шлейка для собак JOYSER Mood Harness размер M"
+   },
+   "permalink": "https://domokup.ru/product/shlejka-dlja-sobak-joyser-mood-harness-razmer-m-2/"
+  },
+  {
+   "id": 6285,
+   "name": "Шлейка для собак JOYSER Mood Harness размер M",
+   "slug": "shlejka-dlja-sobak-joyser-mood-harness-razmer-m",
+   "sku": "8023",
+   "priceMinor": 134400,
+   "regularPriceMinor": 134400,
+   "currencyMinorUnit": 2,
+   "inStock": true,
+   "purchasable": true,
+   "reviewCount": 0,
+   "averageRating": "0",
+   "categories": [
+    {
+     "id": 168,
+     "name": "Амуниция для собак",
+     "slug": "amunicija-dlja-sobak"
+    }
+   ],
+   "derived": {
+    "weightKg": null,
+    "weightSource": null,
+    "species": "dog",
+    "form": null
+   },
+   "image": {
+    "src": "https://domokup.ru/wp-content/uploads/2026/04/jsr__site__v871__dog__screen_03__walk__moodharness_m_v1__f1.png",
+    "thumbnail": "https://domokup.ru/wp-content/uploads/2026/04/jsr__site__v871__dog__screen_03__walk__moodharness_m_v1__f1-300x300.png",
+    "alt": "Шлейка для собак JOYSER Mood Harness размер M"
+   },
+   "permalink": "https://domokup.ru/product/shlejka-dlja-sobak-joyser-mood-harness-razmer-m/"
+  },
+  {
+   "id": 6278,
+   "name": "Шлейка для собак JOYSER Mood Harness размер S",
+   "slug": "shlejka-dlja-sobak-joyser-mood-harness-razmer-s",
+   "sku": "8022",
+   "priceMinor": 120000,
+   "regularPriceMinor": 120000,
+   "currencyMinorUnit": 2,
+   "inStock": true,
+   "purchasable": true,
+   "reviewCount": 0,
+   "averageRating": "0",
+   "categories": [
+    {
+     "id": 168,
+     "name": "Амуниция для собак",
+     "slug": "amunicija-dlja-sobak"
+    }
+   ],
+   "derived": {
+    "weightKg": null,
+    "weightSource": null,
+    "species": "dog",
+    "form": null
+   },
+   "image": {
+    "src": "https://domokup.ru/wp-content/uploads/2026/04/jsr__site__v871__dog__screen_03__walk__moodharness_s_v2__f1.png",
+    "thumbnail": "https://domokup.ru/wp-content/uploads/2026/04/jsr__site__v871__dog__screen_03__walk__moodharness_s_v2__f1-300x300.png",
+    "alt": "Шлейка для собак JOYSER Mood Harness размер S"
+   },
+   "permalink": "https://domokup.ru/product/shlejka-dlja-sobak-joyser-mood-harness-razmer-s/"
+  },
+  {
+   "id": 6271,
+   "name": "Шлейка для собак JOYSER Mood Harness размер S",
+   "slug": "shlejka-dlja-sobak-razmer-s",
+   "sku": "8021",
+   "priceMinor": 120000,
+   "regularPriceMinor": 120000,
+   "currencyMinorUnit": 2,
+   "inStock": true,
+   "purchasable": true,
+   "reviewCount": 0,
+   "averageRating": "0",
+   "categories": [
+    {
+     "id": 168,
+     "name": "Амуниция для собак",
+     "slug": "amunicija-dlja-sobak"
+    }
+   ],
+   "derived": {
+    "weightKg": null,
+    "weightSource": null,
+    "species": "dog",
+    "form": null
+   },
+   "image": {
+    "src": "https://domokup.ru/wp-content/uploads/2026/04/jsr__site__v871__dog__screen_03__walk__moodharness_s_v1__f1.png",
+    "thumbnail": "https://domokup.ru/wp-content/uploads/2026/04/jsr__site__v871__dog__screen_03__walk__moodharness_s_v1__f1-300x300.png",
+    "alt": "Шлейка для собак JOYSER Mood Harness размер S"
+   },
+   "permalink": "https://domokup.ru/product/shlejka-dlja-sobak-razmer-s/"
+  },
+  {
+   "id": 6320,
+   "name": "Шлейка для собак JOYSER Mood Harness размер XL",
+   "slug": "shlejka-dlja-sobak-joyser-mood-harness-razmer-xl-2",
+   "sku": "8028",
+   "priceMinor": 175200,
+   "regularPriceMinor": 175200,
+   "currencyMinorUnit": 2,
+   "inStock": true,
+   "purchasable": true,
+   "reviewCount": 0,
+   "averageRating": "0",
+   "categories": [
+    {
+     "id": 168,
+     "name": "Амуниция для собак",
+     "slug": "amunicija-dlja-sobak"
+    }
+   ],
+   "derived": {
+    "weightKg": null,
+    "weightSource": null,
+    "species": "dog",
+    "form": null
+   },
+   "image": {
+    "src": "https://domokup.ru/wp-content/uploads/2026/04/jsr__site__v871__dog__screen_03__walk__moodharness_xl_v2__f1.png",
+    "thumbnail": "https://domokup.ru/wp-content/uploads/2026/04/jsr__site__v871__dog__screen_03__walk__moodharness_xl_v2__f1-300x300.png",
+    "alt": "Шлейка для собак JOYSER Mood Harness размер XL"
+   },
+   "permalink": "https://domokup.ru/product/shlejka-dlja-sobak-joyser-mood-harness-razmer-xl-2/"
+  },
+  {
+   "id": 6313,
+   "name": "Шлейка для собак JOYSER Mood Harness размер XL",
+   "slug": "shlejka-dlja-sobak-joyser-mood-harness-razmer-xl",
+   "sku": "8027",
+   "priceMinor": 175200,
+   "regularPriceMinor": 175200,
+   "currencyMinorUnit": 2,
+   "inStock": true,
+   "purchasable": true,
+   "reviewCount": 0,
+   "averageRating": "0",
+   "categories": [
+    {
+     "id": 168,
+     "name": "Амуниция для собак",
+     "slug": "amunicija-dlja-sobak"
+    }
+   ],
+   "derived": {
+    "weightKg": null,
+    "weightSource": null,
+    "species": "dog",
+    "form": null
+   },
+   "image": {
+    "src": "https://domokup.ru/wp-content/uploads/2026/04/jsr__site__v871__dog__screen_03__walk__moodharness_xl_v1__f1.png",
+    "thumbnail": "https://domokup.ru/wp-content/uploads/2026/04/jsr__site__v871__dog__screen_03__walk__moodharness_xl_v1__f1-300x300.png",
+    "alt": "Шлейка для собак JOYSER Mood Harness размер XL"
+   },
+   "permalink": "https://domokup.ru/product/shlejka-dlja-sobak-joyser-mood-harness-razmer-xl/"
+  },
+  {
+   "id": 5181,
+   "name": "Pet&#8217;OCERA Крем 70 мл",
+   "slug": "petocera-krem-70-ml",
+   "sku": "88801",
+   "priceMinor": 173878,
+   "regularPriceMinor": 173878,
+   "currencyMinorUnit": 2,
+   "inStock": true,
+   "purchasable": true,
+   "reviewCount": 0,
+   "averageRating": "0",
+   "categories": [
+    {
+     "id": 149,
+     "name": "Средства для ухода для собак",
+     "slug": "sredstva-dlja-uhoda-dlja-sobak"
+    },
+    {
+     "id": 150,
+     "name": "Средства для ухода для кошек",
+     "slug": "sredstva-dlja-uhoda-dlja-koshek"
+    }
+   ],
+   "derived": {
+    "weightKg": null,
+    "weightSource": null,
+    "species": null,
+    "form": null
+   },
+   "image": {
+    "src": "https://domokup.ru/wp-content/uploads/2025/02/4df5549ab740da526765bc6849bdfc72.png",
+    "thumbnail": "https://domokup.ru/wp-content/uploads/2025/02/4df5549ab740da526765bc6849bdfc72-300x300.png",
+    "alt": "Pet&#8217;OCERA Крем 70 мл"
+   },
+   "permalink": "https://domokup.ru/product/petocera-krem-70-ml/"
+  },
+  {
+   "id": 5045,
+   "name": "PetO&#8217;CERA Крем для интенсивного ухода, 20 гр",
+   "slug": "petocera-krem-dlja-intensivnogo-uhoda-20-gr",
+   "sku": "88802",
+   "priceMinor": 148000,
+   "regularPriceMinor": 148000,
+   "currencyMinorUnit": 2,
+   "inStock": true,
+   "purchasable": true,
+   "reviewCount": 0,
+   "averageRating": "0",
+   "categories": [
+    {
+     "id": 149,
+     "name": "Средства для ухода для собак",
+     "slug": "sredstva-dlja-uhoda-dlja-sobak"
+    },
+    {
+     "id": 150,
+     "name": "Средства для ухода для кошек",
+     "slug": "sredstva-dlja-uhoda-dlja-koshek"
+    }
+   ],
+   "derived": {
+    "weightKg": null,
+    "weightSource": null,
+    "species": null,
+    "form": null
+   },
+   "image": {
+    "src": "https://domokup.ru/wp-content/uploads/2025/02/PetOCERA-Intensive-Care-Cream_3-scaled.jpg",
+    "thumbnail": "https://domokup.ru/wp-content/uploads/2025/02/PetOCERA-Intensive-Care-Cream_3-300x300.jpg",
+    "alt": "PetO&#8217;CERA Крем для интенсивного ухода, 20 гр"
+   },
+   "permalink": "https://domokup.ru/product/petocera-krem-dlja-intensivnogo-uhoda-20-gr/"
+  },
+  {
+   "id": 5109,
+   "name": "PetO&#8217;CERA Пенка для очищения шерсти кошек и собак без воды, 150 мл",
+   "slug": "petocera-penka-dlja-ochishhenija-shersti-koshek-i-so",
+   "sku": "88901",
+   "priceMinor": 142508,
+   "regularPriceMinor": 142508,
+   "currencyMinorUnit": 2,
+   "inStock": false,
+   "purchasable": true,
+   "reviewCount": 0,
+   "averageRating": "0",
+   "categories": [
+    {
+     "id": 152,
+     "name": "Груминг",
+     "slug": "gruming"
+    },
+    {
+     "id": 149,
+     "name": "Средства для ухода для собак",
+     "slug": "sredstva-dlja-uhoda-dlja-sobak"
+    },
+    {
+     "id": 153,
+     "name": "Груминг",
+     "slug": "gruming-cat-products"
+    },
+    {
+     "id": 150,
+     "name": "Средства для ухода для кошек",
+     "slug": "sredstva-dlja-uhoda-dlja-koshek"
+    }
+   ],
+   "derived": {
+    "weightKg": null,
+    "weightSource": null,
+    "species": null,
+    "form": null
+   },
+   "image": {
+    "src": "https://domokup.ru/wp-content/uploads/2025/02/PetOCERA-Waterless-Soothing-Wash_9.png",
+    "thumbnail": "https://domokup.ru/wp-content/uploads/2025/02/PetOCERA-Waterless-Soothing-Wash_9-300x300.png",
+    "alt": "PetO&#8217;CERA Пенка для очищения шерсти кошек и собак без воды, 150 мл"
+   },
+   "permalink": "https://domokup.ru/product/petocera-penka-dlja-ochishhenija-shersti-koshek-i-so/"
+  },
+  {
+   "id": 5069,
+   "name": "PetO&#8217;CERA Питательный шампунь и кондиционер для собак, 500 мл",
+   "slug": "petocera-pitatelnyj-shampun-i-kondicioner",
+   "sku": "88403",
+   "priceMinor": 220485,
+   "regularPriceMinor": 220485,
+   "currencyMinorUnit": 2,
+   "inStock": false,
+   "purchasable": true,
+   "reviewCount": 0,
+   "averageRating": "0",
+   "categories": [
+    {
+     "id": 152,
+     "name": "Груминг",
+     "slug": "gruming"
+    },
+    {
+     "id": 149,
+     "name": "Средства для ухода для собак",
+     "slug": "sredstva-dlja-uhoda-dlja-sobak"
+    }
+   ],
+   "derived": {
+    "weightKg": null,
+    "weightSource": null,
+    "species": "dog",
+    "form": null
+   },
+   "image": {
+    "src": "https://domokup.ru/wp-content/uploads/2025/02/Body-Wash-Nourishing-500-ml_1-scaled.jpg",
+    "thumbnail": "https://domokup.ru/wp-content/uploads/2025/02/Body-Wash-Nourishing-500-ml_1-300x300.jpg",
+    "alt": "PetO&#8217;CERA Питательный шампунь и кондиционер для собак, 500 мл"
+   },
+   "permalink": "https://domokup.ru/product/petocera-pitatelnyj-shampun-i-kondicioner/"
+  },
+  {
+   "id": 5126,
+   "name": "PetO&#8217;CERA Розовая соль для ванны 1,5 кг",
+   "slug": "petocera-rozovaja-sol-dlja-vanny-15-kg",
+   "sku": "881004",
+   "priceMinor": 960000,
+   "regularPriceMinor": 960000,
+   "currencyMinorUnit": 2,
+   "inStock": true,
+   "purchasable": true,
+   "reviewCount": 0,
+   "averageRating": "0",
+   "categories": [
+    {
+     "id": 152,
+     "name": "Груминг",
+     "slug": "gruming"
+    },
+    {
+     "id": 149,
+     "name": "Средства для ухода для собак",
+     "slug": "sredstva-dlja-uhoda-dlja-sobak"
+    }
+   ],
+   "derived": {
+    "weightKg": 1.5,
+    "weightSource": "name",
+    "species": "dog",
+    "form": null
+   },
+   "image": {
+    "src": "https://domokup.ru/wp-content/uploads/2025/02/8bc46270bff70ae34eef9ab96ed7479f_300x-1.jpg",
+    "thumbnail": "https://domokup.ru/wp-content/uploads/2025/02/8bc46270bff70ae34eef9ab96ed7479f_300x-1-300x300.jpg",
+    "alt": "PetO&#8217;CERA Розовая соль для ванны 1,5 кг"
+   },
+   "permalink": "https://domokup.ru/product/petocera-rozovaja-sol-dlja-vanny-15-kg/"
+  },
+  {
+   "id": 5056,
+   "name": "PetO&#8217;CERA Спрей для деликатного ухода за шерстью собак и кошек, 150 мл",
+   "slug": "petocera-sprej-dlja-delikatnogo-uhoda-za-shers",
+   "sku": "88902",
+   "priceMinor": 168000,
+   "regularPriceMinor": 168000,
+   "currencyMinorUnit": 2,
+   "inStock": true,
+   "purchasable": true,
+   "reviewCount": 0,
+   "averageRating": "0",
+   "categories": [
+    {
+     "id": 149,
+     "name": "Средства для ухода для собак",
+     "slug": "sredstva-dlja-uhoda-dlja-sobak"
+    },
+    {
+     "id": 150,
+     "name": "Средства для ухода для кошек",
+     "slug": "sredstva-dlja-uhoda-dlja-koshek"
+    }
+   ],
+   "derived": {
+    "weightKg": null,
+    "weightSource": null,
+    "species": null,
+    "form": null
+   },
+   "image": {
+    "src": "https://domokup.ru/wp-content/uploads/2025/02/PetOCERA-Mist-Sensitive-150-ml_2-scaled.jpg",
+    "thumbnail": "https://domokup.ru/wp-content/uploads/2025/02/PetOCERA-Mist-Sensitive-150-ml_2-300x300.jpg",
+    "alt": "PetO&#8217;CERA Спрей для деликатного ухода за шерстью собак и кошек, 150 мл"
+   },
+   "permalink": "https://domokup.ru/product/petocera-sprej-dlja-delikatnogo-uhoda-za-shers/"
+  },
+  {
+   "id": 5014,
+   "name": "PetO&#8217;CERA Спрей для ухода за шерстью собак и кошек, 150 мл",
+   "slug": "petocera-sprej-dlja-uhoda-za-sherstju-sobak-i-ko",
+   "sku": "88601",
+   "priceMinor": 148000,
+   "regularPriceMinor": 148000,
+   "currencyMinorUnit": 2,
+   "inStock": false,
+   "purchasable": true,
+   "reviewCount": 0,
+   "averageRating": "0",
+   "categories": [
+    {
+     "id": 149,
+     "name": "Средства для ухода для собак",
+     "slug": "sredstva-dlja-uhoda-dlja-sobak"
+    },
+    {
+     "id": 150,
+     "name": "Средства для ухода для кошек",
+     "slug": "sredstva-dlja-uhoda-dlja-koshek"
+    }
+   ],
+   "derived": {
+    "weightKg": null,
+    "weightSource": null,
+    "species": null,
+    "form": null
+   },
+   "image": {
+    "src": "https://domokup.ru/wp-content/uploads/2025/02/PetOCERA-Mist-150-ml_2-scaled.jpg",
+    "thumbnail": "https://domokup.ru/wp-content/uploads/2025/02/PetOCERA-Mist-150-ml_2-300x300.jpg",
+    "alt": "PetO&#8217;CERA Спрей для ухода за шерстью собак и кошек, 150 мл"
+   },
+   "permalink": "https://domokup.ru/product/petocera-sprej-dlja-uhoda-za-sherstju-sobak-i-ko/"
+  },
+  {
+   "id": 5062,
+   "name": "PetO&#8217;CERA Увлажняющий шампунь и кондиционер для собак (2-в-1), 500 мл",
+   "slug": "petocera-uvlazhnjajushhij-shampun-i-kondicioner",
+   "sku": "88402",
+   "priceMinor": 187000,
+   "regularPriceMinor": 187000,
+   "currencyMinorUnit": 2,
+   "inStock": false,
+   "purchasable": true,
+   "reviewCount": 0,
+   "averageRating": "0",
+   "categories": [
+    {
+     "id": 152,
+     "name": "Груминг",
+     "slug": "gruming"
+    },
+    {
+     "id": 149,
+     "name": "Средства для ухода для собак",
+     "slug": "sredstva-dlja-uhoda-dlja-sobak"
+    }
+   ],
+   "derived": {
+    "weightKg": null,
+    "weightSource": null,
+    "species": "dog",
+    "form": "wet"
+   },
+   "image": {
+    "src": "https://domokup.ru/wp-content/uploads/2025/02/Body-Wash-Plus-500-ml_Product-Image_2-scaled.jpg",
+    "thumbnail": "https://domokup.ru/wp-content/uploads/2025/02/Body-Wash-Plus-500-ml_Product-Image_2-300x300.jpg",
+    "alt": "PetO&#8217;CERA Увлажняющий шампунь и кондиционер для собак (2-в-1), 500 мл"
+   },
+   "permalink": "https://domokup.ru/product/petocera-uvlazhnjajushhij-shampun-i-kondicioner/"
+  },
+  {
+   "id": 4985,
+   "name": "PetO&#8217;CERA Уход за ушами для собак и кошек, 120 мл",
+   "slug": "petocera-uhod-za-ushami-dlja-sobak-i-koshek-120-ml",
+   "sku": "88701",
+   "priceMinor": 125000,
+   "regularPriceMinor": 125000,
+   "currencyMinorUnit": 2,
+   "inStock": false,
+   "purchasable": true,
+   "reviewCount": 0,
+   "averageRating": "0",
+   "categories": [
+    {
+     "id": 149,
+     "name": "Средства для ухода для собак",
+     "slug": "sredstva-dlja-uhoda-dlja-sobak"
+    },
+    {
+     "id": 150,
+     "name": "Средства для ухода для кошек",
+     "slug": "sredstva-dlja-uhoda-dlja-koshek"
+    }
+   ],
+   "derived": {
+    "weightKg": null,
+    "weightSource": null,
+    "species": null,
+    "form": null
+   },
+   "image": {
+    "src": "https://domokup.ru/wp-content/uploads/2025/02/PetOCERA-Cl-ear-EEF-120ml_2-scaled.jpg",
+    "thumbnail": "https://domokup.ru/wp-content/uploads/2025/02/PetOCERA-Cl-ear-EEF-120ml_2-300x300.jpg",
+    "alt": "PetO&#8217;CERA Уход за ушами для собак и кошек, 120 мл"
+   },
+   "permalink": "https://domokup.ru/product/petocera-uhod-za-ushami-dlja-sobak-i-koshek-120-ml/"
+  },
+  {
+   "id": 4998,
+   "name": "PetO&#8217;CERA Уход за шерстью вокруг глаз для собак и кошек, 120 мл",
+   "slug": "petocera-uhod-za-sherstju-vokrug-glaz-dlja-soba",
+   "sku": "88702",
+   "priceMinor": 125000,
+   "regularPriceMinor": 125000,
+   "currencyMinorUnit": 2,
+   "inStock": false,
+   "purchasable": true,
+   "reviewCount": 0,
+   "averageRating": "0",
+   "categories": [
+    {
+     "id": 149,
+     "name": "Средства для ухода для собак",
+     "slug": "sredstva-dlja-uhoda-dlja-sobak"
+    },
+    {
+     "id": 150,
+     "name": "Средства для ухода для кошек",
+     "slug": "sredstva-dlja-uhoda-dlja-koshek"
+    }
+   ],
+   "derived": {
+    "weightKg": null,
+    "weightSource": null,
+    "species": null,
+    "form": null
+   },
+   "image": {
+    "src": "https://domokup.ru/wp-content/uploads/2025/02/Thumbnail-PetOCERA-Q-Eye-120ml_Image.jpg",
+    "thumbnail": "https://domokup.ru/wp-content/uploads/2025/02/Thumbnail-PetOCERA-Q-Eye-120ml_Image-300x300.jpg",
+    "alt": "PetO&#8217;CERA Уход за шерстью вокруг глаз для собак и кошек, 120 мл"
+   },
+   "permalink": "https://domokup.ru/product/petocera-uhod-za-sherstju-vokrug-glaz-dlja-soba/"
+  },
+  {
+   "id": 5003,
+   "name": "PetO&#8217;CERA Уход за шерстью вокруг глаз для собак и кошек, 300 мл",
+   "slug": "petocera-uhod-za-sherstju-vokrug-glaz-dlja-soba-2",
+   "sku": "88703",
+   "priceMinor": 307424,
+   "regularPriceMinor": 307424,
+   "currencyMinorUnit": 2,
+   "inStock": false,
+   "purchasable": true,
+   "reviewCount": 0,
+   "averageRating": "0",
+   "categories": [
+    {
+     "id": 152,
+     "name": "Груминг",
+     "slug": "gruming"
+    },
+    {
+     "id": 149,
+     "name": "Средства для ухода для собак",
+     "slug": "sredstva-dlja-uhoda-dlja-sobak"
+    },
+    {
+     "id": 153,
+     "name": "Груминг",
+     "slug": "gruming-cat-products"
+    },
+    {
+     "id": 150,
+     "name": "Средства для ухода для кошек",
+     "slug": "sredstva-dlja-uhoda-dlja-koshek"
+    }
+   ],
+   "derived": {
+    "weightKg": null,
+    "weightSource": null,
+    "species": null,
+    "form": null
+   },
+   "image": {
+    "src": "https://domokup.ru/wp-content/uploads/2025/02/Thumbnail-PetOCERA-Q-Eye-300ml.jpg",
+    "thumbnail": "https://domokup.ru/wp-content/uploads/2025/02/Thumbnail-PetOCERA-Q-Eye-300ml-300x300.jpg",
+    "alt": "PetO&#8217;CERA Уход за шерстью вокруг глаз для собак и кошек, 300 мл"
+   },
+   "permalink": "https://domokup.ru/product/petocera-uhod-za-sherstju-vokrug-glaz-dlja-soba-2/"
+  },
+  {
+   "id": 5023,
+   "name": "PetO&#8217;CERA Шампунь для мытья кошек, 300 мл",
+   "slug": "petocera-shampun-dlja-mytja-koshek-300-ml",
+   "sku": "88401",
+   "priceMinor": 187000,
+   "regularPriceMinor": 187000,
+   "currencyMinorUnit": 2,
+   "inStock": true,
+   "purchasable": true,
+   "reviewCount": 0,
+   "averageRating": "0",
+   "categories": [
+    {
+     "id": 150,
+     "name": "Средства для ухода для кошек",
+     "slug": "sredstva-dlja-uhoda-dlja-koshek"
+    }
+   ],
+   "derived": {
+    "weightKg": null,
+    "weightSource": null,
+    "species": "cat",
+    "form": null
+   },
+   "image": {
+    "src": "https://domokup.ru/wp-content/uploads/2025/02/PetOCERA-Body-Wash-for-Cat-300ml_3-scaled.jpg",
+    "thumbnail": "https://domokup.ru/wp-content/uploads/2025/02/PetOCERA-Body-Wash-for-Cat-300ml_3-300x300.jpg",
+    "alt": "PetO&#8217;CERA Шампунь для мытья кошек, 300 мл"
+   },
+   "permalink": "https://domokup.ru/product/petocera-shampun-dlja-mytja-koshek-300-ml/"
+  },
+  {
+   "id": 5132,
+   "name": "PetO&#8217;CERA Blue Marine Bath, 1.5kg",
+   "slug": "petocera-blue-marine-bath-1-5kg",
+   "sku": "881006",
+   "priceMinor": 960000,
+   "regularPriceMinor": 960000,
+   "currencyMinorUnit": 2,
+   "inStock": true,
+   "purchasable": true,
+   "reviewCount": 0,
+   "averageRating": "0",
+   "categories": [
+    {
+     "id": 152,
+     "name": "Груминг",
+     "slug": "gruming"
+    },
+    {
+     "id": 149,
+     "name": "Средства для ухода для собак",
+     "slug": "sredstva-dlja-uhoda-dlja-sobak"
+    }
+   ],
+   "derived": {
+    "weightKg": null,
+    "weightSource": null,
+    "species": "dog",
+    "form": null
+   },
+   "image": {
+    "src": "https://domokup.ru/wp-content/uploads/2025/02/1_1b965f81-1c2a-4aa3-8243-cc8525351d3b_300x-1.jpg",
+    "thumbnail": "https://domokup.ru/wp-content/uploads/2025/02/1_1b965f81-1c2a-4aa3-8243-cc8525351d3b_300x-1-300x300.jpg",
+    "alt": "PetO&#8217;CERA Blue Marine Bath, 1.5kg"
+   },
+   "permalink": "https://domokup.ru/product/petocera-blue-marine-bath-1-5kg/"
+  },
+  {
+   "id": 5117,
+   "name": "PetO&#8217;CERA Spa Hot Spring Bath 1,5 кг",
+   "slug": "petocera-spa-hot-spring-bath-15-kg",
+   "sku": "881002",
+   "priceMinor": 960000,
+   "regularPriceMinor": 960000,
+   "currencyMinorUnit": 2,
+   "inStock": true,
+   "purchasable": true,
+   "reviewCount": 0,
+   "averageRating": "0",
+   "categories": [
+    {
+     "id": 152,
+     "name": "Груминг",
+     "slug": "gruming"
+    },
+    {
+     "id": 149,
+     "name": "Средства для ухода для собак",
+     "slug": "sredstva-dlja-uhoda-dlja-sobak"
+    }
+   ],
+   "derived": {
+    "weightKg": 1.5,
+    "weightSource": "name",
+    "species": "dog",
+    "form": null
+   },
+   "image": {
+    "src": "https://domokup.ru/wp-content/uploads/2025/02/1.5kg_300x-1.jpg",
+    "thumbnail": "https://domokup.ru/wp-content/uploads/2025/02/1.5kg_300x-1.jpg",
+    "alt": "PetO&#8217;CERA Spa Hot Spring Bath 1,5 кг"
+   },
+   "permalink": "https://domokup.ru/product/petocera-spa-hot-spring-bath-15-kg/"
+  },
+  {
+   "id": 5081,
+   "name": "RENADOG Балансирующий шампунь (очищение и увлажнение), 300 мл",
+   "slug": "renadog-balansirujushhij-shampun-ochishhenie-i-uv",
+   "sku": "88406",
+   "priceMinor": 187000,
+   "regularPriceMinor": 187000,
+   "currencyMinorUnit": 2,
+   "inStock": false,
+   "purchasable": true,
+   "reviewCount": 0,
+   "averageRating": "0",
+   "categories": [
+    {
+     "id": 152,
+     "name": "Груминг",
+     "slug": "gruming"
+    },
+    {
+     "id": 149,
+     "name": "Средства для ухода для собак",
+     "slug": "sredstva-dlja-uhoda-dlja-sobak"
+    }
+   ],
+   "derived": {
+    "weightKg": null,
+    "weightSource": null,
+    "species": "dog",
+    "form": "wet"
+   },
+   "image": {
+    "src": "https://domokup.ru/wp-content/uploads/2025/02/Balancing-Shampoo-300ml_front-scaled.jpg",
+    "thumbnail": "https://domokup.ru/wp-content/uploads/2025/02/Balancing-Shampoo-300ml_front-300x300.jpg",
+    "alt": "RENADOG Балансирующий шампунь (очищение и увлажнение), 300 мл"
+   },
+   "permalink": "https://domokup.ru/product/renadog-balansirujushhij-shampun-ochishhenie-i-uv/"
+  },
+  {
+   "id": 5093,
+   "name": "RENADOG Отбеливающий шампунь, защита цвета, 300 мл",
+   "slug": "renadog-otbelivajushhij-shampun-zashhita-cveta-300",
+   "sku": "88405",
+   "priceMinor": 215000,
+   "regularPriceMinor": 215000,
+   "currencyMinorUnit": 2,
+   "inStock": false,
+   "purchasable": true,
+   "reviewCount": 0,
+   "averageRating": "0",
+   "categories": [
+    {
+     "id": 152,
+     "name": "Груминг",
+     "slug": "gruming"
+    },
+    {
+     "id": 149,
+     "name": "Средства для ухода для собак",
+     "slug": "sredstva-dlja-uhoda-dlja-sobak"
+    }
+   ],
+   "derived": {
+    "weightKg": null,
+    "weightSource": null,
+    "species": "dog",
+    "form": null
+   },
+   "image": {
+    "src": "https://domokup.ru/wp-content/uploads/2025/02/Whitening-Shampoo-300ml_Background-Removed_1.png",
+    "thumbnail": "https://domokup.ru/wp-content/uploads/2025/02/Whitening-Shampoo-300ml_Background-Removed_1-300x300.png",
+    "alt": "RENADOG Отбеливающий шампунь, защита цвета, 300 мл"
+   },
+   "permalink": "https://domokup.ru/product/renadog-otbelivajushhij-shampun-zashhita-cveta-300/"
+  },
+  {
+   "id": 5098,
+   "name": "RENADOG Спрей для объема и уплотнения шерсти, 240 мл",
+   "slug": "renadog-sprej-dlja-obema-i-uplotnenija-shersti",
+   "sku": "88605",
+   "priceMinor": 165000,
+   "regularPriceMinor": 165000,
+   "currencyMinorUnit": 2,
+   "inStock": false,
+   "purchasable": true,
+   "reviewCount": 0,
+   "averageRating": "0",
+   "categories": [
+    {
+     "id": 152,
+     "name": "Груминг",
+     "slug": "gruming"
+    },
+    {
+     "id": 149,
+     "name": "Средства для ухода для собак",
+     "slug": "sredstva-dlja-uhoda-dlja-sobak"
+    }
+   ],
+   "derived": {
+    "weightKg": null,
+    "weightSource": null,
+    "species": "dog",
+    "form": null
+   },
+   "image": {
+    "src": "https://domokup.ru/wp-content/uploads/2025/02/Pro-Capture-One-0060-scaled.jpg",
+    "thumbnail": "https://domokup.ru/wp-content/uploads/2025/02/Pro-Capture-One-0060-300x300.jpg",
+    "alt": "RENADOG Спрей для объема и уплотнения шерсти, 240 мл"
+   },
+   "permalink": "https://domokup.ru/product/renadog-sprej-dlja-obema-i-uplotnenija-shersti/"
+  },
+  {
+   "id": 5103,
+   "name": "RENADOG Спрей для распутывания шерсти, 240 мл",
+   "slug": "renadog-sprej-dlja-rasputyvanija-shersti-240-ml",
+   "sku": "88606",
+   "priceMinor": 165000,
+   "regularPriceMinor": 165000,
+   "currencyMinorUnit": 2,
+   "inStock": false,
+   "purchasable": true,
+   "reviewCount": 0,
+   "averageRating": "0",
+   "categories": [
+    {
+     "id": 152,
+     "name": "Груминг",
+     "slug": "gruming"
+    },
+    {
+     "id": 149,
+     "name": "Средства для ухода для собак",
+     "slug": "sredstva-dlja-uhoda-dlja-sobak"
+    }
+   ],
+   "derived": {
+    "weightKg": null,
+    "weightSource": null,
+    "species": "dog",
+    "form": null
+   },
+   "image": {
+    "src": "https://domokup.ru/wp-content/uploads/2025/02/55db084fcd855e6ea7b6c8c9bde196a1.png",
+    "thumbnail": "https://domokup.ru/wp-content/uploads/2025/02/55db084fcd855e6ea7b6c8c9bde196a1-300x300.png",
+    "alt": "RENADOG Спрей для распутывания шерсти, 240 мл"
+   },
+   "permalink": "https://domokup.ru/product/renadog-sprej-dlja-rasputyvanija-shersti-240-ml/"
+  },
+  {
+   "id": 5091,
+   "name": "RENADOG Универсальный кондиционер (питание, уход, расчесывание), 300 мл",
+   "slug": "renadog-universalnyj-kondicioner-pitanie",
+   "sku": "88501",
+   "priceMinor": 215000,
+   "regularPriceMinor": 215000,
+   "currencyMinorUnit": 2,
+   "inStock": true,
+   "purchasable": true,
+   "reviewCount": 0,
+   "averageRating": "0",
+   "categories": [
+    {
+     "id": 152,
+     "name": "Груминг",
+     "slug": "gruming"
+    },
+    {
+     "id": 149,
+     "name": "Средства для ухода для собак",
+     "slug": "sredstva-dlja-uhoda-dlja-sobak"
+    }
+   ],
+   "derived": {
+    "weightKg": null,
+    "weightSource": null,
+    "species": "dog",
+    "form": null
+   },
+   "image": {
+    "src": "https://domokup.ru/wp-content/uploads/2025/02/All-Purpose-Conditioner-300ml_1.png",
+    "thumbnail": "https://domokup.ru/wp-content/uploads/2025/02/All-Purpose-Conditioner-300ml_1-300x300.png",
+    "alt": "RENADOG Универсальный кондиционер (питание, уход, расчесывание), 300 мл"
+   },
+   "permalink": "https://domokup.ru/product/renadog-universalnyj-kondicioner-pitanie/"
+  },
+  {
+   "id": 5077,
+   "name": "RENADOG Шампунь для глубокого очищения и защиты шерсти, 300 мл",
+   "slug": "renadog-shampun-dlja-glubokogo-ochishhenija-i-zashh",
+   "sku": "88404",
+   "priceMinor": 187000,
+   "regularPriceMinor": 187000,
+   "currencyMinorUnit": 2,
+   "inStock": false,
+   "purchasable": true,
+   "reviewCount": 0,
+   "averageRating": "0",
+   "categories": [
+    {
+     "id": 152,
+     "name": "Груминг",
+     "slug": "gruming"
+    },
+    {
+     "id": 149,
+     "name": "Средства для ухода для собак",
+     "slug": "sredstva-dlja-uhoda-dlja-sobak"
+    }
+   ],
+   "derived": {
+    "weightKg": null,
+    "weightSource": null,
+    "species": "dog",
+    "form": null
+   },
+   "image": {
+    "src": "https://domokup.ru/wp-content/uploads/2025/02/Deep-Cleansing-Shampoo-300ml_front-scaled.jpg",
+    "thumbnail": "https://domokup.ru/wp-content/uploads/2025/02/Deep-Cleansing-Shampoo-300ml_front-300x300.jpg",
+    "alt": "RENADOG Шампунь для глубокого очищения и защиты шерсти, 300 мл"
+   },
+   "permalink": "https://domokup.ru/product/renadog-shampun-dlja-glubokogo-ochishhenija-i-zashh/"
+  },
+  {
+   "id": 5088,
+   "name": "RENADOG Шампунь для объема, укрепления шерсти, 300 мл",
+   "slug": "renadog-shampun-dlja-obema-ukreplenija-sherst",
+   "sku": "88407",
+   "priceMinor": 215000,
+   "regularPriceMinor": 215000,
+   "currencyMinorUnit": 2,
+   "inStock": false,
+   "purchasable": true,
+   "reviewCount": 0,
+   "averageRating": "0",
+   "categories": [
+    {
+     "id": 152,
+     "name": "Груминг",
+     "slug": "gruming"
+    },
+    {
+     "id": 149,
+     "name": "Средства для ухода для собак",
+     "slug": "sredstva-dlja-uhoda-dlja-sobak"
+    }
+   ],
+   "derived": {
+    "weightKg": null,
+    "weightSource": null,
+    "species": "dog",
+    "form": null
+   },
+   "image": {
+    "src": "https://domokup.ru/wp-content/uploads/2025/02/RENADOG-Volumizing-Shampoo-300ml.png",
+    "thumbnail": "https://domokup.ru/wp-content/uploads/2025/02/RENADOG-Volumizing-Shampoo-300ml-300x300.png",
+    "alt": "RENADOG Шампунь для объема, укрепления шерсти, 300 мл"
+   },
+   "permalink": "https://domokup.ru/product/renadog-shampun-dlja-obema-ukreplenija-sherst/"
+  },
+  {
+   "id": 5107,
+   "name": "RENADOG Bodypack-Moroccan Rhassoul Mud 1kg",
+   "slug": "renadog-bodypack-moroccan-rhassoul-mud-1kg",
+   "sku": "881102",
+   "priceMinor": 750000,
+   "regularPriceMinor": 750000,
+   "currencyMinorUnit": 2,
+   "inStock": true,
+   "purchasable": true,
+   "reviewCount": 0,
+   "averageRating": "0",
+   "categories": [
+    {
+     "id": 152,
+     "name": "Груминг",
+     "slug": "gruming"
+    },
+    {
+     "id": 149,
+     "name": "Средства для ухода для собак",
+     "slug": "sredstva-dlja-uhoda-dlja-sobak"
+    }
+   ],
+   "derived": {
+    "weightKg": null,
+    "weightSource": null,
+    "species": "dog",
+    "form": null
+   },
+   "image": {
+    "src": "https://domokup.ru/wp-content/uploads/2025/02/IMG_0119-e1738750993139.png",
+    "thumbnail": "https://domokup.ru/wp-content/uploads/2025/02/IMG_0119-300x300.png",
+    "alt": "RENADOG Bodypack-Moroccan Rhassoul Mud 1kg"
+   },
+   "permalink": "https://domokup.ru/product/renadog-bodypack-moroccan-rhassoul-mud-1kg/"
+  },
+  {
+   "id": 5141,
+   "name": "RENADOG BubbleSpa 1kg",
+   "slug": "renadog-bubblespa-1kg",
+   "sku": "881202",
+   "priceMinor": 950000,
+   "regularPriceMinor": 950000,
+   "currencyMinorUnit": 2,
+   "inStock": true,
+   "purchasable": true,
+   "reviewCount": 0,
+   "averageRating": "0",
+   "categories": [
+    {
+     "id": 152,
+     "name": "Груминг",
+     "slug": "gruming"
+    },
+    {
+     "id": 149,
+     "name": "Средства для ухода для собак",
+     "slug": "sredstva-dlja-uhoda-dlja-sobak"
+    }
+   ],
+   "derived": {
+    "weightKg": null,
+    "weightSource": null,
+    "species": "dog",
+    "form": null
+   },
+   "image": {
+    "src": "https://domokup.ru/wp-content/uploads/2025/02/Bubble-Spa-1kg.png",
+    "thumbnail": "https://domokup.ru/wp-content/uploads/2025/02/Bubble-Spa-1kg-300x300.png",
+    "alt": "RENADOG BubbleSpa 1kg"
+   },
+   "permalink": "https://domokup.ru/product/renadog-bubblespa-1kg/"
+  },
+  {
+   "id": 5144,
+   "name": "RENADOG BubbleSpa 30g*10 шт.",
+   "slug": "renadog-bubblespa-30g10-sht",
+   "sku": "881201",
+   "priceMinor": 580000,
+   "regularPriceMinor": 580000,
+   "currencyMinorUnit": 2,
+   "inStock": true,
+   "purchasable": true,
+   "reviewCount": 0,
+   "averageRating": "0",
+   "categories": [
+    {
+     "id": 152,
+     "name": "Груминг",
+     "slug": "gruming"
+    },
+    {
+     "id": 149,
+     "name": "Средства для ухода для собак",
+     "slug": "sredstva-dlja-uhoda-dlja-sobak"
+    }
+   ],
+   "derived": {
+    "weightKg": null,
+    "weightSource": null,
+    "species": "dog",
+    "form": null
+   },
+   "image": {
+    "src": "https://domokup.ru/wp-content/uploads/2025/02/de621ccc374b02006746576c23d2f1be.png",
+    "thumbnail": "https://domokup.ru/wp-content/uploads/2025/02/de621ccc374b02006746576c23d2f1be-300x300.png",
+    "alt": "RENADOG BubbleSpa 30g*10 шт."
+   },
+   "permalink": "https://domokup.ru/product/renadog-bubblespa-30g10-sht/"
+  }
+ ]
+}

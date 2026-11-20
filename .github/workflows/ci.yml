@@ -1,0 +1,173 @@
+# 품질 검사 (PR·push 때 자동 실행) — 하나라도 실패하면 PR 병합이 막힌다
+# (main 보호 규칙에서 아래 3개 작업을 「필수 검사」로 지정해야 막힌다 → docs/APPROVAL-FLOW.md)
+#
+# 액션·도구 버전 확인일: 2026-11-20 (GitHub Releases · npm registry 직접 조회)
+#   actions/checkout v7.0.1 · actions/setup-node v7.1.0 · actions/upload-artifact v7.0.2
+#   lycheeverse/lychee-action v2.9.0 · @lhci/cli 0.16.1 · html-validate 11.21.1 · pa11y-ci 5.0.0
+#   http-server 14 (정적 서버)
+# 모두 무료(오픈소스). 외부 유료 서비스·비밀값 사용 없음.
+
+name: CI
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+# 최소 권한 — 코드 읽기만
+permissions:
+  contents: read
+
+# 같은 가지에서 새로 올리면 이전 검사는 취소
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  NODE_VERSION: lts/*
+  LHCI_VERSION: 0.16.1
+  HTML_VALIDATE_VERSION: 11.21.1
+  PA11Y_CI_VERSION: 5.0.0
+  HTTP_SERVER_VERSION: 14.1.1
+
+jobs:
+  # ─────────────────────────────────────────────
+  # 1) 빌드 · HTML 문법 · 이미지 무게 · 링크
+  # ─────────────────────────────────────────────
+  build-validate:
+    name: 빌드·HTML·링크
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+
+      - uses: actions/setup-node@v7
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+
+      - name: 의존성 설치 (package-lock.json 이 있을 때만)
+        run: |
+          if [ -f package-lock.json ]; then npm ci --ignore-scripts; else echo "package-lock.json 없음 — 건너뜀"; fi
+
+      - name: 빌드 (node scripts/build.mjs → dist/)
+        run: node scripts/build.mjs
+
+      - name: dist 확인
+        run: |
+          test -d dist || { echo "::error::dist/ 가 만들어지지 않았습니다"; exit 1; }
+          find dist -name '*.html' | head -1 | grep -q . || { echo "::error::dist/ 에 HTML 이 없습니다"; exit 1; }
+
+      - name: HTML 문법 검사 (html-validate)
+        run: npx --yes html-validate@${HTML_VALIDATE_VERSION} "dist/**/*.html"
+
+      - name: 이미지 1장 200KB 이하 검사
+        run: |
+          over=$(find dist -type f \( -iname '*.jpg' -o -iname '*.jpeg' -o -iname '*.png' -o -iname '*.webp' -o -iname '*.avif' -o -iname '*.gif' -o -iname '*.svg' \) -size +200k)
+          if [ -n "$over" ]; then
+            echo "::error::200KB 를 넘는 이미지가 있습니다"
+            ls -l $over
+            exit 1
+          fi
+          echo "모든 이미지 200KB 이하"
+
+      - name: 자체 JS 합계 30KB 이하 검사 (외부 스크립트는 금지라 dist 안의 .js 전체가 대상)
+        run: |
+          total=$(find dist -type f -name '*.js' -printf '%s\n' | awk '{s+=$1} END {print s+0}')
+          echo "JS 합계: ${total} bytes"
+          if [ "$total" -gt 30720 ]; then echo "::error::자체 JS 합계가 30KB 를 넘었습니다 (${total} bytes)"; exit 1; fi
+
+      - name: 링크 검사 (lychee — 사이트 안쪽 링크만, 외부 링크 제외)
+        uses: lycheeverse/lychee-action@v2
+        with:
+          args: >-
+            --offline
+            --no-progress
+            --include-fragments
+            --root-dir "${{ github.workspace }}/dist"
+            "dist/**/*.html"
+          fail: true
+          jobSummary: true
+
+  # ─────────────────────────────────────────────
+  # 2) Lighthouse (모바일 기준) — 점수·무게·LCP·CLS
+  # ─────────────────────────────────────────────
+  lighthouse:
+    name: Lighthouse(모바일)
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+
+      - uses: actions/setup-node@v7
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+
+      - name: 의존성 설치 (package-lock.json 이 있을 때만)
+        run: |
+          if [ -f package-lock.json ]; then npm ci --ignore-scripts; fi
+
+      - name: 빌드
+        run: node scripts/build.mjs
+
+      - name: Lighthouse 측정 (dist 를 내장 정적 서버로 띄워 3회 측정)
+        run: npx --yes @lhci/cli@${LHCI_VERSION} collect
+
+      - name: 기준 검사 1 — lighthouserc.json (점수·LCP·CLS·무게)
+        run: npx --yes @lhci/cli@${LHCI_VERSION} assert
+
+      - name: 기준 검사 2 — budget.json (무게 예산)
+        run: npx --yes @lhci/cli@${LHCI_VERSION} assert --no-lighthouserc --budgetsFile=budget.json
+
+      - name: 보고서 저장 (실패해도 저장)
+        if: always()
+        run: npx --yes @lhci/cli@${LHCI_VERSION} upload --target=filesystem --outputDir=./lhci-report
+
+      - name: 보고서 올리기 (Actions 화면에서 내려받기)
+        if: always()
+        uses: actions/upload-artifact@v7
+        with:
+          name: lighthouse-report
+          path: lhci-report
+          retention-days: 14
+          if-no-files-found: ignore
+
+  # ─────────────────────────────────────────────
+  # 3) 접근성 (pa11y-ci — axe + HTML_CodeSniffer, WCAG 2 AA)
+  # ─────────────────────────────────────────────
+  a11y:
+    name: 접근성(pa11y)
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+
+      - uses: actions/setup-node@v7
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+
+      - name: 의존성 설치 (package-lock.json 이 있을 때만)
+        run: |
+          if [ -f package-lock.json ]; then npm ci --ignore-scripts; fi
+
+      - name: 빌드
+        run: node scripts/build.mjs
+
+      - name: 정적 서버 시작 (dist → http://127.0.0.1:8080)
+        run: |
+          npx --yes http-server@${HTTP_SERVER_VERSION} dist -p 8080 -a 127.0.0.1 -s -c-1 &
+          for i in $(seq 1 30); do curl -sf http://127.0.0.1:8080/ >/dev/null && break; sleep 1; done
+          curl -sf http://127.0.0.1:8080/ >/dev/null || { echo "::error::정적 서버가 뜨지 않았습니다"; exit 1; }
+
+      - name: 접근성 검사 (dist 안 모든 HTML)
+        run: |
+          urls=$(cd dist && find . -name '*.html' | sed 's|^\./|http://127.0.0.1:8080/|')
+          echo "$urls"
+          npx --yes pa11y-ci@${PA11Y_CI_VERSION} --config .pa11yci.json $urls
