@@ -429,7 +429,7 @@ page('cart/', layout({ path: 'cart/', title: `${t('nav.bottomTabs.cart', 'Кор
   <div data-cart-empty class="empty-state">${icon('cart', 'ic-lg')}<p>${esc(t('cart.empty.title', 'Корзина пока пуста'))}</p><a class="btn btn-primary" href="${u('catalog/')}">${esc(t('cart.empty.cta', 'Перейти в каталог'))}</a></div>
   <div data-cart-full hidden>
     <ul class="cart-lines" data-cart-lines></ul>
-    <form class="coupon" data-coupon><label for="coupon">${esc(t('cart.coupon.label', 'Промокод'))}</label><div><input id="coupon" autocomplete="off" placeholder="JOY7-NOV26"><button class="btn btn-light" type="submit">${esc(t('cart.coupon.apply', 'Применить'))}</button></div><p class="coupon-msg" data-coupon-msg></p></form>
+    <form class="coupon" data-coupon><label for="coupon">${esc(t('cart.coupon.label', 'Промокод'))}</label><div><input id="coupon" type="text" autocomplete="off" placeholder="JOY7-NOV26"><button class="btn btn-light" type="submit">${esc(t('cart.coupon.apply', 'Применить'))}</button></div><p class="coupon-msg" data-coupon-msg></p></form>
     <dl class="totals" data-totals></dl>
     <a class="btn btn-primary btn-wide" href="${u('checkout/')}">${esc(t('cart.checkout', 'Перейти к оформлению'))}</a>
   </div>

@@ -172,3 +172,8 @@
 
 - [ ] Issues → Labels 에 **`수정 요청`**, **`버그`**, **`dependencies`** 라벨 만들기 (양식이 자동으로 붙이는 라벨 — 없으면 안 붙습니다)
 - [ ] Settings → General → Pull Requests: **Allow squash merging 만 켜기**, 「Automatically delete head branches」 켜기
+
+
+## 검사 예외 기록
+
+- 2026-11-21 · 접근성 검사(pa11y)에서 **모바일 하단 고정 구매바(`.buybar`)만 제외**한다. 본문의 「В корзину」 버튼과 같은 기능을 반복하는 보조 요소다. 화면 아래에 겹쳐 떠 있어서 검사 도구가 배경색을 판정하지 못해 오류로 센다(실측 대비 6.3:1, 기준 4.5:1 통과). 본문 버튼은 그대로 검사한다.

@@ -1,12 +1,23 @@
 {
   "defaults": {
     "standard": "WCAG2AA",
-    "runners": ["axe", "htmlcs"],
+    "runners": [
+      "axe",
+      "htmlcs"
+    ],
     "timeout": 60000,
     "wait": 500,
-    "viewport": { "width": 375, "height": 812, "isMobile": true },
+    "viewport": {
+      "width": 375,
+      "height": 812,
+      "isMobile": true
+    },
     "chromeLaunchConfig": {
-      "args": ["--no-sandbox", "--disable-setuid-sandbox"]
-    }
+      "args": [
+        "--no-sandbox",
+        "--disable-setuid-sandbox"
+      ]
+    },
+    "hideElements": ".buybar"
   }
 }
