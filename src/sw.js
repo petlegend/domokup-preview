@@ -3,7 +3,7 @@
 // 개인정보·결제 화면은 캐시하지 않는다(체크아웃 제외).
 const BASE = new URL(self.registration.scope).pathname;
 const CACHE = 'dk-__VERSION__';
-const PRECACHE = [BASE, BASE + 'offline/', BASE + 'assets/css/main.css', BASE + 'assets/css/tokens.css', BASE + 'assets/js/app.js', BASE + 'data.json'];
+const PRECACHE = [BASE, BASE + 'offline/', BASE + 'assets/css/main.css', BASE + 'assets/css/tokens.css', BASE + 'assets/js/app.js', BASE + 'assets/fonts/onest-ru.woff2', BASE + 'data.json'];
 
 self.addEventListener('install', e => {
   e.waitUntil(caches.open(CACHE).then(c => c.addAll(PRECACHE)).then(() => self.skipWaiting()));

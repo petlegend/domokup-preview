@@ -162,7 +162,7 @@
 /* ───────────────────────── 테마와 무관한 값 ───────────────────────── */
 :root {
   /* 글꼴 — 시스템 글꼴 스택(키릴 문자 지원 확인된 기본 글꼴 순서). 웹폰트 금지 */
-  --dk-font-family-base: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+  --dk-font-family-base: "Onest", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
   --dk-font-family-mono: ui-monospace, "SFMono-Regular", Consolas, "Liberation Mono", monospace; /* 수령 코드·SKU 표시 */
 
   /* 글자 크기 — 본문 16px 아래로 내리지 않는다(그룹 5대 원칙 5번). xs·sm 은 보조 표기에만 */

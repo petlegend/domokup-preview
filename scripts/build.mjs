@@ -29,6 +29,7 @@ const contentFile = readJson(join(SRC, 'data', 'products-content-ru.json'), {});
 // 팀 산출물 덮어쓰기: 화면용 이름(names.json)·러시아어 설명(desc-*.json). 파일이 없으면 원문을 쓴다.
 const OV_DIR = join(SRC, 'data', 'overrides');
 const OV_NAMES = readJson(join(OV_DIR, 'names.json'), {});
+const JOYSER = readJson(join(OV_DIR, 'joyser-updates.json'), { brand: null, products: {} });
 const OV_DESC = existsSync(OV_DIR) ? Object.assign({}, ...readdirSync(OV_DIR).filter(n => /^desc-.*.json$/.test(n)).map(n => readJson(join(OV_DIR, n), {}))) : {};
 const C = deepMerge(readJson(join(SRC, 'data', 'copy-defaults-ru.json')), copyFile);
 
@@ -62,7 +63,6 @@ const CATS = [
   { key: 'gruming', name: 'Груминг', slugs: ['gruming', 'gruming-cat-products', 'tovary-dlja-krasoty'], sp: 'both', icon: 'check' },
   { key: 'napolniteli', name: 'Наполнители для туалета', slugs: ['ever-dream'], sp: 'cat', icon: 'box' },
 ];
-const PHOTO_BLOCK = new Set([4301, 4375, 4379, 4400, 5148, 5153, 6449, 6472, 6473, 6474, 6475, 6476, 6477, 6478, 6483]);
 const catBySlug = new Map(CATS.flatMap(c => c.slugs.map(sl => [sl, c])));
 
 const FLAVOR_RU = { salmon: 'Лосось', chicken: 'Курица', diet: 'Диета', lamb: 'Ягнёнок' };
@@ -104,13 +104,12 @@ const ALL = SOURCE.map(p => {
     const bundle = /\+/.test(fi.pack);
     return { ...base, kind: 'feed', flavor: fi.flavor, kg: fi.kg, pack: fi.pack, group, content: ct,
       displayName: (ct.displayName || `Pure Nature ${{ salmon: 'с лососем', chicken: 'с курицей', diet: 'Диета', lamb: 'с ягнёнком' }[fi.flavor] || ''} для ${cat.sp === 'cat' ? 'кошек' : 'собак'}`) + (bundle ? ` · набор ${fi.pack}` : ''),
-      image: `assets/img/${group}-600.webp`, thumb: `assets/img/${group}-300.webp` };
+      image: `assets/img/p/p-${p.id}-600.webp`, thumb: `assets/img/p/p-${p.id}-300.webp` };
   }
-  // 사진에 금지·효능 문구가 박힌 상품(이미지점검팀 11/20 보고) — 사진을 바꾸기 전까지 중립 이미지
-  const blocked = PHOTO_BLOCK.has(p.id);
-  const local = !blocked && existsSync(join(SRC, 'assets', 'img', 'p', `p-${p.id}-300.webp`));
+  // 대표 이미지는 운영 사이트에서 판매 중인 것을 그대로 쓴다(2026-11-21 대표 지시 — 바꾸지 않는다)
+  const local = existsSync(join(SRC, 'assets', 'img', 'p', `p-${p.id}-300.webp`));
   const ov = OV_DESC[String(p.id)] || {};
-  return { ...base, kind: 'acc', displayName: OV_NAMES[String(p.id)]?.displayName || p.name, short: ov.short || '', bullets: ov.bullets || [], desc: ov.description?.length ? ov.description : paras(p.shortDescriptionHtml).concat(paras(p.descriptionHtml)),
+  return { ...base, kind: 'acc', displayName: JOYSER.products[String(p.id)]?.displayName || OV_NAMES[String(p.id)]?.displayName || ov.displayName || p.name, short: ov.short || '', bullets: ov.bullets || [], desc: ov.description?.length ? ov.description : paras(p.shortDescriptionHtml).concat(paras(p.descriptionHtml)),
     image: local ? `assets/img/p/p-${p.id}-600.webp` : 'assets/img/no-photo.svg', thumb: local ? `assets/img/p/p-${p.id}-300.webp` : 'assets/img/no-photo.svg' };
 });
 // 진열 순서: 재고 있음 먼저 → 사료 먼저(판매 순위: 고양이 연어 → 치킨 → 다이어트 → 강아지) → 작은 포장 먼저
@@ -199,7 +198,7 @@ function layout({ path, title, description, body, jsonld = [], active = '' }) {
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>${esc(title.length > 68 ? title.slice(0, 66).replace(/\s+\S*$/, '') + '…' : title)}</title>
+<title>${esc(title.length > 60 ? title.slice(0, 58).replace(/\s+\S*$/, '') + '…' : title)}</title>
 <meta name="description" content="${esc(description)}">
 <meta name="robots" content="noindex, nofollow">
 <meta name="theme-color" content="#0B6B4A">
@@ -207,6 +206,7 @@ function layout({ path, title, description, body, jsonld = [], active = '' }) {
 <meta property="og:type" content="website"><meta property="og:title" content="${esc(title)}"><meta property="og:description" content="${esc(description)}"><meta property="og:image" content="${u('assets/img/og-1200x630.jpg')}"><meta property="og:locale" content="ru_RU">
 <link rel="manifest" href="${u('manifest.webmanifest')}">
 <link rel="icon" href="${u('assets/img/favicon-32.png')}" sizes="32x32"><link rel="apple-touch-icon" href="${u('assets/img/apple-touch-icon-180.png')}">
+<link rel="preload" href="${u('assets/fonts/onest-ru.woff2')}" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="${u('assets/css/tokens.css')}"><link rel="stylesheet" href="${u('assets/css/main.css')}">
 ${jsonld.map(j => `<script type="application/ld+json">${JSON.stringify(j)}</script>`).join('\n')}
 <script>window.DK={base:${JSON.stringify(BASE)},version:"${BUILD_DATE}"};</script>
@@ -217,7 +217,7 @@ ${jsonld.map(j => `<script type="application/ld+json">${JSON.stringify(j)}</scri
 <div class="demo-bar" role="note">${esc(t('meta.demoBar', 'Демо-версия обновлённого сайта ДОМОКУП · заказы не принимаются'))}</div>
 <header class="hdr">
   <div class="wrap hdr-row">
-    <a class="logo" href="${u('')}" aria-label="ДОМОКУП — на главную"><span class="logo-mark">Д</span><span class="logo-text">ДОМОКУП</span></a>
+    <a class="logo" href="${u('')}" aria-label="ДОМОКУП — на главную"><img src="${u('assets/img/logo-domokup.svg')}" alt="ДОМОКУП" width="42" height="40"></a>
     <form class="hdr-search" action="${u('search/')}" role="search">
       <label class="sr" for="q-hdr">${esc(t('nav.searchLabel', 'Поиск по каталогу'))}</label>
       <input id="q-hdr" name="q" type="search" autocomplete="off" placeholder="${esc(t('nav.searchPlaceholder', 'Например: корм для кошек с лососем'))}">
@@ -239,7 +239,7 @@ ${body}
   <div class="wrap">
     <div class="ftr-grid">
       <div>
-        <p class="ftr-brand">ДОМОКУП</p>
+        <p class="ftr-brand"><img src="${u('assets/img/logo-domokup.svg')}" alt="ДОМОКУП" width="63" height="60" loading="lazy"></p>
         <p>${esc(t('footer.tagline', 'Корма Pure Nature из Южной Кореи. Официальный импорт.'))}</p>
         <p class="ftr-msg"><a class="btn btn-ghost" href="https://t.me/domopet_kor" rel="noopener" target="_blank">${icon('tg')}Telegram</a> <a class="btn btn-ghost" href="${u('contacts/')}">MAX</a></p>
       </div>
@@ -344,8 +344,9 @@ function catalogPage({ path, title, h1, intro = '', items, crumbsList, showCats 
   const cats = showCats ? CATS.filter(c => items.some(i => i.cat === c.key)) : [];
   const chip = (f, v, label, on) => `<button type="button" data-f="${f}" data-v="${v}" aria-pressed="${on}">${esc(label)}</button>`;
   const cr = crumbs(crumbsList);
+  const joyBrand = JOYSER.brand && /^(igrushki|amunicija)/.test(path.split('/')[1] || '') ? `<div class="brand-note"><img src="${u('assets/img/logo-joyser.webp')}" alt="JOYSER" width="160" height="48" loading="lazy"><p>${esc(JOYSER.brand.aboutRu)}</p></div>` : '';
   const body = `${cr.html}
-<section class="wrap cat-head"><h1>${esc(h1)}</h1>${intro ? `<p class="muted">${esc(intro)}</p>` : ''}<p class="muted">${esc(t('catalog.resultsLabel', 'Товаров'))}: <span data-count>${items.length}</span></p></section>
+<section class="wrap cat-head"><h1>${esc(h1)}</h1>${joyBrand}${intro ? `<p class="muted">${esc(intro)}</p>` : ''}<p class="muted">${esc(t('catalog.resultsLabel', 'Товаров'))}: <span data-count>${items.length}</span></p></section>
 <section class="wrap filters" data-filters>
   ${cats.length ? `<div class="chips" role="group" aria-label="${esc(t('catalog.filters.title', 'Раздел'))}">${chip('cat', '', t('catalog.filters.all', 'Все'), true)}${cats.map(c => chip('cat', c.key, c.name, false)).join('')}</div>` : ''}
   ${hasBoth ? `<div class="chips" role="group" aria-label="${esc(t('catalog.filters.species', 'Для кого'))}">${chip('species', '', t('catalog.filters.all', 'Все'), true)}${chip('species', 'cat', t('catalog.filters.speciesCat', 'Кошки'), false)}${chip('species', 'dog', t('catalog.filters.speciesDog', 'Собаки'), false)}</div>` : ''}
@@ -378,7 +379,9 @@ for (const it of ALL) {
   const tabs = [];
   const desc = isFeed ? (ct.description || []).map(p => `<p>${esc(fill(p))}</p>`).join('') : (it.desc || []).map(p => `<p>${esc(p)}</p>`).join('');
   tabs.push(['description', t('product.tabs.description', 'Описание'), (desc || `<p>${esc(it.name)}</p>`) + (isFeed ? `<p class="muted">${esc(t('product.healthDisclaimer', ''))}</p>` : '')]);
-  if (isFeed) tabs.push(['composition', t('product.tabs.composition', 'Состав'), (ct.composition?.length ? `<table class="spec"><tbody>${ct.composition.map(r => `<tr><th scope="row">${esc(r.label)}</th><td>${esc(r.value)}</td></tr>`).join('')}</tbody></table><p class="muted">${esc(t('product.compositionPending', ''))}</p>` : `<p>${esc(t('product.compositionPending', ''))}</p>`)]);
+  // 칼슘 표기: 제조사 사이트 글자칸은 「칼륨」이지만 공식몰 이미지(원재료·영양표)는 「칼슘」 — 글자칸 오타로 판정(11/21 조사팀). 최종은 러시아어 라벨로 확정
+  const compRows = ct.composition || [];
+  if (isFeed) tabs.push(['composition', t('product.tabs.composition', 'Состав'), (compRows.length ? `<table class="spec"><tbody>${compRows.map(r => `<tr><th scope="row">${esc(r.label)}</th><td>${esc(r.value)}</td></tr>`).join('')}</tbody></table><p class="muted">${esc(t('product.compositionPending', ''))}</p>` : `<p>${esc(t('product.compositionPending', ''))}</p>`)]);
   if (isFeed) tabs.push(['feeding', t('product.tabs.feeding', 'Кормление'), ct.feeding?.rows ? `<div class="tbl"><table class="feed"><thead><tr>${ct.feeding.columns.map(c => `<th scope="col">${esc(c)}</th>`).join('')}</tr></thead><tbody>${ct.feeding.rows.map(r => `<tr>${r.map((c, i) => i ? `<td>${esc(c)}</td>` : `<th scope="row">${esc(c)}</th>`).join('')}</tr>`).join('')}</tbody></table></div><ul class="notes">${(ct.feeding.notes || []).map(n => `<li>${esc(fill(n))}</li>`).join('')}</ul><p class="muted">${esc(t('product.feedingDisclaimer', ''))}</p>` : `<p>${esc(t('product.feedingPending', 'Норма кормления указана на упаковке.'))}</p>`]);
   tabs.push(['delivery', t('product.tabs.delivery', 'Доставка'), `<p>${esc(t('pages.delivery.intro', 'Доставка СДЭК по всей России, самовывоз в Москве.'))}</p><p><a href="${u('delivery/')}">${esc(t('pages.delivery.title', 'Доставка и оплата'))} ${icon('arrow')}</a></p>`]);
   tabs.push(['reviews', `${t('product.tabs.reviews', 'Отзывы')} (${it.reviews || 0})`, `<p class="muted">${esc(t('product.reviewsEmpty', 'Отзывов пока нет.'))}</p>`]);
@@ -403,6 +406,7 @@ for (const it of ALL) {
     <ul class="pdp-facts">
       <li>${icon('truck')}<span>${esc(t('product.deliveryEstimate', 'Срок и стоимость доставки рассчитаем при оформлении заказа.'))}</span></li>
       <li>${icon('pin')}<span>${esc(t('product.pickupNote', 'Самовывоз в Москве: ул. Производственная, д. 11, стр. 1'))}</span></li>
+      ${isFeed ? `<li>${icon('shield')}<span>${esc(t('maker.short', ''))}</span></li>` : ''}
       ${isFeed ? `<li>${icon('shield')}<span>${esc(t('product.importNote', 'Официальный импорт: данные импортёра на русской этикетке'))}</span></li>` : ''}
     </ul>
     ${(ct.bullets || it.bullets || []).length ? `<ul class="bullets">${(ct.bullets || it.bullets).map(b => `<li>${icon('check')}<span>${esc(fill(b))}</span></li>`).join('')}</ul>` : ''}
@@ -442,7 +446,7 @@ page('checkout/', layout({ path: 'checkout/', title: `${t('checkout.title', 'О�
   <ol class="steps"><li aria-current="step">${esc(t('checkout.steps.contacts', 'Контакты'))}</li><li>${esc(t('checkout.steps.delivery', 'Доставка'))}</li><li>${esc(t('checkout.steps.payment', 'Оплата'))}</li></ol>
   <form data-checkout novalidate autocomplete="off">
     <fieldset><legend>${esc(t('checkout.steps.contacts', 'Контакты'))}</legend>
-      <label>${esc(t('checkout.fields.name', 'Имя и фамилия'))}<input name="n" disabled placeholder="Иван Иванов"></label>
+      <label>${esc(t('checkout.fields.name', 'Имя и фамилия'))}<input name="n" type="text" disabled placeholder="Иван Иванов"></label>
       <label>${esc(t('checkout.fields.phone', 'Телефон'))}<input name="p" type="tel" disabled placeholder="+7"></label>
       <label>${esc(t('checkout.fields.email', 'Электронная почта'))}<input name="e" type="email" disabled placeholder="для чека и статуса заказа"></label>
     </fieldset>
